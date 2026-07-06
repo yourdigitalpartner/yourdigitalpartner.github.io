@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="/assets/logo-icon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paid Campaigns | Google Ads &amp; LinkedIn Ads That Build Pipeline | Your Digital Partner</title>
+<meta name="description" content="Full-funnel Google Ads and LinkedIn campaigns for B2B: nurture journeys, data-led targeting and ad formats matched to every buying stage. £1m pipeline from £65k spend. Free ad audit.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Paid Campaigns — Google Ads & LinkedIn Ads",
+  "provider": {"@type": "ProfessionalService", "name": "Your Digital Partner", "url": "https://your-digital-partner.co.uk"},
+  "description": "Full-funnel paid media for B2B brands: Google Ads (search, retargeting, Performance Max) and LinkedIn Ads (video, document, carousel and lead gen formats) with nurture journeys, ABM targeting and continuous data-led optimisation tied to pipeline.",
+  "areaServed": "United Kingdom"
+}
+</script>
+<style>
+  :root{--bg:#f1f4fa;--ink:#0a1733;--mut:#5b6b80;--lime:#35e0c8;--card:#fff;--line:#d8e0ec;--soft:#e0eef6;--blue:#2f5fd0;--pink:#c2408d;--pinkSoft:#fdeff7;--green:#0d9488;--purple:#7b5cfa;--li:#0a66c2;--liSoft:#e9f1fb}
+  *{margin:0;box-sizing:border-box;font-family:'Segoe UI',system-ui,-apple-system,sans-serif}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  /* NAV (shared) */
+  nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:50;display:flex;gap:8px;align-items:center;background:rgba(255,255,255,.88);backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:99px;padding:8px 10px 8px 22px;box-shadow:0 10px 30px rgba(8,20,48,.08);width:min(960px,94vw);justify-content:space-between}
+  .logo{font-weight:800;font-size:15.5px;white-space:nowrap;display:flex;align-items:center;gap:9px;letter-spacing:-.2px}.logo b{color:var(--green)}.logo svg{display:block}
+  nav ul{display:flex;gap:20px;list-style:none;font-size:13px;color:var(--mut)}
+  nav ul li{cursor:pointer;position:relative}nav ul li:hover{color:var(--ink)}
+  .dd{position:absolute;top:34px;left:-14px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:8px;min-width:250px;box-shadow:0 18px 40px rgba(8,20,48,.14);opacity:0;visibility:hidden;transform:translateY(6px);transition:all .2s}
+  li:hover .dd{opacity:1;visibility:visible;transform:none}
+  .dd a{display:block;padding:10px 12px;border-radius:9px;font-size:13px;color:var(--ink)}
+  .dd a:hover{background:var(--soft)}
+  .dd a small{display:block;color:var(--mut);font-size:11.5px;margin-top:2px}
+  .cta{background:var(--ink);color:var(--lime);border:none;padding:10px 20px;border-radius:99px;font-size:13px;font-weight:700;cursor:pointer;transition:transform .2s;white-space:nowrap;display:inline-block}
+  .cta:hover{transform:scale(1.05)}
+  /* LAYOUT */
+  section{padding:96px 40px}
+  .wrap{max-width:1160px;margin:0 auto}
+  .bg-white{background:#fff}
+  .bg-li{background:var(--liSoft)}
+  .bg-pink{background:var(--pinkSoft)}
+  h2.sec{font-size:clamp(26px,3.4vw,42px);font-weight:800;letter-spacing:-.01em;margin-bottom:10px}
+  .lead{color:var(--mut);max-width:620px;line-height:1.68;font-size:15.5px}
+  .reveal{opacity:0;transform:translateY(36px);transition:opacity .7s,transform .7s}
+  .reveal.in{opacity:1;transform:none}
+  .eyebrow{display:inline-block;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:800;color:var(--pink);background:#fff;border:1.5px solid var(--pink);border-radius:99px;padding:6px 14px;margin-bottom:18px}
+  .eyebrow.e-li{color:var(--li);border-color:var(--li)}
+  .eyebrow.e-google{color:#4285F4;border-color:#4285F4}
+  .eyebrow.e-green{color:var(--green);border-color:var(--green)}
+  /* HERO */
+  .hero{padding:140px 40px 60px;position:relative;text-align:center}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(700px 480px at 10% 20%,rgba(194,64,141,.13),transparent 70%),radial-gradient(620px 440px at 90% 55%,rgba(10,102,194,.12),transparent 70%),radial-gradient(700px 460px at 50% 100%,rgba(53,224,200,.14),transparent 70%);pointer-events:none;z-index:0}
+  .hero .wrap{position:relative;z-index:1}
+  h1{font-size:clamp(34px,4.8vw,60px);font-weight:800;letter-spacing:-.02em;line-height:1.07}
+  h1 .hl{background:var(--lime);border-radius:12px;padding:0 12px;display:inline-block}
+  .hero p{color:var(--mut);font-size:16.5px;line-height:1.68;margin:22px auto 26px;max-width:720px}
+  .statstrip{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:20px}
+  .sstat{background:#fff;border:1.5px solid;border-radius:99px;padding:9px 18px;font-size:13px;font-weight:700}
+  .sstat.p{color:var(--pink);border-color:var(--pink)}
+  .sstat.b{color:var(--li);border-color:var(--li)}
+  .sstat.g{color:var(--green);border-color:var(--green)}
+  .platchips{display:flex;gap:14px;justify-content:center;align-items:center}
+  .plat{display:inline-flex;align-items:center;gap:9px;background:#fff;border:1px solid var(--line);border-radius:99px;padding:9px 18px;font-size:13.5px;font-weight:800;box-shadow:0 8px 20px rgba(8,20,48,.07)}
+  /* LOGOS */
+  .gmark{width:20px;height:20px}
+  .limark{width:20px;height:20px;background:var(--li);color:#fff;border-radius:4px;display:grid;place-items:center;font-size:11px;font-weight:900;font-family:Arial,sans-serif}
+  /* ===== LINKEDIN JOURNEY ===== */
+  .journey{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:46px;position:relative}
+  .stagecard{background:#fff;border:1px solid var(--line);border-top:6px solid var(--li);border-radius:18px;padding:22px;transition:transform .25s,box-shadow .25s}
+  .stagecard:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(8,20,48,.1)}
+  .stagecard .stg{font-size:10.5px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;color:var(--li)}
+  .stagecard h3{font-size:17px;margin:8px 0 4px}
+  .stagecard .fmt{font-size:12px;color:var(--mut);font-weight:700;margin-bottom:6px}
+  .stagecard p{font-size:12.5px;color:var(--mut);line-height:1.6;margin-bottom:14px}
+  /* LinkedIn ad mock */
+  .liad{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 8px 22px rgba(8,20,48,.08);font-size:11px}
+  .lihead{display:flex;gap:8px;align-items:center;padding:9px 11px}
+  .liav{width:26px;height:26px;border-radius:6px;background:var(--ink);color:var(--lime);display:grid;place-items:center;font-weight:800;font-size:10px}
+  .lihead b{display:block;font-size:11px}
+  .lihead small{color:var(--mut);font-size:9.5px}
+  .licopy{padding:0 11px 9px;color:var(--ink);line-height:1.5}
+  .limedia{height:96px;position:relative;overflow:hidden;background:var(--soft)}
+  .lifoot{display:flex;justify-content:space-between;align-items:center;padding:8px 11px;border-top:1px solid var(--line)}
+  .lifoot span{color:var(--mut);font-size:9.5px}
+  .lifoot b{background:var(--li);color:#fff;border-radius:99px;padding:4px 12px;font-size:10px}
+  /* video media */
+  .vmedia{background:linear-gradient(135deg,#0d2145,#0a1733);display:grid;place-items:center}
+  .vmedia .vplay{width:34px;height:34px;border-radius:50%;background:var(--lime);color:var(--ink);display:grid;place-items:center;font-size:13px;animation:vpulse 1.8s infinite}
+  @keyframes vpulse{0%,100%{box-shadow:0 0 0 0 rgba(53,224,200,.5)}60%{box-shadow:0 0 0 9px rgba(53,224,200,0)}}
+  .vmedia .vbar{position:absolute;bottom:8px;left:10px;right:10px;height:4px;background:rgba(255,255,255,.25);border-radius:99px;overflow:hidden}
+  .vmedia .vbar i{display:block;height:100%;background:var(--lime);width:0;animation:vprog 5s linear infinite}
+  @keyframes vprog{to{width:100%}}
+  /* carousel media */
+  .cmedia{padding:10px}
+  .ctrack{display:flex;gap:8px;animation:cslide 6s ease-in-out infinite}
+  @keyframes cslide{0%,28%{transform:translateX(0)}38%,62%{transform:translateX(-104px)}72%,96%{transform:translateX(-208px)}100%{transform:translateX(0)}}
+  .ccard{width:96px;flex-shrink:0;height:74px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:8px;font-size:9px;font-weight:700;color:var(--ink)}
+  .ccard i{display:block;font-style:normal;font-size:15px;margin-bottom:5px}
+  .ccard small{display:block;color:var(--mut);font-weight:400;font-size:8.5px;line-height:1.4}
+  /* lead gen media */
+  .fmedia{padding:10px;background:#f8fafd}
+  .fmedia u{display:block;height:16px;border-radius:5px;background:#fff;border:1px solid var(--line);margin-bottom:6px;text-decoration:none;position:relative;overflow:hidden}
+  .fmedia u i{position:absolute;left:6px;top:3px;font-style:normal;font-size:8.5px;color:var(--mut)}
+  .fmedia .prefill{font-size:8.5px;color:var(--green);font-weight:800;margin-bottom:6px}
+  .fmedia .fsub{height:20px;border-radius:5px;background:var(--li);color:#fff;font-size:9.5px;font-weight:800;display:grid;place-items:center;animation:fsubmit 4s infinite}
+  @keyframes fsubmit{0%,70%,100%{transform:none}76%{transform:scale(.95)}82%{transform:none}}
+  .fmedia .ftick{text-align:center;font-size:9px;color:var(--green);font-weight:800;opacity:0;animation:ftickshow 4s infinite}
+  @keyframes ftickshow{0%,80%{opacity:0}88%,98%{opacity:1}100%{opacity:0}}
+  /* retarget flow arrows */
+  .retarget{display:flex;justify-content:center;gap:10px;align-items:center;margin-top:22px;font-size:12px;font-weight:700;color:var(--li);flex-wrap:wrap}
+  .retarget .arrowflow{display:inline-block;animation:arrowmove 1.6s ease-in-out infinite}
+  @keyframes arrowmove{50%{transform:translateX(6px)}}
+  /* ===== GOOGLE ADS ===== */
+  .gwrap{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;margin-top:46px}
+  .gcard{background:#fff;border:1px solid var(--line);border-top:6px solid #4285F4;border-radius:18px;padding:24px;transition:transform .25s,box-shadow .25s}
+  .gcard:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(8,20,48,.1)}
+  .gcard .gt{font-size:10.5px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;color:#4285F4}
+  .gcard h3{font-size:17px;margin:8px 0 6px}
+  .gcard>p{font-size:12.5px;color:var(--mut);line-height:1.6;margin-bottom:14px}
+  .gcard.big{grid-row:span 2}
+  /* SERP mock */
+  .serp{background:#f8fafd;border:1px solid var(--line);border-radius:12px;padding:14px}
+  .sbar{background:#fff;border:1px solid var(--line);border-radius:99px;padding:9px 16px;font-size:12.5px;display:flex;gap:8px;align-items:center;margin-bottom:14px;color:var(--ink)}
+  .sbar .q::after{content:"|";color:#4285F4;animation:blink 1s steps(1) infinite}
+  @keyframes blink{50%{opacity:0}}
+  .gad{background:#fff;border:1px solid var(--line);border-radius:10px;padding:13px 15px}
+  .gad .sp{font-size:10px;font-weight:800;color:var(--ink)}
+  .gad .gurl{font-size:11px;color:var(--mut);margin:3px 0}
+  .gad .ghead{display:block;font-size:14.5px;font-weight:600;color:#1a0dab;margin-bottom:3px;line-height:1.35}
+  .gad .gdesc{font-size:11.5px;color:#4d5156;line-height:1.5}
+  .gad .glinks{display:flex;gap:14px;margin-top:8px;flex-wrap:wrap}
+  .gad .glinks span{font-size:11px;color:#1a0dab;font-weight:600}
+  .gad2{opacity:.45;margin-top:10px}
+  .gad2 .ghead{color:var(--mut)}
+  /* display / pmax mocks */
+  .banner{background:linear-gradient(120deg,var(--ink),#13294f);border-radius:10px;padding:14px;color:#fff;display:flex;align-items:center;gap:12px}
+  .banner .bmsg{flex:1}
+  .banner .bmsg b{display:block;font-size:12px;margin-bottom:3px}
+  .banner .bmsg span{font-size:10px;color:#93a5c1}
+  .banner .bcta{background:var(--lime);color:var(--ink);font-size:10px;font-weight:800;border-radius:99px;padding:6px 12px;white-space:nowrap;animation:vpulse 2s infinite}
+  .freq{font-size:10.5px;color:var(--mut);font-weight:700;margin-top:8px}
+  /* ===== TARGETING INTEL ===== */
+  .intel{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:46px}
+  .icard{background:#fff;border:1px solid var(--line);border-left:6px solid var(--pink);border-radius:18px;padding:22px;transition:transform .25s,box-shadow .25s}
+  .icard:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(8,20,48,.1)}
+  .icard h3{font-size:16px;margin-bottom:6px}
+  .icard>p{font-size:12.5px;color:var(--mut);line-height:1.6;margin-bottom:14px}
+  .istage{background:#f8fafd;border:1px solid var(--line);border-radius:12px;padding:14px;min-height:120px}
+  /* copy test */
+  .ct .l{display:flex;justify-content:space-between;font-size:10.5px;font-weight:800;margin-bottom:4px}
+  .ct .t{height:12px;background:#fff;border:1px solid var(--line);border-radius:99px;overflow:hidden;margin-bottom:12px}
+  .ct .f{height:100%;border-radius:99px;width:0}
+  .ct.a .f{background:var(--mut);animation:ctra 4.5s ease-out infinite}
+  .ct.b .f{background:var(--pink);animation:ctrb 4.5s ease-out infinite}
+  @keyframes ctra{0%,10%{width:0}65%,95%{width:30%}100%{width:0}}
+  @keyframes ctrb{0%,10%{width:0}65%,95%{width:72%}100%{width:0}}
+  .iwin{font-size:10.5px;font-weight:800;color:var(--pink);opacity:0;animation:iwinshow 4.5s infinite}
+  @keyframes iwinshow{0%,62%{opacity:0}72%,96%{opacity:1}100%{opacity:0}}
+  /* time of day */
+  .tod{display:flex;align-items:flex-end;gap:3px;height:74px;margin-bottom:8px}
+  .tod i{flex:1;background:var(--line);border-radius:3px 3px 0 0;height:20%}
+  .tod i.hi{background:var(--pink);animation:todglow 2.4s ease-in-out infinite}
+  @keyframes todglow{50%{opacity:.6}}
+  .todnote{font-size:10.5px;font-weight:800;color:var(--pink)}
+  /* audiences */
+  .aud{display:grid;gap:8px}
+  .audrow{display:flex;justify-content:space-between;align-items:center;background:#fff;border:1px solid var(--line);border-radius:8px;padding:7px 10px;font-size:11px;font-weight:700;opacity:0;animation:audin 5.5s infinite}
+  .audrow:nth-child(2){animation-delay:.6s}.audrow:nth-child(3){animation-delay:1.2s}
+  @keyframes audin{0%{opacity:0;transform:translateY(5px)}12%,88%{opacity:1;transform:none}96%,100%{opacity:0}}
+  .audrow .cv{font-weight:800}
+  .audrow .cv.good{color:var(--green)}.audrow .cv.bad{color:#c25040}
+  /* ===== FUNNELS FEATURE PANEL ===== */
+  .funnelbox{background:radial-gradient(560px at 88% 0%,rgba(194,64,141,.32),transparent 65%),radial-gradient(520px at 5% 100%,rgba(10,102,194,.35),transparent 65%),var(--ink);border:2px solid var(--pink);border-radius:28px;padding:56px;box-shadow:0 30px 70px rgba(8,20,48,.22);color:#eef2fb}
+  .funnelbox h2{font-size:clamp(24px,3.2vw,38px);font-weight:800;letter-spacing:-.01em;text-align:center}
+  .funnelbox h2 span{color:var(--lime)}
+  .funnelbox .fsub{text-align:center;color:#93a5c1;font-size:14px;margin:12px auto 40px;max-width:520px;line-height:1.6}
+  .funnels{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+  .fun .fhead{display:flex;align-items:center;gap:10px;font-weight:800;font-size:15px;margin-bottom:20px}
+  .fun .fhead .limark,.fun .fhead .gmark{width:24px;height:24px}
+  .frow{margin-bottom:12px}
+  .frow .fl{display:flex;justify-content:space-between;font-size:11.5px;font-weight:700;color:#c6d2e8;margin-bottom:5px}
+  .frow .ft{height:22px;background:rgba(255,255,255,.08);border-radius:8px;overflow:hidden}
+  .frow .ff{height:100%;border-radius:8px;width:0;transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+  .fun.g .ff{background:linear-gradient(90deg,#4285F4,#34A853)}
+  .fun.l .ff{background:linear-gradient(90deg,#0a66c2,#4aa3e8)}
+  .fpipe{margin-top:18px;background:rgba(53,224,200,.1);border:1px solid rgba(53,224,200,.4);border-radius:14px;padding:16px;text-align:center}
+  .fpipe small{display:block;font-size:10px;letter-spacing:1.6px;text-transform:uppercase;color:#93a5c1;font-weight:800;margin-bottom:4px}
+  .fpipe b{font-size:26px;color:var(--lime)}
+  /* ===== AUDIT CTA ===== */
+  .audit{background:#fff;border:2px solid var(--pink);border-radius:28px;padding:56px;box-shadow:10px 10px 0 rgba(194,64,141,.12);display:grid;grid-template-columns:1.15fr 1fr;gap:44px;align-items:center}
+  .audit h2{font-size:clamp(24px,3.2vw,36px);font-weight:800;letter-spacing:-.01em}
+  .audit h2 span{color:var(--pink)}
+  .audit .ap{color:var(--mut);font-size:14.5px;line-height:1.68;margin:14px 0 20px;max-width:480px}
+  .audit ul{list-style:none;display:grid;gap:9px}
+  .audit li{font-size:13.5px;color:var(--mut);padding-left:24px;position:relative;line-height:1.5}
+  .audit li::before{content:"✓";position:absolute;left:0;color:var(--pink);font-weight:800}
+  .au-form{background:var(--pinkSoft);border:1px solid #f3d3e5;border-radius:18px;padding:26px}
+  .au-form .tag{font-size:10.5px;letter-spacing:1.6px;text-transform:uppercase;color:var(--pink);font-weight:800;margin-bottom:14px}
+  .au-form input{width:100%;border:1px solid #eec3da;background:#fff;border-radius:10px;padding:13px 15px;font-size:13.5px;margin-bottom:11px;outline:none}
+  .au-form input:focus{border-color:var(--pink)}
+  .au-form .cta{width:100%;background:var(--pink);color:#fff;padding:14px;font-size:14px;border-radius:10px;animation:pinkpulse 2.4s ease-out infinite}
+  @keyframes pinkpulse{0%{box-shadow:0 0 0 0 rgba(194,64,141,.45)}70%{box-shadow:0 0 0 14px rgba(194,64,141,0)}100%{box-shadow:0 0 0 0 rgba(194,64,141,0)}}
+  .au-form .micro{font-size:11px;color:var(--mut);margin-top:10px;text-align:center}
+  footer{padding:34px 40px;font-size:12.5px;color:var(--mut);max-width:1160px;margin:0 auto;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+  footer a:hover{color:var(--ink)}
+  @media(max-width:900px){nav ul{display:none}.hero{padding:120px 20px 40px}section{padding:70px 20px}
+   .journey,.gwrap,.intel,.funnels,.audit{grid-template-columns:1fr}.funnelbox,.audit{padding:36px 24px}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="/">
+    <svg viewBox="0 0 64 64" width="30" height="30" xmlns="http://www.w3.org/2000/svg"><rect width="64" height="64" rx="16" fill="#0a1733"/><circle cx="28" cy="28" r="13.5" fill="none" stroke="#35e0c8" stroke-width="4"/><path d="M38 38 L48.5 48.5" stroke="#35e0c8" stroke-width="5.5" stroke-linecap="round"/><path d="M21 33.5 L26.5 26.5 L29.5 29.5 L35 22.5" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M30.5 21.5 L35.5 21.9 L35.1 26.9" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M50 9 l1.9 4.2 4.2 1.9 -4.2 1.9 -1.9 4.2 -1.9 -4.2 -4.2 -1.9 4.2 -1.9 z" fill="#35e0c8"/></svg>
+    <span>your<b>digital</b>partner</span>
+  </a>
+  <ul>
+    <li>Solutions ▾
+      <div class="dd">
+        <a href="/solutions/seo-aeo-visibility">SEO &amp; AEO Visibility<small>Rank on Google, get cited by ChatGPT &amp; Perplexity</small></a>
+        <a href="/solutions/website-optimisation-cro">Website Optimisation &amp; CRO<small>Convert more of the traffic you already have</small></a>
+        <a href="/solutions/paid-campaigns">Paid Campaigns<small>Google &amp; LinkedIn Ads that build pipeline</small></a>
+      </div>
+    </li>
+    <li><a href="/#results">Results</a></li>
+    <li><a href="/#approach">Why me</a></li>
+    <li><a href="#audit">Free ad audit</a></li>
+  </ul>
+  <a class="cta" href="#audit">Free ad audit</a>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Solution 03 · Paid Campaigns</span>
+    <h1>Ads accountable to <span class="hl">pipeline.</span><br>Not clicks.</h1>
+    <p>Anyone can spend your budget. I build full-funnel Google and LinkedIn campaigns that nurture prospects through their buying journey — the right format, the right message, the right moment — with every decision guided by what the data says is converting.</p>
+    <div class="platchips">
+      <span class="plat"><svg class="gmark" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg> Google Ads</span>
+      <span class="plat"><span class="limark">in</span> LinkedIn Ads</span>
+    </div>
+  </div>
+</header>
+
+<section class="reveal bg-li">
+  <div class="wrap">
+    <span class="eyebrow e-li">LinkedIn Ads · Full-funnel nurture</span>
+    <h2 class="sec">Meet prospects where they are in the journey.</h2>
+    <p class="lead">Nobody buys B2B software from one ad. I build nurture journeys where each stage uses the format that works for that moment — and the data from each stage feeds the targeting of the next.</p>
+    <div class="journey">
+      <div class="stagecard">
+        <span class="stg">Stage 1 · Awareness</span>
+        <h3>Get known, not ignored</h3>
+        <div class="fmt">Format: Video &amp; thought-leader ads</div>
+        <p>Short video and founder-voice content builds familiarity with your ICP — measured by view-through and engagement, not clicks.</p>
+        <div class="liad">
+          <div class="lihead"><span class="liav">YB</span><div><b>Your Brand</b><small>Promoted</small></div></div>
+          <div class="licopy">The way buyers find software has changed. Here's what the data shows… 📊</div>
+          <div class="limedia vmedia"><span class="vplay">▶</span><span class="vbar"><i></i></span></div>
+          <div class="lifoot"><span>1,240 reactions</span><b>Learn more</b></div>
+        </div>
+      </div>
+      <div class="stagecard">
+        <span class="stg">Stage 2 · Consideration</span>
+        <h3>Educate the engaged</h3>
+        <div class="fmt">Format: Document &amp; carousel ads</div>
+        <p>Viewers from stage 1 get guides, comparisons and carousels — value-first content that positions you as the safe choice.</p>
+        <div class="liad">
+          <div class="lihead"><span class="liav">YB</span><div><b>Your Brand</b><small>Promoted · Retargeted</small></div></div>
+          <div class="licopy">The 2026 buyer's guide — swipe the highlights 👇</div>
+          <div class="limedia cmedia"><div class="ctrack">
+            <div class="ccard"><i>📘</i>5 costs hiding in your current setup<small>Page 1 of 8</small></div>
+            <div class="ccard"><i>📊</i>Benchmarks: what good looks like<small>Page 2 of 8</small></div>
+            <div class="ccard"><i>✅</i>The evaluation checklist<small>Page 3 of 8</small></div>
+            <div class="ccard"><i>📘</i>5 costs hiding in your current setup<small>Page 1 of 8</small></div>
+          </div></div>
+          <div class="lifoot"><span>486 downloads</span><b>View document</b></div>
+        </div>
+      </div>
+      <div class="stagecard">
+        <span class="stg">Stage 3 · Decision</span>
+        <h3>Convert the ready</h3>
+        <div class="fmt">Format: Lead Gen Forms + retargeting</div>
+        <p>Engaged prospects get native lead gen forms — pre-filled from their profile, so converting takes two taps, not two minutes.</p>
+        <div class="liad">
+          <div class="lihead"><span class="liav">YB</span><div><b>Your Brand</b><small>Promoted · Retargeted</small></div></div>
+          <div class="licopy">See it live — book a 20-minute demo.</div>
+          <div class="limedia fmedia">
+            <div class="prefill">✓ Pre-filled from LinkedIn profile</div>
+            <u><i>Sarah Whitmore</i></u>
+            <u><i>Marketing Director · TechCo</i></u>
+            <div class="fsub">SUBMIT</div>
+            <div class="ftick">✓ New MQL synced to CRM</div>
+          </div>
+          <div class="lifoot"><span>2-tap conversion</span><b>Book demo</b></div>
+        </div>
+      </div>
+    </div>
+    <div class="retarget">
+      Engaged with stage 1 <span class="arrowflow">→</span> retargeted in stage 2 <span class="arrowflow">→</span> converted in stage 3 · every audience built from real engagement data
+    </div>
+  </div>
+</section>
+
+<section class="reveal bg-white">
+  <div class="wrap">
+    <span class="eyebrow e-google">Google Ads · Own the moment of intent</span>
+    <h2 class="sec">Show up when they're actually looking.</h2>
+    <p class="lead">Google captures demand at its hottest — the moment someone searches for what you solve. The difference between profit and wasted spend is precision: the right campaign type, ruthlessly targeted.</p>
+    <div class="gwrap">
+      <div class="gcard big">
+        <span class="gt">Search campaigns</span>
+        <h3>High-intent keywords, message-matched ads</h3>
+        <p>Tightly themed ad groups where the ad answers the exact search — then the landing page carries the same message through to conversion.</p>
+        <div class="serp">
+          <div class="sbar">🔍 <span class="q" id="query"></span></div>
+          <div class="gad">
+            <span class="sp">Sponsored</span>
+            <div class="gurl">your-digital-partner.co.uk</div>
+            <a class="ghead" id="ghead">B2B Paid Ads That Build Pipeline | Google &amp; LinkedIn Expert</a>
+            <p class="gdesc" id="gdesc">£1m Pipeline From £65k Spend. Data-Led Targeting, Ad Copy &amp; Landing Pages. Free Ad Audit In 48 Hours.</p>
+            <div class="glinks"><span>Free Ad Audit</span><span>Case Studies</span><span>LinkedIn ABM</span><span>Pricing</span></div>
+          </div>
+          <div class="gad gad2">
+            <span class="sp">Sponsored</span>
+            <div class="gurl">generic-agency.com</div>
+            <a class="ghead">Digital Marketing Agency | We Do Everything For Everyone</a>
+            <p class="gdesc">Full service agency. Contact us today for a quote.</p>
+          </div>
+        </div>
+      </div>
+      <div class="gcard">
+        <span class="gt">Retargeting &amp; display</span>
+        <h3>Stay in the deal after they leave</h3>
+        <p>95% of visitors leave without converting. Frequency-capped retargeting keeps you present through long B2B buying cycles — without stalking anyone.</p>
+        <div class="banner">
+          <div class="bmsg"><b>Still comparing options?</b><span>See the case study: £1m pipeline from £65k</span></div>
+          <span class="bcta">Read it →</span>
+        </div>
+        <div class="freq">Frequency-capped · sequenced messaging · burn lists for closed deals</div>
+      </div>
+      <div class="gcard">
+        <span class="gt">Performance Max &amp; YouTube</span>
+        <h3>Scale what search proves</h3>
+        <p>Once search data shows which messages and audiences convert, PMax and YouTube extend the winners across Google's full inventory — with guardrails so quality doesn't slip.</p>
+        <div class="banner" style="background:linear-gradient(120deg,#1a2c56,#2f5fd0)">
+          <div class="bmsg"><b>▶ 6-sec bumper ad</b><span>Served to converting audience lookalikes only</span></div>
+          <span class="bcta" style="background:#fff">Watch</span>
+        </div>
+        <div class="freq">Fed by search conversion data · not switched on until it's earned</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reveal bg-pink">
+  <div class="wrap">
+    <span class="eyebrow">Targeting intelligence</span>
+    <h2 class="sec">The data decides where every pound goes.</h2>
+    <p class="lead">Campaigns aren't "set live and hope". I continuously analyse who's interacting, who's converting and what it costs — then move budget to what's working.</p>
+    <div class="intel">
+      <div class="icard">
+        <h3>✍️ Ad copy testing</h3>
+        <p>Every headline and description earns its place. Losers get killed, winners get budget.</p>
+        <div class="istage ct">
+          <div class="ct a"><div class="l"><span>"Full-service marketing agency"</span><span>CTR 1.2%</span></div><div class="t"><div class="f"></div></div></div>
+          <div class="ct b"><div class="l"><span>"£1m pipeline from £65k spend"</span><span>CTR 2.9%</span></div><div class="t"><div class="f"></div></div></div>
+          <div class="iwin">🏆 Proof-led copy wins — rolled out across ad groups</div>
+        </div>
+      </div>
+      <div class="icard">
+        <h3>🕘 Time &amp; day analysis</h3>
+        <p>B2B buyers convert on a schedule. Bid up when they're buying, down when they're not.</p>
+        <div class="istage">
+          <div class="tod"><i style="height:15%"></i><i style="height:10%"></i><i style="height:12%"></i><i style="height:20%"></i><i class="hi" style="height:78%"></i><i class="hi" style="height:95%"></i><i class="hi" style="height:82%"></i><i style="height:45%"></i><i style="height:38%"></i><i style="height:30%"></i><i style="height:14%"></i><i style="height:8%"></i></div>
+          <div class="todnote">Tue–Thu 9–11am converts 3× cheaper → bids shifted</div>
+        </div>
+      </div>
+      <div class="icard">
+        <h3>👥 Audience analysis</h3>
+        <p>Who's actually converting — by role, industry and company size — decides where budget flows.</p>
+        <div class="istage aud">
+          <div class="audrow"><span>IT Directors · 200–1000 employees</span><span class="cv good">4.2% conv ▲</span></div>
+          <div class="audrow"><span>Ops Managers · SMB</span><span class="cv bad">0.9% conv ▼</span></div>
+          <div class="audrow"><span>Finance leaders · retargeted</span><span class="cv good">3.1% conv ▲</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reveal">
+  <div class="wrap">
+    <div class="funnelbox" id="funnels">
+      <h2>From spend to <span>pipeline.</span></h2>
+      <p class="fsub">Clicks don't pay salaries. Every campaign reports on the full journey — impressions to leads to pipeline — so you always know what your budget actually bought.</p>
+      <div class="funnels">
+        <div class="fun g">
+          <div class="fhead"><svg class="gmark" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg> Google Ads</div>
+          <div class="frow"><div class="fl"><span>Impressions</span><span data-c="412" data-suf="k">0</span></div><div class="ft"><div class="ff" data-w="100"></div></div></div>
+          <div class="frow"><div class="fl"><span>Clicks</span><span data-c="18" data-suf="k">0</span></div><div class="ft"><div class="ff" data-w="72"></div></div></div>
+          <div class="frow"><div class="fl"><span>Conversions</span><span data-c="640" data-suf="">0</span></div><div class="ft"><div class="ff" data-w="44"></div></div></div>
+          <div class="frow"><div class="fl"><span>SQLs</span><span data-c="112" data-suf="">0</span></div><div class="ft"><div class="ff" data-w="24"></div></div></div>
+          <div class="fpipe"><small>Pipeline from £65k spend</small><b data-c="1" data-pre="£" data-suf="m">£0</b></div>
+        </div>
+        <div class="fun l">
+          <div class="fhead"><span class="limark">in</span> LinkedIn Ads</div>
+          <div class="frow"><div class="fl"><span>Target account reach</span><span data-c="96" data-suf="k">0</span></div><div class="ft"><div class="ff" data-w="100"></div></div></div>
+          <div class="frow"><div class="fl"><span>Engagements</span><span data-c="7.4" data-suf="k">0</span></div><div class="ft"><div class="ff" data-w="68"></div></div></div>
+          <div class="frow"><div class="fl"><span>Lead gen form fills</span><span data-c="212" data-suf="">0</span></div><div class="ft"><div class="ff" data-w="40"></div></div></div>
+          <div class="frow"><div class="fl"><span>MQLs</span><span data-c="40" data-suf="+">0</span></div><div class="ft"><div class="ff" data-w="20"></div></div></div>
+          <div class="fpipe"><small>Pipeline from ABM campaigns</small><b data-c="400" data-pre="£" data-suf="k">£0</b></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reveal" id="audit" style="padding-top:0">
+  <div class="wrap">
+    <div class="audit">
+      <div>
+        <h2>Get a free <span>ad account audit.</span></h2>
+        <p class="ap">Most accounts I review are leaking 20–40% of their budget. Send me your details and within 48 hours I'll tell you where — and what I'd fix first.</p>
+        <ul>
+          <li>Wasted spend finder — keywords, audiences &amp; placements burning budget</li>
+          <li>Structure &amp; tracking review — is your data even telling you the truth?</li>
+          <li>The top 3 changes I'd make first, with expected impact</li>
+        </ul>
+      </div>
+      <div class="au-form">
+        <div class="tag">Free · no strings · 48h turnaround</div>
+        <!-- HUBSPOT: replace this form with your embedded HubSpot form -->
+        <form id="auform">
+          <input type="url" placeholder="Company website" required>
+          <input type="email" placeholder="Work email" required>
+          <button class="cta" type="submit">Get my free ad audit →</button>
+        </form>
+        <div class="micro">Reviewed personally by me. Your data stays private.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>© Your Digital Partner · Chris Chapman, your on-demand digital marketing partner</span>
+  <span><a href="/solutions/seo-aeo-visibility">SEO &amp; AEO</a> · <a href="/solutions/website-optimisation-cro">CRO</a> · <a href="/solutions/paid-campaigns">Paid</a> · <a href="/privacy">Privacy</a></span>
+</footer>
+
+<script>
+// Reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+
+// SERP query typing loop
+const QUERIES=["b2b google ads consultant","reduce wasted ad spend b2b","linkedin abm campaign expert"];
+const qEl=document.getElementById("query");let qi=0;
+function typeQuery(){const q=QUERIES[qi];let i=0;qEl.textContent="";
+ (function t(){i++;qEl.textContent=q.slice(0,i);
+  if(i<q.length)setTimeout(t,70);
+  else setTimeout(()=>{let j=q.length;
+   (function d(){j-=2;qEl.textContent=q.slice(0,Math.max(0,j));
+    if(j>0)setTimeout(d,25);else{qi=(qi+1)%QUERIES.length;typeQuery();}})();},3200);})();}
+typeQuery();
+
+// Funnels animate on view
+new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){
+ document.querySelectorAll("#funnels .ff").forEach((f,i)=>setTimeout(()=>f.style.width=f.dataset.w+"%",i%5*180));
+ document.querySelectorAll("#funnels [data-c]").forEach(el=>{
+  const n=parseFloat(el.dataset.c),pre=el.dataset.pre||"",suf=el.dataset.suf||"";
+  const dec=String(el.dataset.c).includes(".");let c=0;
+  const st=Math.max(dec?0.2:1,(dec?0.2:Math.round(n/40)));
+  (function t(){c=Math.min(n,c+st);el.textContent=pre+(dec?c.toFixed(1):Math.round(c))+suf;
+   if(c<n)setTimeout(t,40)})();});
+ o.disconnect()}},{threshold:.35}).observe(document.getElementById("funnels"));
+
+// Audit demo form — replace with HubSpot embed in production
+document.getElementById("auform").addEventListener("submit",e=>{e.preventDefault();
+ e.target.outerHTML='<div style="background:#fff;border:1.5px solid var(--pink);border-radius:12px;padding:22px;text-align:center;font-size:14px;line-height:1.6"><b>On it. ✅</b><br>Your ad account audit will be with you within 48 hours.</div>';});
+</script>
+</body>
+</html>
