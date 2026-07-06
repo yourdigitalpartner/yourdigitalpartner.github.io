@@ -392,12 +392,8 @@
       </div>
       <div class="td-form">
         <div class="tag">Free · no strings · 48h turnaround</div>
-        <!-- HUBSPOT: replace this form with your embedded HubSpot form -->
-        <form id="tdform">
-          <input type="url" placeholder="Landing page URL — e.g. yoursite.com/demo" required>
-          <input type="email" placeholder="Work email" required>
-          <button class="cta" type="submit">Get my free teardown →</button>
-        </form>
+        <script src="https://js-eu1.hsforms.net/forms/embed/146760313.js" defer></script>
+<div class="hs-form-frame" data-region="eu1" data-form-id="5a9c0217-1453-477b-82d4-9cba7b68009e" data-portal-id="146760313"></div>
         <div class="micro">Reviewed personally. No automated spam, ever.</div>
       </div>
     </div>
@@ -455,10 +451,6 @@ new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){
    mqlEl.textContent=m;pipEl.textContent="£"+p+"k";
    if(m===42&&p===680){clearInterval(iv);setTimeout(run,2600);}},60);}
  run();o.disconnect();}},{threshold:.4}).observe(mqlEl);
-
-// teardown demo form — replace with HubSpot embed in production
-document.getElementById("tdform").addEventListener("submit",e=>{e.preventDefault();
- e.target.outerHTML='<div style="background:rgba(53,224,200,.12);border:1px solid var(--lime);border-radius:12px;padding:22px;text-align:center;font-size:14px;line-height:1.6;color:#eef2fb"><b>On it. ✅</b><br>Your teardown will land in your inbox within 48 hours.</div>';});
 </script>
 </body>
 </html>
