@@ -41,11 +41,14 @@
   .logo{font-weight:800;font-size:15.5px;white-space:nowrap;display:flex;align-items:center;gap:9px;letter-spacing:-.2px}.logo b{color:#0d9488}.logo svg{display:block}
   nav ul{display:flex;gap:20px;list-style:none;font-size:13px;color:var(--mut)}
   nav ul li{cursor:pointer;position:relative}nav ul li:hover{color:var(--ink)}
-  .dd{position:absolute;top:34px;left:-14px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:8px;min-width:250px;box-shadow:0 18px 40px rgba(8,20,48,.14);opacity:0;visibility:hidden;transform:translateY(6px);transition:all .2s}
+  .dd{position:absolute;top:34px;left:-40px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:10px;width:450px;box-shadow:0 24px 60px rgba(8,20,48,.18);opacity:0;visibility:hidden;transform:translateY(6px);transition:all .2s}
   li:hover .dd{opacity:1;visibility:visible;transform:none}
-  .dd a{display:block;padding:10px 12px;border-radius:9px;font-size:13px;color:var(--ink)}
+  .dd a{display:flex;gap:14px;align-items:flex-start;padding:14px;border-radius:14px;font-size:14px;color:var(--ink);transition:background .15s}
   .dd a:hover{background:var(--soft)}
-  .dd a small{display:block;color:var(--mut);font-size:11.5px;margin-top:2px}
+  .dd .ic{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;font-size:19px;flex-shrink:0}
+  .dd .ic.g{background:#dcf3ef}.dd .ic.b{background:#e8effe}.dd .ic.p{background:#fceaf3}
+  .dd a b{display:block;font-size:14px;margin-bottom:3px}
+  .dd a small{display:block;color:var(--mut);font-size:12px;line-height:1.5}
   .cta{background:var(--ink);color:var(--lime);border:none;padding:10px 20px;border-radius:99px;font-size:13px;font-weight:700;cursor:pointer;transition:transform .2s;white-space:nowrap}
   .cta:hover{transform:scale(1.05)}
   /* HERO */
@@ -63,14 +66,15 @@
   .p-pink{color:var(--pink);border-color:var(--pink)}
   .p-lime{color:#c2410c;border-color:#f97316}
   /* SCORECARD CARD */
-  .gauge-card{max-width:860px;margin:0 auto;background:var(--card);border:1px solid var(--line);border-radius:26px;box-shadow:0 24px 60px rgba(8,20,48,.1);display:grid;grid-template-columns:1.1fr 1fr;overflow:hidden;text-align:left;position:relative}
+  .gauge-card{max-width:1020px;margin:0 auto;background:var(--card);border:1px solid var(--line);border-radius:26px;box-shadow:0 24px 60px rgba(8,20,48,.1);display:grid;grid-template-columns:1.1fr 1fr;overflow:hidden;text-align:left;position:relative}
   /* animated gradient border draws the eye to the scorecard card */
   @property --a{syntax:'<angle>';initial-value:0deg;inherits:false}
   .gauge-card::before{content:"";position:absolute;inset:0;border-radius:26px;padding:2px;background:conic-gradient(from var(--a),#35e0c8,#0d9488 30%,transparent 55%,transparent 75%,#35e0c8);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:spinb 4.5s linear infinite;pointer-events:none;z-index:2}
   @keyframes spinb{to{--a:360deg}}
   .gc-form{padding:34px}
-  .gc-form h2{font-size:22px;margin-bottom:8px;letter-spacing:-.01em}
-  .gc-form p{color:var(--mut);font-size:14px;line-height:1.6;margin-bottom:18px}
+  .gc-form h2{font-size:29px;margin-bottom:12px;letter-spacing:-.02em;line-height:1.15;font-weight:800}
+  .gc-form h2 span{background:var(--lime);border-radius:8px;padding:0 8px}
+  .gc-form p{color:var(--mut);font-size:14px;line-height:1.6;margin-bottom:4px}
   .gc-form input{width:100%;border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;margin-bottom:12px;outline:none;background:#fff}
   .gc-form input:focus{border-color:var(--ink)}
   .gc-form .cta{width:100%;padding:15px;font-size:14px;border-radius:12px;position:relative;overflow:hidden;animation:pulseGlow 2.4s ease-out infinite}
@@ -102,43 +106,55 @@
   .logos span:hover{color:var(--ink)}
   /* BENTO */
   .bento{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;margin-top:46px}
-  .cell{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:38px 34px;position:relative;transition:transform .25s,box-shadow .25s;overflow:hidden;display:block;min-height:220px}
-  .cell:hover{transform:translateY(-6px) rotate(-.4deg);box-shadow:0 24px 52px rgba(8,20,48,.16)}
+  .cell{background:#fff;border:1.5px solid var(--line);border-radius:24px;padding:40px 36px;position:relative;transition:all .25s;overflow:hidden;display:block;min-height:250px}
+  .cell:hover{transform:translateY(-6px)}
   .s2{grid-column:span 2}.s3{grid-column:span 3}.s6{grid-column:span 6}
-  .cell .tag{font-size:11px;letter-spacing:1.6px;text-transform:uppercase;font-weight:800;margin-bottom:14px;color:var(--mut)}
-  .cell h3{font-size:22px;margin-bottom:10px;letter-spacing:-.01em}
+  .cell .icq{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;font-size:25px;margin-bottom:20px}
+  .cell .tag{font-size:11px;letter-spacing:1.6px;text-transform:uppercase;font-weight:800;margin-bottom:10px}
+  .cell h3{font-size:22px;margin-bottom:10px;letter-spacing:-.01em;color:var(--ink)}
   .cell p{font-size:14.5px;color:var(--mut);line-height:1.65}
-  .t-green{border-left:8px solid var(--green);background:linear-gradient(160deg,#d7f2ee,#fff 62%)}.t-green .tag{color:var(--green)}
-  .t-blue{border-left:8px solid var(--blue);background:linear-gradient(160deg,#dbe7fd,#fff 62%)}.t-blue .tag{color:var(--blue)}
-  .t-pink{border-left:8px solid var(--pink);background:linear-gradient(160deg,#fadcee,#fff 62%)}.t-pink .tag{color:var(--pink)}
-  .t-lime{border-left:8px solid #f97316;background:linear-gradient(160deg,#ffe4cf,#fff 62%)}.t-lime .tag{color:#c2410c}
-  .go{position:absolute;top:20px;right:22px;width:32px;height:32px;border-radius:50%;border:1px solid currentColor;display:grid;place-items:center;font-size:14px;transition:all .25s}
+  .t-green .icq{background:#dcf3ef}.t-green .tag{color:var(--green)}
+  .t-green:hover{border-color:var(--green);box-shadow:0 24px 52px rgba(13,148,136,.2)}
+  .t-blue .icq{background:#e8effe}.t-blue .tag{color:var(--blue)}
+  .t-blue:hover{border-color:var(--blue);box-shadow:0 24px 52px rgba(47,95,208,.2)}
+  .t-pink .icq{background:#fceaf3}.t-pink .tag{color:var(--pink)}
+  .t-pink:hover{border-color:var(--pink);box-shadow:0 24px 52px rgba(194,64,141,.18)}
+  .t-lime .icq{background:#ffefe0}.t-lime .tag{color:#c2410c}
+  .t-lime:hover{border-color:#f97316;box-shadow:0 24px 52px rgba(249,115,22,.18)}
+  .go{position:absolute;top:22px;right:24px;width:32px;height:32px;border-radius:50%;border:1px solid var(--line);color:var(--mut);display:grid;place-items:center;font-size:14px;transition:all .25s;z-index:1}
   .cell:hover .go{background:var(--ink);color:var(--lime);border-color:var(--ink)}
-  .cell.dark:hover .go{background:var(--lime);color:var(--ink)}
   /* QUIZ */
   .qopts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
   .qopt{border:1px solid var(--line);background:#fff;border-radius:12px;padding:13px;font-size:13px;cursor:pointer;text-align:left;transition:all .2s;color:var(--ink)}
   .qopt:hover{border-color:var(--ink);background:var(--soft);transform:scale(1.02)}
   .qstep{font-size:10.5px;letter-spacing:1.5px;text-transform:uppercase;color:#0d9488;margin-bottom:8px}
-  /* CASE STUDIES */
-  .cases{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:46px}
-  .case{background:var(--card);border:1px solid var(--line);border-top:8px solid var(--line);border-radius:22px;padding:36px;transition:transform .25s,box-shadow .25s}
-  .case:hover{transform:translateY(-6px);box-shadow:0 24px 52px rgba(8,20,48,.16)}
-  .case.a-blue{border-top-color:var(--blue);background:linear-gradient(180deg,#dbe7fd,#fff 50%)}.case.a-blue h3,.case.a-blue .visit{color:var(--blue)}
-  .case.a-green{border-top-color:var(--green);background:linear-gradient(180deg,#d7f2ee,#fff 50%)}.case.a-green h3,.case.a-green .visit{color:var(--green)}
-  .case.a-pink{border-top-color:var(--pink);background:linear-gradient(180deg,#fadcee,#fff 50%)}.case.a-pink h3,.case.a-pink .visit{color:var(--pink)}
-  .case.a-lime{border-top-color:#f97316;background:linear-gradient(180deg,#ffe4cf,#fff 50%)}.case.a-lime h3,.case.a-lime .visit{color:#c2410c}
-  .case .shot{width:100%;border-radius:12px;border:1px solid var(--line);margin-bottom:18px;aspect-ratio:1354/730;object-fit:cover;display:block}
-  .case .visit{display:inline-block;margin-top:14px;font-weight:700;font-size:13px}
-  .case .visit:hover{text-decoration:underline}
-  .case-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:10px;flex-wrap:wrap}
-  .case-head h3{font-size:23px;letter-spacing:-.01em}
-  .case-head span{font-size:11.5px;letter-spacing:1px;text-transform:uppercase;color:var(--mut)}
-  .case>p{font-size:13.5px;color:var(--mut);line-height:1.65;margin-bottom:14px}
-  .case ul{list-style:none;display:grid;gap:8px}
-  .case li{font-size:13px;color:var(--mut);line-height:1.55;padding-left:20px;position:relative}
-  .case li::before{content:"✓";position:absolute;left:0;color:#0d9488;font-weight:800}
-  .case li b{color:var(--ink)}
+  /* SUCCESS STORIES */
+  .stories{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:46px}
+  .story{border:1px solid rgba(255,255,255,.08);border-radius:24px;padding:38px 32px;color:#eef2fb;position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s;display:block}
+  .story:hover{transform:translateY(-6px)}
+  .story::after{content:"";position:absolute;width:300px;height:300px;border-radius:50%;top:-120px;right:-100px;pointer-events:none}
+  .story.sg{background:#073530}
+  .story.sb{background:#0c2150}
+  .story.sp{background:#3a1031}
+  .story.sg:hover{box-shadow:0 28px 60px rgba(7,53,48,.45)}
+  .story.sb:hover{box-shadow:0 28px 60px rgba(12,33,80,.45)}
+  .story.sp:hover{box-shadow:0 28px 60px rgba(58,16,49,.45)}
+  .story.sg::after{background:radial-gradient(circle,rgba(53,224,200,.3),transparent 70%)}
+  .story.sb::after{background:radial-gradient(circle,rgba(91,139,255,.32),transparent 70%)}
+  .story.sp::after{background:radial-gradient(circle,rgba(239,107,181,.3),transparent 70%)}
+  .story .stag{font-size:11px;letter-spacing:1.6px;text-transform:uppercase;font-weight:800;margin-bottom:24px;display:block}
+  .story.sg .stag,.story.sg .visit{color:var(--lime)}
+  .story.sb .stag,.story.sb .visit{color:#5b8bff}
+  .story.sp .stag,.story.sp .visit{color:#ef6bb5}
+  .story .big{font-size:56px;font-weight:800;line-height:1;display:block;letter-spacing:-.02em;color:#fff}
+  .story .biglab{color:#93a5c1;font-size:13.5px;margin:10px 0 24px;display:block;line-height:1.5}
+  .minis{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:22px}
+  .mini{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:14px}
+  .mini b{font-size:20px;display:block;color:#fff}
+  .mini span{font-size:11px;color:#93a5c1;line-height:1.45;display:block;margin-top:3px}
+  .story .clients{font-size:11px;color:#7787a3;margin-bottom:16px;letter-spacing:.3px}
+  .story .visit{font-weight:700;font-size:13px;display:inline-block}
+  .story .visit:hover{text-decoration:underline}
   /* BIG QUIZ */
   .quizbig{background:var(--ink);border-radius:28px;padding:64px 60px;color:#eef2fb;position:relative;overflow:hidden}
   .quizbig::before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(53,224,200,.28),transparent 70%);top:-160px;right:-100px;pointer-events:none}
@@ -146,15 +162,32 @@
   .quizbig .qstep{color:var(--lime);font-size:12px;letter-spacing:2.5px}
   .quizbig h3{font-size:clamp(24px,3.2vw,36px);margin:12px 0 6px;letter-spacing:-.01em;position:relative;z-index:1}
   .quizbig .qopts{gap:14px;margin-top:30px;position:relative;z-index:1}
-  .quizbig .qopt{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.2);color:#eef2fb;padding:22px 24px;font-size:15.5px;border-radius:16px}
+  .quizbig .qopt{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.2);color:#eef2fb;padding:22px 24px;font-size:15.5px;border-radius:16px;display:flex;justify-content:space-between;align-items:center;gap:12px}
   .quizbig .qopt:hover{background:var(--lime);border-color:var(--lime);color:var(--ink);transform:scale(1.02)}
+  .qopt .qarr{opacity:0;transform:translateX(-8px);transition:all .25s;font-weight:800;flex-shrink:0}
+  .qopt:hover .qarr{opacity:1;transform:none}
+  /* first option highlighted by default so visitors know these are clickable */
+  .quizbig .qopts .qopt:first-child{background:var(--lime);border-color:var(--lime);color:var(--ink)}
+  .quizbig .qopts .qopt:first-child .qarr{opacity:1;transform:none}
+  .quizbig .qopts:hover .qopt:first-child:not(:hover){background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.2);color:#eef2fb}
+  .quizbig .qopts:hover .qopt:first-child:not(:hover) .qarr{opacity:0}
   .quizbig p{position:relative;z-index:1}
   .qhint{color:#93a5c1;font-size:13.5px;margin-top:6px}
-  /* WHY */
+  /* ABOUT */
   .why-frame{background:#fff;border:1.5px solid var(--ink);border-radius:26px;padding:52px;box-shadow:10px 10px 0 rgba(8,20,48,.07)}
-  .why{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}
-  .why .facts{display:grid;gap:12px}
-  .fact{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;font-size:13.5px;line-height:1.55;color:var(--mut)}
+  .about-grid{display:grid;grid-template-columns:290px 1fr;gap:48px;align-items:center}
+  .headshot-card{text-align:center}
+  .headshot{width:100%;max-width:260px;aspect-ratio:1;object-fit:cover;border-radius:24px;box-shadow:0 20px 44px rgba(8,20,48,.2);display:block;margin:0 auto}
+  .hs-fallback{display:none;width:260px;aspect-ratio:1;border-radius:24px;background:var(--ink);color:var(--lime);place-items:center;font-size:64px;font-weight:800;margin:0 auto}
+  .hname{font-weight:800;font-size:17px;margin-top:16px}
+  .hrole{font-size:12.5px;color:var(--mut);margin-bottom:16px}
+  .points{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:26px 0}
+  .point{display:flex;gap:13px;align-items:flex-start}
+  .point .pic{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;font-size:19px;flex-shrink:0}
+  .pic.g{background:#dcf3ef}.pic.b{background:#e8effe}.pic.p{background:#fceaf3}.pic.o{background:#ffefe0}
+  .point b{display:block;font-size:15px;margin-bottom:2px}
+  .point span{font-size:12.5px;color:var(--mut);line-height:1.55;display:block}
+  .fact{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px;font-size:13.5px;line-height:1.55;color:var(--mut)}
   .fact b{color:var(--ink)}
   .li-banner{display:flex;align-items:center;gap:16px;background:#0a66c2;border:none;color:#dcebff;font-size:14px;cursor:pointer;transition:transform .2s,box-shadow .2s}
   .li-banner b{color:#fff;font-size:15.5px}
@@ -179,7 +212,7 @@
   .final .cta{background:var(--lime);color:var(--ink);font-size:15px;padding:15px 32px;margin-top:26px}
   footer{padding:34px 40px;font-size:12.5px;color:var(--mut);max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:gap;gap:14px;flex-wrap:wrap}
   footer a:hover{color:var(--ink)}
-  @media(max-width:900px){nav ul{display:none}.hero,section{padding-left:20px;padding-right:20px}.bento{grid-template-columns:1fr}.s2,.s3,.s6{grid-column:span 1}.cases{grid-template-columns:1fr}.quizbig{padding:44px 26px}.why-frame{padding:28px 22px}.gauge-card{grid-template-columns:1fr}.gc-demo{border-left:none;border-top:1px solid var(--line)}.why{grid-template-columns:1fr}}
+  @media(max-width:900px){nav ul{display:none}.hero,section{padding-left:20px;padding-right:20px}.bento{grid-template-columns:1fr}.s2,.s3,.s6{grid-column:span 1}.stories{grid-template-columns:1fr}.quizbig{padding:44px 26px}.why-frame{padding:28px 22px}.gauge-card{grid-template-columns:1fr}.gc-demo{border-left:none;border-top:1px solid var(--line)}.about-grid{grid-template-columns:1fr}.points{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -192,36 +225,34 @@
   <ul>
     <li>Solutions ▾
       <div class="dd">
-        <a href="/solutions/seo-aeo-visibility">SEO &amp; AEO Visibility<small>Rank on Google, get cited by ChatGPT &amp; Perplexity</small></a>
-        <a href="/solutions/website-optimisation-cro">Website Optimisation &amp; CRO<small>Convert more of the traffic you already have</small></a>
-        <a href="/solutions/paid-campaigns">Paid Campaigns<small>Google &amp; LinkedIn Ads that build pipeline</small></a>
+        <a href="/solutions/seo-aeo-visibility"><span class="ic g">🔍</span><span><b>SEO &amp; AEO Visibility</b><small>Rank on Google and get cited by ChatGPT, Gemini &amp; Perplexity</small></span></a>
+        <a href="/solutions/website-optimisation-cro"><span class="ic b">📈</span><span><b>Website Optimisation &amp; CRO</b><small>Heatmaps, A/B testing &amp; personalisation that turn traffic into pipeline</small></span></a>
+        <a href="/solutions/paid-campaigns"><span class="ic p">🎯</span><span><b>Paid Campaigns</b><small>Google &amp; LinkedIn Ads accountable to revenue, not clicks</small></span></a>
       </div>
     </li>
-    <li><a href="#results">Results</a></li>
-    <li><a href="#approach">Why me</a></li>
+    <li><a href="#results">Success Stories</a></li>
+    <li><a href="#approach">About</a></li>
     <li><a href="#faq">FAQs</a></li>
   </ul>
-  <button class="cta" onclick="document.getElementById('scorecard').scrollIntoView()">Free scorecard</button>
+  <button class="cta" onclick="document.getElementById('scorecard').scrollIntoView()">Free AEO audit</button>
 </nav>
 
 <header class="hero">
-  <h1>Your growth,<br><span class="hl">measurably</span> better.</h1>
-  <p class="sub">I'm Chris Chapman — a senior digital marketer with 13+ years in-house, from Mercedes-Benz and Volkswagen Group to NASDAQ-listed and B2B SaaS companies. I help brands get found in Google and AI search, convert more of their visitors, and make every ad pound accountable to pipeline.</p>
+  <h1>More visibility. More leads.<br><span class="hl">Measurable growth.</span></h1>
+  <p class="sub">Your next customers are already searching — on Google <em>and</em> in ChatGPT. I help ambitious businesses get found in both, turn more visitors into leads, and make every ad pound accountable to revenue. Senior expertise from 13+ years in-house at brands like Mercedes-Benz and Copart — without the agency overhead.</p>
   <div class="svc-pills">
     <a class="svc-pill p-green" href="/solutions/seo-aeo-visibility">🔍 SEO &amp; AEO</a>
     <a class="svc-pill p-blue" href="/solutions/website-optimisation-cro">📈 Website Optimisation &amp; CRO</a>
     <a class="svc-pill p-pink" href="/solutions/paid-campaigns">🎯 Paid Ads — Google &amp; LinkedIn</a>
-    <a class="svc-pill p-lime" href="/solutions/ai-marketing">🤖 AI-Embedded Marketing</a>
   </div>
 
   <div class="gauge-card" id="scorecard">
     <div class="gc-form">
-      <h2>How visible is your brand in AI &amp; search?</h2>
+      <h2>How <span>visible</span> is your brand in AI &amp; search?</h2>
       <p>Get your free visibility scorecard — SEO, AI visibility (AEO) and conversion signals, with prioritised fixes. Delivered within 48 hours.</p>
       <!-- HUBSPOT: replace this form with your embedded HubSpot form (see implementation guide) -->
       <script src="https://js-eu1.hsforms.net/forms/embed/146760313.js" defer></script>
 <div class="hs-form-frame" data-region="eu1" data-form-id="cae80dee-6896-4409-bdc6-da17c2280ba1" data-portal-id="146760313"></div>
-      <div class="micro">Free, human-reviewed, no strings. You'll get it within 48 hours.</div>
     </div>
     <div class="gc-demo" id="demo">
       <span class="tag">Example scorecard</span>
@@ -235,17 +266,17 @@
 
 <div class="trust reveal">
   <p>Trusted by teams at</p>
-  <div class="logos"><span>CloudSense</span><span>Zema Global</span><span>Copart UK</span><span>VBOX Automotive</span><span>Causeway</span><span>RACELOGIC</span></div>
+  <div class="logos"><span>Causeway</span><span>CloudSense</span><span>Copart UK</span><span>Zema Global</span><span>VBOX Automotive</span><span>RACELOGIC</span></div>
 </div>
 
 <section class="reveal" id="solutions">
   <h2 class="sec">How I can add value to your business.</h2>
   <p class="lead">It all connects: SEO &amp; AEO get you found, your website converts that attention, paid ads accelerate it, and AI makes the whole engine smarter.</p>
   <div class="bento">
-    <a class="cell s3 t-green" href="/solutions/seo-aeo-visibility"><span class="go">↗</span><div class="tag">SEO &amp; AEO</div><h3>Grow your visibility in search &amp; AI</h3><p>Technical SEO and E-E-A-T content that earn page-one rankings — plus schema, AI-crawler access and answer-first structure so ChatGPT, Gemini and Perplexity cite you too.</p></a>
-    <a class="cell s3 t-blue" href="/solutions/website-optimisation-cro"><span class="go">↗</span><div class="tag">Website Optimisation &amp; CRO</div><h3>Convert more of your traffic</h3><p>My specialism: using data to understand behaviour and remove friction. Heatmaps, A/B testing and persona-based personalisation that turn visitors into pipeline.</p></a>
-    <a class="cell s3 t-pink" href="/solutions/paid-campaigns"><span class="go">↗</span><div class="tag">Paid Campaigns</div><h3>Ads accountable to pipeline</h3><p>Google &amp; LinkedIn Ads with full-funnel ABM — targeted at the accounts and personas that actually buy, and optimised against revenue, not clicks.</p></a>
-    <a class="cell s3 t-lime" href="/solutions/ai-marketing"><span class="go">↗</span><div class="tag">AI-Embedded Marketing</div><h3>Put AI to work in your marketing</h3><p>Practical AI adoption inside your processes — reporting, content operations, personalisation and automation — so your team moves faster with more insight.</p></a>
+    <a class="cell s3 t-green" href="/solutions/seo-aeo-visibility"><span class="go">↗</span><div class="icq">🔍</div><div class="tag">SEO &amp; AEO</div><h3>Grow your visibility in search &amp; AI</h3><p>Technical SEO and E-E-A-T content that earn page-one rankings — plus schema, AI-crawler access and answer-first structure so ChatGPT, Gemini and Perplexity cite you too.</p></a>
+    <a class="cell s3 t-blue" href="/solutions/website-optimisation-cro"><span class="go">↗</span><div class="icq">📈</div><div class="tag">Website Optimisation &amp; CRO</div><h3>Convert more of your traffic</h3><p>My specialism: using data to understand behaviour and remove friction. Heatmaps, A/B testing and persona-based personalisation that turn visitors into pipeline.</p></a>
+    <a class="cell s3 t-pink" href="/solutions/paid-campaigns"><span class="go">↗</span><div class="icq">🎯</div><div class="tag">Paid Campaigns</div><h3>Ads accountable to pipeline</h3><p>Google &amp; LinkedIn Ads with full-funnel ABM — targeted at the accounts and personas that actually buy, and optimised against revenue, not clicks.</p></a>
+    <a class="cell s3 t-lime" href="/solutions/ai-marketing"><span class="go">↗</span><div class="icq">🤖</div><div class="tag">AI-Embedded Marketing</div><h3>Put AI to work in your marketing</h3><p>Practical AI adoption inside your processes — reporting, content operations, personalisation and automation — so your team moves faster with more insight.</p></a>
   </div>
 </section>
 
@@ -259,73 +290,66 @@
 </section>
 
 <section class="reveal" id="results" style="padding-top:0">
-  <h2 class="sec">Case studies.</h2>
-  <p class="lead">Trusted by industry leaders — a selection of work across visibility, website optimisation and paid.</p>
-  <div class="cases">
-    <div class="case a-blue">
-      <img class="shot" src="/assets/case-cloudsense.png" alt="CloudSense website" loading="lazy">
-      <div class="case-head"><h3>CloudSense</h3><span>B2B SaaS · Telco CPQ</span></div>
-      <p>Complete website overhaul to drive more pipeline, increase engagement and get users to the most important pages.</p>
-      <ul>
-        <li>Increased traffic to key pages by <b>+15%</b> and user engagement by <b>+8%</b></li>
-        <li>Redesigned website and navigation for UX — conversion rate <b>+6%</b></li>
-        <li><b>£2m+</b> pipeline from targeted, multi-channel ABM campaigns</li>
-      </ul>
-      <a class="visit" href="https://www.cloudsense.com" target="_blank" rel="noopener">Visit website →</a>
-    </div>
-    <div class="case a-green">
-      <img class="shot" src="/assets/case-zema.png" alt="Zema Global website" loading="lazy">
-      <div class="case-head"><h3>Zema Global</h3><span>Data &amp; analytics · Energy</span></div>
-      <p>Consolidated eight legacy systems into one integrated HubSpot CRM &amp; CMS, then launched full-funnel ABM at scale.</p>
-      <ul>
-        <li>Website migration from WordPress to HubSpot, with lead scoring &amp; Salesforce integration</li>
-        <li>MQLs <b>+18%</b> via personalised content, targeted ads and optimised landing pages</li>
-        <li>Organic traffic <b>+9%</b> — fixed indexing errors, optimised high-value E-E-A-T content</li>
-      </ul>
-      <a class="visit" href="https://zema.global" target="_blank" rel="noopener">Visit website →</a>
-    </div>
-    <div class="case a-pink">
-      <img class="shot" src="/assets/case-cashforcars.png" alt="Cash for Cars website" loading="lazy">
-      <div class="case-head"><h3>Copart — Cash for Cars</h3><span>Consumer · Automotive</span></div>
-      <p>Restructured and redesigned the site of a $33bn NASDAQ-listed company's UK consumer brand to improve conversion and SEO.</p>
-      <ul>
-        <li>PPC conversions <b>+22%</b> through campaign, content and landing page optimisation</li>
-        <li>Website conversion rate <b>+7%</b> from A/B testing customer journeys</li>
-        <li>Organic traffic <b>+12%</b> and drop-off in the quote process <b>−16%</b></li>
-      </ul>
-      <a class="visit" href="https://cashforcars.co.uk" target="_blank" rel="noopener">Visit website →</a>
-    </div>
-    <div class="case a-lime">
-      <img class="shot" src="/assets/case-vbox.png" alt="VBOX Automotive website" loading="lazy">
-      <div class="case-head"><h3>VBOX Automotive</h3><span>B2B · Test &amp; measurement</span></div>
-      <p>Modernised the brand's website and digital presence to reflect a cutting-edge industry leader, improving engagement across the funnel.</p>
-      <ul>
-        <li>Website engagement rate <b>+30%</b> after decluttering and restructuring</li>
-        <li>Doubled social media following from 2.5k to 5k</li>
-        <li><b>£298k</b> turnover from a single targeted LinkedIn campaign costing £2.5k</li>
-      </ul>
-      <a class="visit" href="https://vboxautomotive.co.uk" target="_blank" rel="noopener">Visit website →</a>
-    </div>
+  <h2 class="sec">Success stories.</h2>
+  <p class="lead">Less about logos, more about outcomes — real numbers from the three things I do best.</p>
+  <div class="stories">
+    <a class="story sg" href="/solutions/seo-aeo-visibility">
+      <span class="stag">🔍 SEO &amp; AEO Visibility</span>
+      <b class="big" data-n="100" data-pre="+" data-suf="%">0</b>
+      <span class="biglab">increase in AI visibility with a targeted AEO strategy — cited by ChatGPT, Gemini &amp; Perplexity</span>
+      <div class="minis">
+        <div class="mini"><b data-n="30" data-pre="+" data-suf="%">0</b><span>organic traffic growth from E-E-A-T content</span></div>
+        <div class="mini"><b data-n="12" data-pre="+" data-suf="%">0</b><span>more traffic to key money pages</span></div>
+      </div>
+      <span class="visit">See how I do it →</span>
+    </a>
+    <a class="story sb" href="/solutions/website-optimisation-cro">
+      <span class="stag">📈 Website Optimisation &amp; CRO</span>
+      <b class="big" data-n="14" data-pre="+" data-suf="%">0</b>
+      <span class="biglab">website conversion rate uplift — persona-based content, interactive modules &amp; heatmap-led fixes</span>
+      <div class="minis">
+        <div class="mini"><b data-n="16" data-pre="−" data-suf="%">0</b><span>drop-off in the conversion journey</span></div>
+        <div class="mini"><b data-n="22" data-pre="+" data-suf="%">0</b><span>PPC conversions from better landing pages</span></div>
+      </div>
+      <span class="visit">See how I do it →</span>
+    </a>
+    <a class="story sp" href="/solutions/paid-campaigns">
+      <span class="stag">🎯 Paid Campaigns</span>
+      <b class="big" data-n="1" data-pre="£" data-suf="m">£0</b>
+      <span class="biglab">pipeline generated from just £65k of Google Ads spend</span>
+      <div class="minis">
+        <div class="mini"><b data-n="40" data-suf="+">0</b><span>MQLs from full-funnel LinkedIn ABM</span></div>
+        <div class="mini"><b data-n="119" data-suf="x">0</b><span>return on a single targeted campaign</span></div>
+      </div>
+      <span class="visit">See how I do it →</span>
+    </a>
   </div>
 </section>
 
 <section class="reveal" id="approach" style="padding-top:0">
   <div class="why-frame">
-  <div class="why">
-    <div>
-      <h2 class="sec">Why me.</h2>
-      <p class="lead" style="margin-bottom:18px">With over 13 years in digital marketing, I learned my trade at Mercedes-Benz and Volkswagen Group before specialising in B2B tech and SaaS. I've held senior digital and demand gen roles at some of the world's largest companies — so you get strategy, execution and reporting from one senior pair of hands. No account managers, no juniors learning on your budget.</p>
-      <a href="#scorecard" style="font-weight:700;color:#0d9488">Start with your free scorecard →</a>
-    </div>
-    <div class="facts">
-      <a class="fact li-banner" href="https://linkedin.com/in/chrischapman89" target="_blank" rel="noopener">
+  <div class="about-grid">
+    <div class="headshot-card">
+      <img class="headshot" src="https://146760313.fs1.hubspotusercontent-eu1.net/hubfs/146760313/6B24F59D-9FF0-4D55-BBBA-9A13BC08B8A5.png" alt="Chris Chapman — Your Digital Partner" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+      <div class="hs-fallback">CC</div>
+      <div class="hname">Chris Chapman</div>
+      <div class="hrole">Founder · Your Digital Partner</div>
+      <a class="fact li-banner" href="https://linkedin.com/in/chrischapman89" target="_blank" rel="noopener" style="text-align:left">
         <span class="in">in</span>
-        <span><b>Chris Chapman</b><br>Driving Revenue &amp; Growth through CRO, AEO, SEO &amp; Paid Ads — view my profile</span>
+        <span><b>Connect on LinkedIn</b></span>
         <span class="li-arrow">→</span>
       </a>
-      <div class="fact"><b>Commercial, not just creative</b> — I've owned pipeline and revenue targets in-house, including £4m+ pipeline generated in the last three years.</div>
-      <div class="fact"><b>Data decides</b> — a test-and-learn approach using analytics, heatmaps and A/B testing to prove what moves the needle.</div>
-      <div class="fact"><b>AI-savvy, grounded in fundamentals</b> — embedding AI into marketing since before it was a headline, on top of deep SEO, CRO and paid experience.</div>
+    </div>
+    <div>
+      <h2 class="sec">About.</h2>
+      <p class="lead" style="max-width:100%">Senior digital marketing, without the agency overhead. One expert who's owned the numbers in-house — strategy, execution and reporting from the same pair of hands.</p>
+      <div class="points">
+        <div class="point"><span class="pic g">🏁</span><div><b>13+ years in digital</b><span>Trained at Mercedes-Benz &amp; Volkswagen Group</span></div></div>
+        <div class="point"><span class="pic b">📈</span><div><b>£4m+ pipeline</b><span>Generated in the last three years</span></div></div>
+        <div class="point"><span class="pic p">🧪</span><div><b>Data decides</b><span>Heatmaps, A/B tests, analytics — proof over opinion</span></div></div>
+        <div class="point"><span class="pic o">🤖</span><div><b>AI-first</b><span>AEO &amp; AI embedded in everything I build</span></div></div>
+      </div>
+      <a href="#scorecard" style="font-weight:700;color:#0d9488">Start with your free AEO audit →</a>
     </div>
   </div>
   </div>
@@ -343,9 +367,9 @@
 
 <section class="final reveal" style="padding-top:0">
   <div class="wrap">
-    <h2>Ready to see your <span>scorecard?</span></h2>
-    <p>Find out how visible your brand is in AI &amp; search — and exactly what to fix first. Free, delivered within 48 hours.</p>
-    <button class="cta" onclick="document.getElementById('scorecard').scrollIntoView()">Get your free visibility scorecard →</button>
+    <h2>How <span>AI-ready</span> is your brand?</h2>
+    <p>Your free AEO audit — an AI-readiness scorecard showing how visible you are in ChatGPT, Gemini &amp; Google, and exactly what to fix first. Delivered within 48 hours.</p>
+    <button class="cta" onclick="document.getElementById('scorecard').scrollIntoView()">Get my free AEO audit →</button>
   </div>
 </section>
 
@@ -381,12 +405,12 @@ let qi=0,route="aeo";
 function renderQ(){document.getElementById("qq").textContent=Q[qi].q;
  document.getElementById("qs").textContent=`Find your fastest win · Question ${qi+1} of 3`;
  const o=document.getElementById("qo");o.innerHTML="";
- Q[qi].o.forEach(([t,r])=>{const b=document.createElement("button");b.className="qopt";b.textContent=t;
+ Q[qi].o.forEach(([t,r])=>{const b=document.createElement("button");b.className="qopt";b.innerHTML=t+'<span class="qarr">→</span>';
   b.onclick=()=>{if(r&&qi===0)route=r;if(r&&qi===2)route=r;
    if(qi<2){qi++;renderQ()}else{const R=ROUTES[route];document.getElementById("quizcell").innerHTML=
    `<div class="qstep">Recommended for you</div><h3>→ ${R.t}</h3><p style="color:#93a5c1;font-size:15px;line-height:1.65;margin-top:8px;max-width:560px">${R.d}</p>
     <div style="display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;position:relative;z-index:1"><a class="cta" style="display:inline-block;background:var(--lime);color:var(--ink)" href="${R.u}">Explore ${R.t} →</a>
-    <button class="cta" style="background:rgba(255,255,255,.12);color:#eef2fb" onclick="document.getElementById('scorecard').scrollIntoView()">Or get your free scorecard</button></div>`}};
+    <button class="cta" style="background:rgba(255,255,255,.12);color:#eef2fb" onclick="document.getElementById('scorecard').scrollIntoView()">Or get your free AEO audit</button></div>`}};
   o.appendChild(b)});}
 renderQ();
 </script>
