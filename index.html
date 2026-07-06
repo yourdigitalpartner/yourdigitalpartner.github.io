@@ -52,29 +52,23 @@
   .cta{background:var(--ink);color:var(--lime);border:none;padding:10px 20px;border-radius:99px;font-size:13px;font-weight:700;cursor:pointer;transition:transform .2s;white-space:nowrap}
   .cta:hover{transform:scale(1.05)}
   /* HERO */
-  .hero{padding:130px 40px 50px;text-align:center;position:relative}
+  .hero{padding:105px 40px 40px;text-align:center;position:relative}
   .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(600px 420px at 12% 18%,rgba(47,95,208,.12),transparent 70%),radial-gradient(560px 400px at 88% 28%,rgba(194,64,141,.10),transparent 70%),radial-gradient(700px 480px at 50% 95%,rgba(53,224,200,.14),transparent 70%);pointer-events:none;z-index:-1}
-  h1{font-size:clamp(38px,5.4vw,72px);font-weight:800;letter-spacing:-.02em;line-height:1.05}
+  h1{font-size:clamp(34px,4.6vw,58px);font-weight:800;letter-spacing:-.02em;line-height:1.05}
   h1 .hl{background:var(--lime);border-radius:14px;padding:0 14px;display:inline-block;animation:pop .7s .4s cubic-bezier(.3,1.6,.5,1) backwards}
   @keyframes pop{from{transform:scale(.6);opacity:0}}
-  .sub{color:var(--mut);max-width:780px;margin:22px auto 30px;font-size:16.5px;line-height:1.65}
-  .svc-pills{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:0 auto 40px}
-  .svc-pill{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:99px;font-size:13.5px;font-weight:700;border:1.5px solid;background:#fff;transition:transform .2s,box-shadow .2s}
-  .svc-pill:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(8,20,48,.14)}
-  .p-green{color:var(--green);border-color:var(--green)}
-  .p-blue{color:var(--blue);border-color:var(--blue)}
-  .p-pink{color:var(--pink);border-color:var(--pink)}
-  .p-lime{color:#c2410c;border-color:#f97316}
+  .sub{color:var(--mut);max-width:860px;margin:26px auto 28px;font-size:15.5px;line-height:1.6}
   /* SCORECARD CARD */
-  .gauge-card{max-width:1020px;margin:0 auto;background:var(--card);border:1px solid var(--line);border-radius:26px;box-shadow:0 24px 60px rgba(8,20,48,.1);display:grid;grid-template-columns:1.1fr 1fr;overflow:hidden;text-align:left;position:relative}
+  .gauge-card{max-width:1020px;margin:0 auto;background:var(--card);border:1px solid var(--line);border-radius:26px;box-shadow:0 24px 60px rgba(8,20,48,.1);display:grid;grid-template-columns:1fr 1fr;overflow:hidden;text-align:left;position:relative}
   /* animated gradient border draws the eye to the scorecard card */
   @property --a{syntax:'<angle>';initial-value:0deg;inherits:false}
   .gauge-card::before{content:"";position:absolute;inset:0;border-radius:26px;padding:2px;background:conic-gradient(from var(--a),#35e0c8,#0d9488 30%,transparent 55%,transparent 75%,#35e0c8);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:spinb 4.5s linear infinite;pointer-events:none;z-index:2}
   @keyframes spinb{to{--a:360deg}}
-  .gc-form{padding:34px}
-  .gc-form h2{font-size:29px;margin-bottom:12px;letter-spacing:-.02em;line-height:1.15;font-weight:800}
+  .gc-form{padding:24px 28px 20px}
+  .gc-form h2{font-size:26px;margin-bottom:8px;letter-spacing:-.02em;line-height:1.15;font-weight:800}
   .gc-form h2 span{background:var(--lime);border-radius:8px;padding:0 8px}
-  .gc-form p{color:var(--mut);font-size:14px;line-height:1.6;margin-bottom:4px}
+  .gc-form p{color:var(--mut);font-size:14px;line-height:1.6;margin-bottom:0}
+  .gc-form .hs-form-frame{margin:-6px 0 -14px}
   .gc-form input{width:100%;border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;margin-bottom:12px;outline:none;background:#fff}
   .gc-form input:focus{border-color:var(--ink)}
   .gc-form .cta{width:100%;padding:15px;font-size:14px;border-radius:12px;position:relative;overflow:hidden;animation:pulseGlow 2.4s ease-out infinite}
@@ -82,7 +76,7 @@
   .gc-form .cta::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.28),transparent);transform:skewX(-20deg);animation:shine 3.8s ease-in-out infinite}
   @keyframes shine{0%,55%{left:-60%}85%,100%{left:130%}}
   .gc-form .micro{font-size:11.5px;color:var(--mut);margin-top:10px;text-align:center}
-  .gc-demo{background:var(--soft);padding:34px;border-left:1px solid var(--line);position:relative}
+  .gc-demo{background:var(--soft);padding:24px 28px;border-left:1px solid var(--line);position:relative}
   .gc-demo .tag{font-size:10.5px;letter-spacing:1.5px;text-transform:uppercase;color:#0d9488;margin-bottom:16px;display:block}
   .bar{margin-bottom:16px}
   .bar .lab{display:flex;justify-content:space-between;font-size:12.5px;font-weight:600;margin-bottom:6px}
@@ -95,7 +89,7 @@
   /* SECTIONS */
   section{padding:100px 40px;max-width:1200px;margin:0 auto}
   h2.sec{font-size:clamp(26px,3.4vw,42px);font-weight:800;letter-spacing:-.01em;margin-bottom:10px}
-  .lead{color:var(--mut);max-width:560px;line-height:1.65;font-size:15px}
+  .lead{color:var(--mut);max-width:660px;line-height:1.65;font-size:15px}
   .reveal{opacity:0;transform:translateY(36px);transition:opacity .7s,transform .7s}
   .reveal.in{opacity:1;transform:none}
   /* TRUST STRIP */
@@ -239,12 +233,7 @@
 
 <header class="hero">
   <h1>More visibility. More leads.<br><span class="hl">Measurable growth.</span></h1>
-  <p class="sub">Your next customers are already searching — on Google <em>and</em> in ChatGPT. I help ambitious businesses get found in both, turn more visitors into leads, and make every ad pound accountable to revenue. Senior expertise from 13+ years in-house at brands like Mercedes-Benz and Copart — without the agency overhead.</p>
-  <div class="svc-pills">
-    <a class="svc-pill p-green" href="/solutions/seo-aeo-visibility">🔍 SEO &amp; AEO</a>
-    <a class="svc-pill p-blue" href="/solutions/website-optimisation-cro">📈 Website Optimisation &amp; CRO</a>
-    <a class="svc-pill p-pink" href="/solutions/paid-campaigns">🎯 Paid Ads — Google &amp; LinkedIn</a>
-  </div>
+  <p class="sub">Your next customers are already searching — on Google <em>and</em> in ChatGPT. I help ambitious businesses get found in both, then turn that visibility into leads and pipeline. Senior expertise, hands-on delivery and results you can measure — without the agency overhead.</p>
 
   <div class="gauge-card" id="scorecard">
     <div class="gc-form">
@@ -259,7 +248,7 @@
       <div class="bar"><div class="lab"><span>Search visibility (SEO)</span><span data-t="72">0</span></div><div class="track"><div class="fill" data-w="72"></div></div></div>
       <div class="bar lime"><div class="lab"><span>AI visibility (AEO)</span><span data-t="41">0</span></div><div class="track"><div class="fill" data-w="41"></div></div></div>
       <div class="bar"><div class="lab"><span>Conversion signals (CRO)</span><span data-t="65">0</span></div><div class="track"><div class="fill" data-w="65"></div></div></div>
-      <div class="sum"><b>What you'd learn:</b> Solid rankings, but stuck on page two for the keywords that convert. AI assistants can't cite the site (no schema, GPTBot blocked). And slow templates are leaking conversions. Prioritised fixes for all three.</div>
+      <div class="sum"><b>What your scorecard reveals:</b> where you rank for the keywords that convert, whether AI assistants can find and cite your site, and where your pages are leaking conversions — with the fixes, prioritised.</div>
     </div>
   </div>
 </header>
@@ -271,12 +260,12 @@
 
 <section class="reveal" id="solutions">
   <h2 class="sec">How I can add value to your business.</h2>
-  <p class="lead">It all connects: SEO &amp; AEO get you found, your website converts that attention, paid ads accelerate it, and AI makes the whole engine smarter.</p>
+  <p class="lead" style="max-width:none">It all connects — get found in search &amp; AI, convert more of your visitors, and accelerate it all with paid.</p>
   <div class="bento">
     <a class="cell s3 t-green" href="/solutions/seo-aeo-visibility"><span class="go">↗</span><div class="icq">🔍</div><div class="tag">SEO &amp; AEO</div><h3>Grow your visibility in search &amp; AI</h3><p>Technical SEO and E-E-A-T content that earn page-one rankings — plus schema, AI-crawler access and answer-first structure so ChatGPT, Gemini and Perplexity cite you too.</p></a>
     <a class="cell s3 t-blue" href="/solutions/website-optimisation-cro"><span class="go">↗</span><div class="icq">📈</div><div class="tag">Website Optimisation &amp; CRO</div><h3>Convert more of your traffic</h3><p>My specialism: using data to understand behaviour and remove friction. Heatmaps, A/B testing and persona-based personalisation that turn visitors into pipeline.</p></a>
     <a class="cell s3 t-pink" href="/solutions/paid-campaigns"><span class="go">↗</span><div class="icq">🎯</div><div class="tag">Paid Campaigns</div><h3>Ads accountable to pipeline</h3><p>Google &amp; LinkedIn Ads with full-funnel ABM — targeted at the accounts and personas that actually buy, and optimised against revenue, not clicks.</p></a>
-    <a class="cell s3 t-lime" href="/solutions/ai-marketing"><span class="go">↗</span><div class="icq">🤖</div><div class="tag">AI-Embedded Marketing</div><h3>Put AI to work in your marketing</h3><p>Practical AI adoption inside your processes — reporting, content operations, personalisation and automation — so your team moves faster with more insight.</p></a>
+    <div class="cell s3 t-lime"><div class="icq">🤖</div><div class="tag">AI-Embedded Marketing</div><h3>Put AI to work in your marketing</h3><p>Practical AI adoption inside your processes — reporting, content operations, personalisation and automation — so your team moves faster with more insight.</p></div>
   </div>
 </section>
 
