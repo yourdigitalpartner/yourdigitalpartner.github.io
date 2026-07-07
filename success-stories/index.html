@@ -192,7 +192,10 @@
   .dbar .dt{height:9px;background:#eef2fb;border-radius:99px;overflow:hidden}
   .dbar .df{height:100%;background:linear-gradient(90deg,var(--purple),#a78bfa);border-radius:99px;width:0;transition:width 1.3s cubic-bezier(.2,.8,.2,1)}
   /* qualifier mock */
-  .qual{background:#f8fafd;border:1px solid var(--line);border-radius:14px;padding:14px;position:relative}
+  .qual{background:#f8fafd;border:1px solid var(--line);border-radius:14px;padding:14px;position:relative;display:grid;align-items:start}
+  /* Stack both states in one grid cell: the module is always sized to its tallest (expanded) state, so it never shrinks and never jumps the page. */
+  .qual-form,.qual-done{grid-area:1/1;min-width:0}
+  .qual-form{transition:opacity .3s ease}
   .qrow{display:flex;justify-content:space-between;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px 10px;margin-bottom:7px;font-size:11px;font-weight:700;transition:all .3s;opacity:.55}
   .qrow.on{opacity:1;border-color:var(--purple);box-shadow:0 6px 14px rgba(123,92,250,.15)}
   .qrow.rated{opacity:1}
@@ -202,9 +205,9 @@
   .qmail{background:#fff;border:1px solid var(--line);border-radius:10px;padding:9px 11px;font-size:11px;margin:10px 0 8px;min-height:34px}
   .qsub{background:var(--ink);color:var(--lime);border-radius:10px;padding:10px;text-align:center;font-size:11.5px;font-weight:800;transition:transform .2s}
   .qsub.press{transform:scale(.95)}
-  .qual-done{display:none}
-  .qual.show .qual-form{display:none}
-  .qual.show .qual-done{display:block;animation:qfade .5s}
+  .qual-done{opacity:0;visibility:hidden;pointer-events:none;transition:opacity .45s ease,visibility 0s linear .45s}
+  .qual.show .qual-form{opacity:0;visibility:hidden;pointer-events:none;transition:opacity .3s ease,visibility 0s linear .3s}
+  .qual.show .qual-done{opacity:1;visibility:visible;pointer-events:auto;transition:opacity .45s ease}
   @keyframes qfade{from{opacity:0;transform:translateY(8px)}}
   .qdh{font-size:11.5px;font-weight:800;margin-bottom:10px}
   .qdh b{color:var(--purple)}
@@ -288,7 +291,7 @@
 <header class="hero">
   <div class="wrap">
     <h1>Results you can <span class="hl">point to.</span></h1>
-    <p>Strategy is cheap. These are documented outcomes from real B2B engagements — brands winning the AI answer, ads that pay for themselves many times over, and websites rebuilt into lead-generating experiences.</p>
+    <p>Strategy is cheap. These are documented outcomes from real B2B engagements - brands winning the AI answer, ads that pay for themselves many times over, and websites rebuilt into lead-generating experiences.</p>
     <div class="herostats">
       <div class="hstat g"><b data-n="44" data-suf="%">0</b><span>AI share of voice vs competitors</span></div>
       <div class="hstat p"><b data-n="15" data-suf="×">0</b><span>return on Google Ads spend</span></div>
@@ -308,28 +311,28 @@
   <div class="wrap">
     <span class="eyebrow e-green">Success story · SEO &amp; AEO</span>
     <h2 class="sec">Owning the AI answer for an entire category.</h2>
-    <p class="lead">When buyers asked Google and AI assistants about a major industry regulation, one client needed to be the answer. A hub-and-spoke content strategy — pillar guides, supporting articles, webinars and event panels, all structured for AI — made them the most-cited domain for the prompts that matter commercially.</p>
+    <p class="lead">When buyers asked Google and AI assistants about a major industry regulation, one brand needed to be the answer. A hub-and-spoke content strategy - pillar guides, supporting articles, webinars and event panels, all structured for AI - made them the most-cited domain for the prompts that matter commercially.</p>
 
     <div class="gmock">
       <div class="gm-left">
         <div class="gbar">🔍 <span id="gq"></span></div>
         <div class="gaio" id="gaio">
           <div class="ah">✦ AI Overview</div>
-          <p>The upcoming mandate will fundamentally transform the industry — replacing manual paperwork with structured digital data, speeding up approvals and improving cash flow across complex supply chains…</p>
+          <p>The upcoming mandate will fundamentally transform the industry - replacing manual paperwork with structured digital data, speeding up approvals and improving cash flow across complex supply chains…</p>
           <u></u><u></u>
-          <span class="citebadge">◆ Our client — cited +5 times in this one answer</span>
+          <span class="citebadge">◆ Featured brand - cited +5 times in this one answer</span>
         </div>
       </div>
       <div class="gside" id="gside">
-        <div class="gcardm"><span class="kind">Pillar guide</span><b>The 2029 mandate: what companies need to know</b><small>◆ Our client</small></div>
-        <div class="gcardm"><span class="kind">Webinar</span><b>Key takeaways for SMEs and supply chains</b><small>◆ Our client</small></div>
-        <div class="gcardm"><span class="kind">Event panel</span><b>Panel discussion: the mandate &amp; its industry impact</b><small>◆ Our client</small></div>
+        <div class="gcardm"><span class="kind">Pillar guide</span><b>The 2029 mandate: what companies need to know</b><small>◆ Featured brand</small></div>
+        <div class="gcardm"><span class="kind">Webinar</span><b>Key takeaways for SMEs and supply chains</b><small>◆ Featured brand</small></div>
+        <div class="gcardm"><span class="kind">Event panel</span><b>Panel discussion: the mandate &amp; its industry impact</b><small>◆ Featured brand</small></div>
       </div>
     </div>
 
     <div class="hubwrap reveal">
       <h3>How it all links together</h3>
-      <div class="hsub">From research to citation: keyword and prompt research decides what to create, the content cluster answers it from every angle, and the technical layer — schema, internal links, crawler access — makes it all machine-readable. AI engines reward the whole system, not individual pages.</div>
+      <div class="hsub">From research to citation: keyword and prompt research decides what to create, the content cluster answers it from every angle, and the technical layer - schema, internal links, crawler access - makes it all machine-readable. AI engines reward the whole system, not individual pages.</div>
       <svg class="hub-svg" viewBox="0 0 920 340" xmlns="http://www.w3.org/2000/svg">
         <text class="colh" x="115" y="26" text-anchor="middle">1 · RESEARCH</text>
         <text class="colh" x="345" y="26" text-anchor="middle">2 · CONTENT CLUSTER</text>
@@ -367,7 +370,7 @@
         <g>
           <rect x="490" y="58" rx="10" width="178" height="62" fill="#fff" stroke="#d8e0ec"/>
           <text x="579" y="80" text-anchor="middle" font-size="11" font-weight="700" fill="#0a1733">Schema markup</text>
-          <text x="579" y="96" text-anchor="middle" font-size="9" fill="#5b6b80">FAQ · Article · Organisation —</text>
+          <text x="579" y="96" text-anchor="middle" font-size="9" fill="#5b6b80">FAQ · Article · Organisation -</text>
           <text x="579" y="108" text-anchor="middle" font-size="9" fill="#5b6b80">so machines understand every page</text>
           <rect x="490" y="142" rx="10" width="178" height="62" fill="#fff" stroke="#d8e0ec"/>
           <text x="579" y="164" text-anchor="middle" font-size="11" font-weight="700" fill="#0a1733">Related pages &amp; clusters</text>
@@ -376,7 +379,7 @@
           <rect x="490" y="226" rx="10" width="178" height="62" fill="#fff" stroke="#d8e0ec"/>
           <text x="579" y="248" text-anchor="middle" font-size="11" font-weight="700" fill="#0a1733">AI crawler access</text>
           <text x="579" y="264" text-anchor="middle" font-size="9" fill="#5b6b80">GPTBot, Gemini &amp; friends allowed</text>
-          <text x="579" y="276" text-anchor="middle" font-size="9" fill="#5b6b80">in — most sites block them</text>
+          <text x="579" y="276" text-anchor="middle" font-size="9" fill="#5b6b80">in - most sites block them</text>
         </g>
         <g>
           <rect x="718" y="96" rx="14" width="180" height="92" fill="#fff" stroke="#35e0c8" stroke-width="2"/>
@@ -398,11 +401,11 @@
   <div class="wrap">
     <span class="eyebrow e-green">The numbers behind it</span>
     <h2 class="sec">Measured, tracked, improved every week.</h2>
-    <p class="lead">AI visibility isn't a feeling — it's tracked prompt by prompt against named competitors. Within weeks the client's domain became the most-cited in its category.</p>
+    <p class="lead">AI visibility isn't a feeling - it's tracked prompt by prompt against named competitors. Within weeks the brand's domain became the most-cited in its category.</p>
     <div class="charts" id="charts">
       <div class="chartcard">
         <h3>Owned domain citation rate vs competitors</h3>
-        <div class="csub">How often AI engines cite the client's website directly, compared to competitor domains · weekly</div>
+        <div class="csub">How often AI engines cite the brand's website directly, compared to competitor domains · weekly</div>
         <div class="legend"><span><i class="lc-you"></i>Your company</span><span><i class="lc-a"></i>Competitor A</span><span><i class="lc-b"></i>Competitor B</span></div>
         <svg class="linechart" viewBox="0 0 520 210" xmlns="http://www.w3.org/2000/svg">
           <text class="axlab" x="6" y="26">8%</text><text class="axlab" x="6" y="96">4%</text><text class="axlab" x="6" y="186">0%</text>
@@ -411,7 +414,7 @@
           <polyline class="pl compb draw" points="30,92 110,100 190,90 270,86 350,112 430,158 510,150"/>
           <polyline class="pl you draw" points="30,75 110,64 190,62 270,60 350,38 430,55 510,62"/>
           <circle class="spikedot" cx="350" cy="38" r="5"/>
-          <text class="peaklab" x="322" y="24">8.1% — highest in category</text>
+          <text class="peaklab" x="322" y="24">8.1% - highest in category</text>
         </svg>
       </div>
       <div class="chartcard">
@@ -426,7 +429,7 @@
 
       </div>
       <div class="chartcard" style="grid-column:1/-1">
-        <h3>Prompt visibility rate — week by week</h3>
+        <h3>Prompt visibility rate - week by week</h3>
         <div class="csub">Share of tracked prompts where the brand appears · near-zero before the programme, then a step-change as optimised content was indexed</div>
         <svg class="linechart" viewBox="0 0 900 240" xmlns="http://www.w3.org/2000/svg">
           <text class="axlab" x="6" y="33">40%</text><text class="axlab" x="6" y="121">20%</text><text class="axlab" x="6" y="209">0%</text>
@@ -491,7 +494,7 @@
           <span class="farrow">→</span>
           <div class="fnode win"><b data-n="1" data-pre="£" data-suf="m">£0</b><span>pipeline generated</span></div>
         </div>
-        <p>Search campaigns rebuilt from historical performance data — targeting, ad copy and landing pages overhauled, then optimised continuously against pipeline rather than clicks.</p>
+        <p>Search campaigns rebuilt from historical performance data - targeting, ad copy and landing pages overhauled, then optimised continuously against pipeline rather than clicks.</p>
       </div>
       <div class="paidcard l">
         <div class="pc-head"><span class="limark">in</span> LinkedIn Ads</div>
@@ -501,12 +504,12 @@
           <span class="farrow">→</span>
           <div class="fnode win"><b data-n="400" data-pre="£" data-suf="k">0</b><span>pipeline generated</span></div>
         </div>
-        <p>Account-based campaigns to named target accounts across the full journey — video and thought-leadership up top, document ads mid-funnel, pre-filled lead gen forms at the point of decision.</p>
+        <p>Account-based campaigns to named target accounts across the full journey - video and thought-leadership up top, document ads mid-funnel, pre-filled lead gen forms at the point of decision.</p>
       </div>
     </div>
     <div class="optstrip">
-      <div class="opt"><b>Continuous copy testing</b>Proof-led headlines beat generic agency copy — CTR up from 1.2% to 2.9%, losers switched off weekly.</div>
-      <div class="opt"><b>Time &amp; audience analysis</b>Budget shifted to the days, hours and job titles that convert — cutting cost per conversion by up to 3×.</div>
+      <div class="opt"><b>Continuous copy testing</b>Proof-led headlines beat generic agency copy - CTR up from 1.2% to 2.9%, losers switched off weekly.</div>
+      <div class="opt"><b>Time &amp; audience analysis</b>Budget shifted to the days, hours and job titles that convert - cutting cost per conversion by up to 3×.</div>
       <div class="opt"><b>119× on a single campaign</b>One tightly-targeted LinkedIn campaign turned £2.5k of spend into £298k of revenue.</div>
     </div>
   </div>
@@ -517,11 +520,11 @@
   <div class="wrap">
     <span class="eyebrow e-blue">Success story · Website experiences</span>
     <h2 class="sec">Websites rebuilt as lead-generating experiences.</h2>
-    <p class="lead">Bold, animated, interactive — not brochureware. Product finders that route every visitor to the right answer in three clicks, live value dashboards that prove ROI, and journeys personalised by industry and role.</p>
+    <p class="lead">Bold, animated, interactive - not brochureware. Product finders that route every visitor to the right answer in three clicks, live value dashboards that prove ROI, and journeys personalised by industry and role.</p>
     <div class="webgrid">
       <div class="modcard">
         <h3>Interactive product finder</h3>
-        <div class="csub">Built for a complex multi-product platform: pick your industry, pick your role, see your products — self-service in seconds. Watch it work:</div>
+        <div class="csub">Built for a complex multi-product platform: pick your industry, pick your role, see your products - self-service in seconds. Watch it work:</div>
         <div class="pf" id="pf">
           <div class="pf-steps">
             <div class="pf-step s1"><em>STEP 1</em>Your industry</div>
@@ -529,45 +532,45 @@
             <div class="pf-step s3"><em>STEP 3</em>Built for you</div>
           </div>
           <div class="pf-opts row1">
-            <div class="pf-opt o1">🏗️ Construction</div>
-            <div class="pf-opt o2">🛣️ Highways</div>
-            <div class="pf-opt o3">📐 Engineering</div>
+            <div class="pf-opt o1">🏥 Healthcare</div>
+            <div class="pf-opt o2">🛒 Retail</div>
+            <div class="pf-opt o3">🏭 Manufacturing</div>
           </div>
           <div class="pf-opts row2" style="display:none">
-            <div class="pf-opt o4">Housebuilder</div>
-            <div class="pf-opt o5">Contractor</div>
-            <div class="pf-opt o6">Supply chain</div>
+            <div class="pf-opt o4">Operations</div>
+            <div class="pf-opt o5">Finance</div>
+            <div class="pf-opt o6">IT</div>
           </div>
           <div class="pf-prods" style="display:none">
-            <div class="pf-prod"><b>Estimating</b>Win more of the right work</div>
-            <div class="pf-prod"><b>Trading &amp; AP</b>Touchless invoicing</div>
-            <div class="pf-prod"><b>Job management</b>Delivery, tracked live</div>
+            <div class="pf-prod"><b>Reporting suite</b>See performance at a glance</div>
+            <div class="pf-prod"><b>Automation</b>Cut out manual busywork</div>
+            <div class="pf-prod"><b>Integrations</b>Connect your existing tools</div>
           </div>
           <span class="pf-cur" id="pfcur" style="top:70px;left:40px">👆</span>
-          <div class="pf-note">Every path ends on a personalised product list — and a relevant CTA.</div>
+          <div class="pf-note">Every path ends on a personalised product list - and a relevant CTA.</div>
         </div>
       </div>
       <div class="modcard">
         <h3>Interactive lead qualifier</h3>
-        <div class="csub">Five quick questions rate what matters to the visitor, an email unlocks demo videos tailored to their answers — every submission a self-qualified, sales-ready lead. Watch it work:</div>
+        <div class="csub">Five quick questions rate what matters to the visitor, an email unlocks demo videos tailored to their answers - every submission a self-qualified, sales-ready lead. Watch it work:</div>
         <div class="qual" id="qual">
           <div class="qual-form">
-            <div class="qrow" data-pick="0"><span>Cutting invoice admin</span><span class="rp"><i>Important</i><i>Somewhat</i><i>Not</i></span></div>
-            <div class="qrow" data-pick="1"><span>Faster supplier payments</span><span class="rp"><i>Important</i><i>Somewhat</i><i>Not</i></span></div>
-            <div class="qrow" data-pick="0"><span>Live project visibility</span><span class="rp"><i>Important</i><i>Somewhat</i><i>Not</i></span></div>
-            <div class="qrow" data-pick="2"><span>Compliance &amp; audit trail</span><span class="rp"><i>Important</i><i>Somewhat</i><i>Not</i></span></div>
-            <div class="qrow" data-pick="0"><span>Integrating with your ERP</span><span class="rp"><i>Important</i><i>Somewhat</i><i>Not</i></span></div>
+            <div class="qrow" data-pick="0"><span>Cutting reporting time</span><span class="rp"><i>Important</i><i>Somewhat</i><i>Not</i></span></div>
+            <div class="qrow" data-pick="1"><span>Faster team collaboration</span><span class="rp"><i>Important</i><i>Somewhat</i><i>Not</i></span></div>
+            <div class="qrow" data-pick="0"><span>Real-time dashboards</span><span class="rp"><i>Important</i><i>Somewhat</i><i>Not</i></span></div>
+            <div class="qrow" data-pick="2"><span>Data security &amp; compliance</span><span class="rp"><i>Important</i><i>Somewhat</i><i>Not</i></span></div>
+            <div class="qrow" data-pick="0"><span>Integrating with your tools</span><span class="rp"><i>Important</i><i>Somewhat</i><i>Not</i></span></div>
             <div class="qmail">✉️ <span id="qmailtxt"></span></div>
             <div class="qsub" id="qsub">See my tailored demos →</div>
           </div>
           <div class="qual-done">
-            <div class="qdh">🎬 Your tailored demos — based on what you rated <b>Important</b></div>
+            <div class="qdh">🎬 Your tailored demos - based on what you rated <b>Important</b></div>
             <div class="vids">
-              <div class="vid"><span class="vp">▶</span><b>Invoice automation</b><small>2-min demo</small></div>
-              <div class="vid"><span class="vp">▶</span><b>Project visibility</b><small>3-min demo</small></div>
-              <div class="vid"><span class="vp">▶</span><b>ERP integration</b><small>90-sec demo</small></div>
+              <div class="vid"><span class="vp">▶</span><b>Reporting automation</b><small>2-min demo</small></div>
+              <div class="vid"><span class="vp">▶</span><b>Live dashboards</b><small>3-min demo</small></div>
+              <div class="vid"><span class="vp">▶</span><b>Tool integrations</b><small>90-sec demo</small></div>
             </div>
-            <div class="qdn">High-intent leads that arrive pre-qualified — with their priorities already on the CRM record.</div>
+            <div class="qdn">High-intent leads that arrive pre-qualified - with their priorities already on the CRM record.</div>
           </div>
         </div>
       </div>
@@ -585,7 +588,7 @@
     <div class="fwrap contact-grid">
       <div>
         <h2>Want numbers like these <span>next to your name?</span></h2>
-        <p style="margin:14px 0 0">Tell me a little about your business and your biggest growth challenge — I'll come back within one working day with an honest view of where I can help, and where I can't.</p>
+        <p style="margin:14px 0 0">Tell me a little about your business and your biggest growth challenge - I'll come back within one working day with an honest view of where I can help, and where I can't.</p>
       </div>
       <div style="background:#fff;border-radius:18px;padding:22px 24px 16px;box-shadow:0 20px 44px rgba(0,0,0,.25)">
         <div style="font-size:18px;letter-spacing:0;text-transform:none;line-height:1.25;color:var(--green);font-weight:800;margin-bottom:12px">Start the conversation</div>
@@ -601,7 +604,7 @@
   <div class="why-frame">
   <div class="about-grid">
     <div class="headshot-card">
-      <img class="headshot" src="https://146760313.fs1.hubspotusercontent-eu1.net/hubfs/146760313/6B24F59D-9FF0-4D55-BBBA-9A13BC08B8A5.png" alt="Chris Chapman — Your Digital Partner" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+      <img class="headshot" src="https://146760313.fs1.hubspotusercontent-eu1.net/hubfs/146760313/6B24F59D-9FF0-4D55-BBBA-9A13BC08B8A5.png" alt="Chris Chapman - Your Digital Partner" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
       <div class="hs-fallback">CC</div>
       <div class="hname">Chris Chapman</div>
       <div class="hrole">Founder · Your Digital Partner</div>
@@ -612,15 +615,15 @@
       </a>
     </div>
     <div>
-      <h2 class="sec">About.</h2>
-      <p class="lead" style="max-width:100%">Senior digital marketing, without the agency overhead. One expert who's owned the numbers in-house — strategy, execution and reporting from the same pair of hands.</p>
+      <h2 class="sec">The person behind the numbers.</h2>
+      <p class="lead" style="max-width:100%">No account manager, no junior handling your account behind the scenes - just one senior marketer who owns strategy, execution and reporting from the same pair of hands.</p>
       <div class="points">
         <div class="point"><span class="pic g">🏁</span><div><b>13+ years in digital</b><span>Trained at Mercedes-Benz &amp; Volkswagen Group</span></div></div>
         <div class="point"><span class="pic b">📈</span><div><b>£4m+ pipeline</b><span>Generated in the last three years</span></div></div>
-        <div class="point"><span class="pic p">🧪</span><div><b>Data decides</b><span>Heatmaps, A/B tests, analytics — proof over opinion</span></div></div>
+        <div class="point"><span class="pic p">🧪</span><div><b>Data decides</b><span>Heatmaps, A/B tests, analytics - proof over opinion</span></div></div>
         <div class="point"><span class="pic o">🤖</span><div><b>AI-first</b><span>AEO &amp; AI embedded in everything I build</span></div></div>
       </div>
-      <a href="#contact" style="font-weight:700;color:#0d9488">Start the conversation →</a>
+      <a href="#contact" style="font-weight:700;color:#0d9488">Book a free strategy call →</a>
     </div>
   </div>
   </div>
@@ -644,8 +647,8 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.targ
 document.querySelectorAll(".reveal,.charts,.hubwrap").forEach(el=>io.observe(el));
 document.querySelectorAll(".trust,.hero .wrap").forEach(el=>io.observe(el));
 
-// Google AI Overview mock — typing + reveal loop
-const GQ="will the 2029 e-invoicing mandate affect construction?";
+// Google AI Overview mock - typing + reveal loop
+const GQ="will the 2029 e-invoicing mandate affect my business?";
 const gq=document.getElementById("gq"),gaio=document.getElementById("gaio"),gside=document.getElementById("gside");
 function playG(){gaio.classList.remove("show");gside.classList.remove("show");let i=0;gq.innerHTML="";
  (function t(){i++;gq.innerHTML=GQ.slice(0,i)+'<span class="caret"></span>';
