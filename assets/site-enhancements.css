@@ -1,0 +1,44 @@
+/* Shared navigation, accessibility and mobile improvements */
+:root{--accessible-muted:#516176}
+html:not(.js) .reveal{opacity:1!important;transform:none!important}
+.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+.mobile-menu-toggle{display:none;border:0;background:transparent;color:var(--ink);width:42px;height:42px;border-radius:12px;cursor:pointer;align-items:center;justify-content:center;font-size:22px}
+.mobile-menu-toggle:focus-visible,.solutions-toggle:focus-visible,.mobile-sticky-cta:focus-visible{outline:3px solid var(--lime);outline-offset:3px}
+.solutions-toggle{appearance:none;border:0;background:transparent;color:inherit;font:inherit;padding:0;cursor:pointer;display:inline-flex;align-items:center;gap:5px}
+.solutions-item:hover>.dd,.solutions-item:focus-within>.dd,.solutions-item.open>.dd{opacity:1;visibility:visible;transform:none}
+.mobile-sticky-cta{display:none}
+.logos span,.disclaim{color:#66758a}
+.axlab{fill:#5b6b80}
+.chart-data{margin-top:14px;font-size:13px;color:var(--mut)}
+.chart-data summary{cursor:pointer;font-weight:700;color:var(--ink)}
+@media(max-width:900px){
+  body{padding-bottom:86px}
+  nav{padding:8px 10px 8px 14px;width:min(94vw,680px)}
+  nav>.cta{display:none!important}
+  .mobile-menu-toggle{display:flex;margin-left:auto}
+  nav ul{display:none!important;position:absolute;top:calc(100% + 8px);left:0;right:0;flex-direction:column;gap:4px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:12px;box-shadow:0 20px 50px rgba(8,20,48,.18);max-height:calc(100vh - 110px);overflow:auto}
+  nav.menu-open ul{display:flex!important}
+  nav ul li{width:100%;font-size:15px}
+  nav ul>li>a,.solutions-toggle{display:flex;width:100%;padding:12px 14px;border-radius:12px;align-items:center;justify-content:space-between}
+  nav ul>li>a:hover,.solutions-toggle:hover{background:var(--soft)}
+  .dd{position:static!important;top:auto;left:auto;width:100%;opacity:1;visibility:visible;transform:none;display:none;box-shadow:none;border:0;background:var(--bg);padding:6px;margin-top:2px}
+  .solutions-item.open>.dd{display:block}
+  .dd a{padding:11px}
+  .mobile-sticky-cta{display:flex;position:fixed;z-index:70;left:14px;right:14px;bottom:max(14px,env(safe-area-inset-bottom));min-height:54px;align-items:center;justify-content:center;background:var(--ink);color:var(--lime);font-weight:800;font-size:15px;border-radius:16px;box-shadow:0 14px 34px rgba(8,20,48,.28);padding:14px 20px;text-align:center}
+  [data-page="home"] .hero h1 .hl{margin-top:12px}
+  .wrap,.gauge-card,.scoreband,.review-box,.audit,.contact-grid,.sb-form,.td-form,.au-form,.gc-form{width:100%!important;max-width:none!important;min-width:0!important}
+  .gc-form,.gc-demo,.sb-form,.td-form,.au-form,.contact-grid>div:last-child{padding-left:14px!important;padding-right:14px!important}
+  .hs-form-frame,.hs-form-frame iframe,.hs-form-frame form,.hs-form-frame .hs-form,.hs-form-frame .hs-form-field,.hs-form-frame .input,.hs-form-frame input,.hs-form-frame textarea,.hs-form-frame select{width:100%!important;max-width:none!important;min-width:0!important;box-sizing:border-box!important}
+  .scoreband,.review-box,.audit,.contact-grid{grid-template-columns:1fr!important;gap:24px!important}
+  .hero,section,.editor-sec{max-width:100%;overflow:hidden}
+  .journey,.gwrap,.intel,.funnels,.audit,.platchips,.retarget,.stagecard,.gcard,.serp,.liad,.banner{max-width:100%!important;min-width:0!important}
+  .platchips{flex-wrap:wrap}
+  .gcard,.stagecard,.audit,.funnelbox{overflow-wrap:anywhere}
+  .linechart{min-width:680px}
+  .chartcard{overflow-x:auto;-webkit-overflow-scrolling:touch}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .reveal{opacity:1!important;transform:none!important}
+}
