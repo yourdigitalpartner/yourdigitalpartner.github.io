@@ -405,7 +405,7 @@
   .gc-form h2{font-size:26px;margin-bottom:8px;letter-spacing:-.02em;line-height:1.15;font-weight:800}
   .gc-form h2 span{background:var(--lime);border-radius:8px;padding:0 8px}
   .gc-form p{color:var(--mut);font-size:14px;line-height:1.6;margin-bottom:0}
-  .gc-form .hs-form-frame{margin:-6px 0 -14px;width:116%;max-width:116%;margin-left:-8%}
+  .gc-form .hs-form-frame{margin:-20px 0 -14px;width:116%;max-width:116%;margin-left:-8%}
   .gc-form input{width:100%;border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;margin-bottom:12px;outline:none;background:#fff}
   .gc-form input:focus{border-color:var(--ink)}
   .gc-form .cta{width:100%;padding:15px;font-size:14px;border-radius:12px;position:relative;overflow:hidden;animation:pulseGlow 2.4s ease-out infinite}
@@ -413,18 +413,8 @@
   .gc-form .cta::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.28),transparent);transform:skewX(-20deg);animation:shine 3.8s ease-in-out infinite}
   @keyframes shine{0%,55%{left:-60%}85%,100%{left:130%}}
   .gc-form .micro{font-size:11.5px;color:var(--mut);margin-top:10px;text-align:center}
-  /* Book-a-call toggle: both tabs stay boldly coloured at all times - the ring + checkmark (not colour) shows which one is selected */
-  .gc-tabs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:16px 0 14px}
-  .gc-tab{text-align:center;padding:11px 8px;border-radius:10px;font-size:12.5px;font-weight:800;cursor:pointer;transition:all .18s;user-select:none;border:1.5px solid transparent}
-  .gc-tab.audit{background:var(--ink);color:var(--lime);box-shadow:0 6px 16px rgba(10,23,51,.22)}
-  .gc-tab.book{background:var(--green);color:#fff;box-shadow:0 6px 16px rgba(13,148,136,.3)}
-  .gc-tab:hover{transform:translateY(-1px)}
-  .gc-tab.on{border-color:var(--lime);box-shadow:0 0 0 3px rgba(53,224,200,.5)}
-  .gc-tab.on::before{content:"✓ "}
-  .gc-panel{display:none}
-  .gc-panel.show{display:block;animation:gcfade .25s ease}
-  @keyframes gcfade{from{opacity:0;transform:translateY(4px)}}
-  .gc-book{background:var(--greenSoft);border:1px solid var(--green);border-radius:14px;padding:20px;text-align:center}
+  /* Book-a-call section: always visible under the form, no toggle */
+  .gc-book{background:var(--greenSoft);border:1px solid var(--green);border-radius:14px;padding:18px;text-align:center;margin-top:18px}
   .gc-book .gc-book-big{font-size:14.5px;font-weight:800;margin-bottom:6px;color:var(--ink)}
   .gc-book p{color:var(--mut);font-size:12.5px;margin-bottom:14px;line-height:1.5}
   .gc-book-cta{background:var(--green);color:#fff;width:100%;padding:13px 22px;border-radius:12px;font-size:14px;font-weight:800;border:0;cursor:pointer;font-family:inherit}
@@ -598,21 +588,13 @@ Senior strategy and hands-on delivery, without the agency overhead.</p>
     <div class="gc-form">
       <h2>How <span>visible</span> is your brand in AI &amp; Google search?</h2>
       <p>Get your free, human-reviewed visibility scorecard covering SEO, AI visibility and  conversion signals, with your highest-priority improvements clearly explained.</p>
-      <div class="gc-tabs">
-        <div class="gc-tab audit on" id="gcTabForm" onclick="gcShow('form')">Get your free AEO audit</div>
-        <div class="gc-tab book" id="gcTabBook" onclick="gcShow('book')">📅 Book a 30-min call</div>
-      </div>
-      <div class="gc-panel show" id="gcPanelForm">
-        <!-- HUBSPOT: replace this form with your embedded HubSpot form (see implementation guide) -->
-        <script src="https://js-eu1.hsforms.net/forms/embed/146760313.js" defer></script>
-        <div class="hs-form-frame" data-region="eu1" data-form-id="cae80dee-6896-4409-bdc6-da17c2280ba1" data-portal-id="146760313"></div>
-      </div>
-      <div class="gc-panel" id="gcPanelBook">
-        <div class="gc-book">
-          <div class="gc-book-big">Prefer to talk it through? 30 minutes, no prep needed.</div>
-          <p>We'll go through your visibility in Google and AI search together, and I'll show you exactly where to focus first.</p>
-          <button class="gc-book-cta" type="button" onclick="Calendly.showPopupWidget('https://calendly.com/chris-your-digital-partner/30min');return false;">📅 Book your 30-minute call →</button>
-        </div>
+      <!-- HUBSPOT: replace this form with your embedded HubSpot form (see implementation guide) -->
+      <script src="https://js-eu1.hsforms.net/forms/embed/146760313.js" defer></script>
+      <div class="hs-form-frame" data-region="eu1" data-form-id="cae80dee-6896-4409-bdc6-da17c2280ba1" data-portal-id="146760313"></div>
+      <div class="gc-book">
+        <div class="gc-book-big">Prefer to talk it through? 30 minutes, no prep needed.</div>
+        <p>We'll go through your visibility in Google and AI search together, and I'll show you exactly where to focus first.</p>
+        <button class="gc-book-cta" type="button" onclick="Calendly.showPopupWidget('https://calendly.com/chris-your-digital-partner/30min');return false;">📅 Book your 30-minute call →</button>
       </div>
     </div>
     <div class="gc-demo" id="demo">
@@ -785,13 +767,6 @@ function spinQ1(){if(qi!==0||!q1Btns)return;q1Spun=true;let step=0;
   if(step===4)clearInterval(spin)},1100);}
 renderQ();
 
-// Scorecard card: audit form vs book-a-call toggle
-function gcShow(which){
- document.getElementById("gcTabForm").classList.toggle("on",which==="form");
- document.getElementById("gcTabBook").classList.toggle("on",which==="book");
- document.getElementById("gcPanelForm").classList.toggle("show",which==="form");
- document.getElementById("gcPanelBook").classList.toggle("show",which==="book");
-}
 new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){spinQ1();o.disconnect()}},{threshold:.7}).observe(document.getElementById("quizcell"));
 
 </script>
