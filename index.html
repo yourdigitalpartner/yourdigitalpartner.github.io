@@ -413,6 +413,23 @@
   .gc-form .cta::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.28),transparent);transform:skewX(-20deg);animation:shine 3.8s ease-in-out infinite}
   @keyframes shine{0%,55%{left:-60%}85%,100%{left:130%}}
   .gc-form .micro{font-size:11.5px;color:var(--mut);margin-top:10px;text-align:center}
+  /* Book-a-call toggle: audit tab stays soft (it's open by default) - call tab stays bold/solid always, so it's the one that pulls the eye */
+  .gc-tabs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:16px 0 14px}
+  .gc-tab{text-align:center;padding:11px 8px;border-radius:10px;font-size:12.5px;cursor:pointer;transition:all .18s;user-select:none}
+  .gc-tab.audit{background:#fff;color:var(--mut);border:1.5px solid var(--line);font-weight:700}
+  .gc-tab.audit.on{background:var(--greenSoft);color:var(--ink);border-color:#b6e3dd}
+  .gc-tab.audit:hover{border-color:var(--ink)}
+  .gc-tab.book{background:var(--green);color:#fff;font-weight:800;border:1.5px solid var(--green);box-shadow:0 6px 16px rgba(13,148,136,.3)}
+  .gc-tab.book.on{background:#0b7d72;border-color:#0b7d72}
+  .gc-tab.book:hover{transform:translateY(-1px);box-shadow:0 9px 20px rgba(13,148,136,.38)}
+  .gc-panel{display:none}
+  .gc-panel.show{display:block;animation:gcfade .25s ease}
+  @keyframes gcfade{from{opacity:0;transform:translateY(4px)}}
+  .gc-book{background:var(--greenSoft);border:1px solid var(--green);border-radius:14px;padding:20px;text-align:center}
+  .gc-book .gc-book-big{font-size:14.5px;font-weight:800;margin-bottom:6px;color:var(--ink)}
+  .gc-book p{color:var(--mut);font-size:12.5px;margin-bottom:14px;line-height:1.5}
+  .gc-book-cta{background:var(--green);color:#fff;width:100%;padding:13px 22px;border-radius:12px;font-size:14px;font-weight:800;border:0;cursor:pointer;font-family:inherit}
+  .gc-book-cta:hover{background:#0b7d72}
   .gc-demo{background:var(--soft);padding:24px 28px;border-left:1px solid var(--line);position:relative}
   .gc-demo .tag{font-size:10.5px;letter-spacing:1.5px;text-transform:uppercase;color:#0d9488;margin-bottom:16px;display:block}
   .bar{margin-bottom:16px}
@@ -546,6 +563,8 @@
   @media(max-width:900px){body{padding-bottom:74px}nav ul{display:none}nav>.cta{display:none}.mobile-menu-toggle{position:relative;display:grid;place-items:center;width:42px;height:42px;border:0;background:var(--ink);color:var(--lime);border-radius:50%;font-size:0;line-height:0;cursor:pointer;padding:0}nav.open ul{display:flex;position:absolute;top:calc(100% + 8px);left:0;right:0;flex-direction:column;gap:4px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:10px;box-shadow:0 18px 42px rgba(8,20,48,.18)}nav.open ul li{padding:10px}nav.open .dd{position:static;opacity:1;visibility:visible;transform:none;width:auto;box-shadow:none;border:0;padding:6px 0 0;background:transparent}nav.open .dd a{padding:10px}.mobile-sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;align-items:center;justify-content:center;background:var(--ink);color:var(--lime);border-radius:0;padding:17px 20px calc(17px + env(safe-area-inset-bottom));font-size:16px;font-weight:800;box-shadow:0 -10px 28px rgba(8,20,48,.18)}.mobile-sticky-cta::after{content:"\2192";display:inline-block;margin-left:10px;animation:stickyArrow 1.35s ease-in-out infinite}.hero,section{padding-left:20px;padding-right:20px}.hero h1 .hl{margin-top:10px}.bento{grid-template-columns:1fr}.s2,.s3,.s6{grid-column:span 1}.stories{grid-template-columns:1fr}.quizbig{padding:44px 26px}.why-frame{padding:28px 22px}.gauge-card{grid-template-columns:1fr}.gc-demo{border-left:none;border-top:1px solid var(--line)}.about-grid{grid-template-columns:1fr}.points{grid-template-columns:1fr}nav .cta{white-space:normal}.qopts{grid-template-columns:1fr}.gc-form{padding:24px 8px 18px}.gc-demo{padding:22px 18px}.gc-form .hs-form-frame{width:116%;max-width:116%;margin-left:-8%;overflow:visible}.gc-form .hs-form-frame iframe{width:100%!important;min-width:0!important;transform:none}.reveal{opacity:1;transform:none;transition:none}.final .desktop-break{display:none}}
   @keyframes stickyArrow{0%,100%{transform:translateX(0);opacity:.68}50%{transform:translateX(6px);opacity:1}}
 </style>
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 </head>
 <body>
 
@@ -580,9 +599,22 @@ Senior strategy and hands-on delivery, without the agency overhead.</p>
     <div class="gc-form">
       <h2>How <span>visible</span> is your brand in AI &amp; Google search?</h2>
       <p>Get your free, human-reviewed visibility scorecard covering SEO, AI visibility and  conversion signals, with your highest-priority improvements clearly explained.</p>
-      <!-- HUBSPOT: replace this form with your embedded HubSpot form (see implementation guide) -->
-      <script src="https://js-eu1.hsforms.net/forms/embed/146760313.js" defer></script>
-<div class="hs-form-frame" data-region="eu1" data-form-id="cae80dee-6896-4409-bdc6-da17c2280ba1" data-portal-id="146760313"></div>
+      <div class="gc-tabs">
+        <div class="gc-tab audit on" id="gcTabForm" onclick="gcShow('form')">Get your free AEO audit</div>
+        <div class="gc-tab book" id="gcTabBook" onclick="gcShow('book')">📅 Book a 30-min call</div>
+      </div>
+      <div class="gc-panel show" id="gcPanelForm">
+        <!-- HUBSPOT: replace this form with your embedded HubSpot form (see implementation guide) -->
+        <script src="https://js-eu1.hsforms.net/forms/embed/146760313.js" defer></script>
+        <div class="hs-form-frame" data-region="eu1" data-form-id="cae80dee-6896-4409-bdc6-da17c2280ba1" data-portal-id="146760313"></div>
+      </div>
+      <div class="gc-panel" id="gcPanelBook">
+        <div class="gc-book">
+          <div class="gc-book-big">Prefer to talk it through? 30 minutes, no prep needed.</div>
+          <p>We'll go through your visibility in Google and AI search together, and I'll show you exactly where to focus first.</p>
+          <button class="gc-book-cta" type="button" onclick="Calendly.showPopupWidget('https://calendly.com/chris-your-digital-partner/30min');return false;">📅 Book your 30-minute call →</button>
+        </div>
+      </div>
     </div>
     <div class="gc-demo" id="demo">
       <span class="tag">Example scorecard</span>
@@ -753,6 +785,14 @@ function spinQ1(){if(qi!==0||!q1Btns)return;q1Spun=true;let step=0;
  const spin=setInterval(()=>{q1Btns[step%4].classList.remove("active");step++;q1Btns[step%4].classList.add("active");
   if(step===4)clearInterval(spin)},1100);}
 renderQ();
+
+// Scorecard card: audit form vs book-a-call toggle
+function gcShow(which){
+ document.getElementById("gcTabForm").classList.toggle("on",which==="form");
+ document.getElementById("gcTabBook").classList.toggle("on",which==="book");
+ document.getElementById("gcPanelForm").classList.toggle("show",which==="form");
+ document.getElementById("gcPanelBook").classList.toggle("show",which==="book");
+}
 new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){spinQ1();o.disconnect()}},{threshold:.7}).observe(document.getElementById("quizcell"));
 
 </script>
