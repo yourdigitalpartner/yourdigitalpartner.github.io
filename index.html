@@ -69,7 +69,7 @@
   .gc-form h2{font-size:26px;margin-bottom:8px;letter-spacing:-.02em;line-height:1.15;font-weight:800}
   .gc-form h2 span{background:var(--lime);border-radius:8px;padding:0 8px}
   .gc-form p{color:var(--mut);font-size:14px;line-height:1.6;margin-bottom:0}
-  .gc-form .hs-form-frame{margin:-6px 0 -14px}
+  .gc-form .hs-form-frame{margin:-6px 0 -14px;width:100%;min-width:0}
   .gc-form input{width:100%;border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;margin-bottom:12px;outline:none;background:#fff}
   .gc-form input:focus{border-color:var(--ink)}
   .gc-form .cta{width:100%;padding:15px;font-size:14px;border-radius:12px;position:relative;overflow:hidden;animation:pulseGlow 2.4s ease-out infinite}
@@ -207,7 +207,7 @@
   .final .cta{background:var(--lime);color:var(--ink);font-size:15px;padding:15px 32px;margin-top:26px}
   footer{padding:34px 40px;font-size:12.5px;color:var(--mut);max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:gap;gap:14px;flex-wrap:wrap}
   footer a:hover{color:var(--ink)}
-  @media(max-width:900px){nav ul{display:none}.hero,section{padding-left:20px;padding-right:20px}.bento{grid-template-columns:1fr}.s2,.s3,.s6{grid-column:span 1}.stories{grid-template-columns:1fr}.quizbig{padding:44px 26px}.why-frame{padding:28px 22px}.gauge-card{grid-template-columns:1fr}.gc-demo{border-left:none;border-top:1px solid var(--line)}.about-grid{grid-template-columns:1fr}.points{grid-template-columns:1fr}}
+  @media(max-width:900px){nav ul{display:none}.hero,section{padding-left:20px;padding-right:20px}.bento{grid-template-columns:1fr}.s2,.s3,.s6{grid-column:span 1}.stories{grid-template-columns:1fr}.quizbig{padding:44px 26px}.why-frame{padding:28px 22px}.gauge-card{grid-template-columns:1fr}.gc-demo{border-left:none;border-top:1px solid var(--line)}.about-grid{grid-template-columns:1fr}.points{grid-template-columns:1fr}.cta{white-space:normal}.qopts{grid-template-columns:1fr}.gc-form,.gc-demo{padding:22px 18px}}
 </style>
 </head>
 <body>
@@ -225,9 +225,8 @@
         <a href="/solutions/paid-campaigns"><span class="ic p">🎯</span><span><b>Paid Campaigns</b><small>Google &amp; LinkedIn Ads accountable to revenue, not clicks</small></span></a>
       </div>
     </li>
-    <li><a href="#results">Success Stories</a></li>
+    <li><a href="/success-stories">Success Stories</a></li>
     <li><a href="#approach">About</a></li>
-    <li><a href="#faq">FAQs</a></li>
   </ul>
   <button class="cta" onclick="document.getElementById('scorecard').scrollIntoView()">Free AEO audit</button>
 </nav>
