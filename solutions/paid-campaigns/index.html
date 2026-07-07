@@ -4,8 +4,20 @@
 <meta charset="UTF-8">
 <link rel="icon" type="image/svg+xml" href="/assets/logo-icon.svg">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Paid Campaigns | Google Ads &amp; LinkedIn Ads That Build Pipeline | Your Digital Partner</title>
-<meta name="description" content="Full-funnel Google Ads and LinkedIn campaigns for B2B: nurture journeys, data-led targeting and ad formats matched to every buying stage. £1m pipeline from £65k spend. Free ad audit.">
+<script>document.documentElement.classList.add('js');window.siteMotionOK=!matchMedia('(prefers-reduced-motion: reduce)').matches;window.sitePageVisible=!document.hidden;</script>
+<title>B2B Google & LinkedIn Ads | Your Digital Partner</title>
+<meta name="description" content="Build measurable B2B pipeline with Google Ads and LinkedIn campaigns, precise targeting, conversion-led landing pages and continuous optimisation against revenue.">
+<link rel="canonical" href="https://your-digital-partner.co.uk/solutions/paid-campaigns/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Your Digital Partner">
+<meta property="og:title" content="B2B Google & LinkedIn Ads | Your Digital Partner">
+<meta property="og:description" content="Build measurable B2B pipeline with Google Ads and LinkedIn campaigns, precise targeting, conversion-led landing pages and continuous optimisation against revenue.">
+<meta property="og:url" content="https://your-digital-partner.co.uk/solutions/paid-campaigns/">
+<meta property="og:image" content="https://146760313.fs1.hubspotusercontent-eu1.net/hubfs/146760313/6B24F59D-9FF0-4D55-BBBA-9A13BC08B8A5.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="B2B Google & LinkedIn Ads | Your Digital Partner">
+<meta name="twitter:description" content="Build measurable B2B pipeline with Google Ads and LinkedIn campaigns, precise targeting, conversion-led landing pages and continuous optimisation against revenue.">
+<meta name="twitter:image" content="https://146760313.fs1.hubspotusercontent-eu1.net/hubfs/146760313/6B24F59D-9FF0-4D55-BBBA-9A13BC08B8A5.png">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -216,16 +228,19 @@
   @media(max-width:900px){nav ul{display:none}.hero{padding:120px 20px 40px}section{padding:70px 20px}
    .journey,.gwrap,.intel,.funnels,.audit{grid-template-columns:1fr}.funnelbox,.audit{padding:36px 24px}.cta{white-space:normal}.au-form input{min-width:0}}
 </style>
+<link rel="stylesheet" href="/assets/site-enhancements.css">
+<script src="/assets/site-enhancements.js" defer></script>
 </head>
-<body>
+<body data-page="paid" data-mobile-cta="Free ad audit" data-mobile-target="#audit">
 
-<nav>
+<nav aria-label="Primary">
   <a class="logo" href="/">
     <svg viewBox="0 0 64 64" width="30" height="30" xmlns="http://www.w3.org/2000/svg"><rect width="64" height="64" rx="16" fill="#0a1733"/><circle cx="28" cy="28" r="13.5" fill="none" stroke="#35e0c8" stroke-width="4"/><path d="M38 38 L48.5 48.5" stroke="#35e0c8" stroke-width="5.5" stroke-linecap="round"/><path d="M21 33.5 L26.5 26.5 L29.5 29.5 L35 22.5" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M30.5 21.5 L35.5 21.9 L35.1 26.9" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M50 9 l1.9 4.2 4.2 1.9 -4.2 1.9 -1.9 4.2 -1.9 -4.2 -4.2 -1.9 4.2 -1.9 z" fill="#35e0c8"/></svg>
     <span>your<b>digital</b>partner</span>
   </a>
-  <ul>
-    <li>Solutions ▾
+  <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">☰</button>
+  <ul id="site-menu">
+    <li class="solutions-item"><button class="solutions-toggle" type="button" aria-expanded="false">Solutions <span aria-hidden="true">▾</span></button>
       <div class="dd">
         <a href="/solutions/seo-aeo-visibility"><span class="ic g">🔍</span><span><b>SEO &amp; AEO Visibility</b><small>Rank on Google and get cited by ChatGPT, Gemini &amp; Perplexity</small></span></a>
         <a href="/solutions/website-optimisation-cro"><span class="ic b">📈</span><span><b>Website Optimisation &amp; CRO</b><small>Heatmaps, A/B testing &amp; personalisation that turn traffic into pipeline</small></span></a>
@@ -437,7 +452,7 @@
 
 <footer>
   <span>© Your Digital Partner · Chris Chapman, your on-demand digital marketing partner</span>
-  <span><a href="/solutions/seo-aeo-visibility">SEO &amp; AEO</a> · <a href="/solutions/website-optimisation-cro">CRO</a> · <a href="/solutions/paid-campaigns">Paid</a></span>
+  <span><a href="/solutions/seo-aeo-visibility">SEO &amp; AEO</a> · <a href="/solutions/website-optimisation-cro">CRO</a> · <a href="/solutions/paid-campaigns">Paid</a> · <a href="/privacy/">Privacy</a></span>
 </footer>
 
 <script>
@@ -448,13 +463,13 @@ document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
 // SERP query typing loop
 const QUERIES=["b2b google ads consultant","reduce wasted ad spend b2b","linkedin abm campaign expert"];
 const qEl=document.getElementById("query");let qi=0;
-function typeQuery(){const q=QUERIES[qi];let i=0;qEl.textContent="";
+function typeQuery(){if(document.hidden){setTimeout(typeQuery,1000);return;}const q=QUERIES[qi];let i=0;qEl.textContent="";
  (function t(){i++;qEl.textContent=q.slice(0,i);
   if(i<q.length)setTimeout(t,70);
   else setTimeout(()=>{let j=q.length;
    (function d(){j-=2;qEl.textContent=q.slice(0,Math.max(0,j));
     if(j>0)setTimeout(d,25);else{qi=(qi+1)%QUERIES.length;typeQuery();}})();},3200);})();}
-typeQuery();
+if(window.siteMotionOK)typeQuery();else qEl.textContent=QUERIES[0];
 
 // Funnels animate on view
 new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){

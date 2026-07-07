@@ -4,8 +4,20 @@
 <meta charset="UTF-8">
 <link rel="icon" type="image/svg+xml" href="/assets/logo-icon.svg">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Website Optimisation &amp; CRO | Convert More of Your Traffic | Your Digital Partner</title>
-<meta name="description" content="Data-led website optimisation for B2B: heatmaps, session recordings, A/B testing and interactive modules that turn visitors into pipeline. Get a free conversion review of your landing page.">
+<script>document.documentElement.classList.add('js');window.siteMotionOK=!matchMedia('(prefers-reduced-motion: reduce)').matches;window.sitePageVisible=!document.hidden;</script>
+<title>B2B Website Optimisation & CRO | Your Digital Partner</title>
+<meta name="description" content="Turn more B2B website traffic into leads with heatmaps, session recordings, A/B testing, personalisation and conversion-focused interactive journeys.">
+<link rel="canonical" href="https://your-digital-partner.co.uk/solutions/website-optimisation-cro/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Your Digital Partner">
+<meta property="og:title" content="B2B Website Optimisation & CRO | Your Digital Partner">
+<meta property="og:description" content="Turn more B2B website traffic into leads with heatmaps, session recordings, A/B testing, personalisation and conversion-focused interactive journeys.">
+<meta property="og:url" content="https://your-digital-partner.co.uk/solutions/website-optimisation-cro/">
+<meta property="og:image" content="https://146760313.fs1.hubspotusercontent-eu1.net/hubfs/146760313/6B24F59D-9FF0-4D55-BBBA-9A13BC08B8A5.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="B2B Website Optimisation & CRO | Your Digital Partner">
+<meta name="twitter:description" content="Turn more B2B website traffic into leads with heatmaps, session recordings, A/B testing, personalisation and conversion-focused interactive journeys.">
+<meta name="twitter:image" content="https://146760313.fs1.hubspotusercontent-eu1.net/hubfs/146760313/6B24F59D-9FF0-4D55-BBBA-9A13BC08B8A5.png">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -234,16 +246,19 @@
    .ed-grid{grid-template-columns:1fr}.canvas-stick{position:relative;top:0}.estep{min-height:0;padding:34px 0;opacity:1}
    .demos,.review-box,.leadgrid{grid-template-columns:1fr}.review-box{padding:40px 26px}.cta{white-space:normal}.td-form input{min-width:0}.vids{grid-template-columns:1fr}.qrow{flex-wrap:wrap}}
 </style>
+<link rel="stylesheet" href="/assets/site-enhancements.css">
+<script src="/assets/site-enhancements.js" defer></script>
 </head>
-<body>
+<body data-page="cro" data-mobile-cta="Free website review" data-mobile-target="#review">
 
-<nav>
+<nav aria-label="Primary">
   <a class="logo" href="/">
     <svg viewBox="0 0 64 64" width="30" height="30" xmlns="http://www.w3.org/2000/svg"><rect width="64" height="64" rx="16" fill="#0a1733"/><circle cx="28" cy="28" r="13.5" fill="none" stroke="#35e0c8" stroke-width="4"/><path d="M38 38 L48.5 48.5" stroke="#35e0c8" stroke-width="5.5" stroke-linecap="round"/><path d="M21 33.5 L26.5 26.5 L29.5 29.5 L35 22.5" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M30.5 21.5 L35.5 21.9 L35.1 26.9" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M50 9 l1.9 4.2 4.2 1.9 -4.2 1.9 -1.9 4.2 -1.9 -4.2 -4.2 -1.9 4.2 -1.9 z" fill="#35e0c8"/></svg>
     <span>your<b>digital</b>partner</span>
   </a>
-  <ul>
-    <li>Solutions ▾
+  <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">☰</button>
+  <ul id="site-menu">
+    <li class="solutions-item"><button class="solutions-toggle" type="button" aria-expanded="false">Solutions <span aria-hidden="true">▾</span></button>
       <div class="dd">
         <a href="/solutions/seo-aeo-visibility"><span class="ic g">🔍</span><span><b>SEO &amp; AEO Visibility</b><small>Rank on Google and get cited by ChatGPT, Gemini &amp; Perplexity</small></span></a>
         <a href="/solutions/website-optimisation-cro"><span class="ic b">📈</span><span><b>Website Optimisation &amp; CRO</b><small>Heatmaps, A/B testing &amp; personalisation that turn traffic into pipeline</small></span></a>
@@ -450,7 +465,7 @@
 
 <footer>
   <span>© Your Digital Partner · Chris Chapman, your on-demand digital marketing partner</span>
-  <span><a href="/solutions/seo-aeo-visibility">SEO &amp; AEO</a> · <a href="/solutions/website-optimisation-cro">CRO</a> · <a href="/solutions/paid-campaigns">Paid</a></span>
+  <span><a href="/solutions/seo-aeo-visibility">SEO &amp; AEO</a> · <a href="/solutions/website-optimisation-cro">CRO</a> · <a href="/solutions/paid-campaigns">Paid</a> · <a href="/privacy/">Privacy</a></span>
 </footer>
 
 <script>
@@ -504,6 +519,7 @@ new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){
 const qual=document.getElementById("qual"),qrows=qual.querySelectorAll(".qrow"),qmail=document.getElementById("qmailtxt"),qsub=document.getElementById("qsub");
 const QEMAIL="jane@yourcompany.co.uk";
 function qualLoop(){
+ if(document.hidden){setTimeout(qualLoop,1000);return;}
  qual.classList.remove("show");qmail.textContent="";qsub.classList.remove("press");
  qrows.forEach(r=>{r.classList.remove("on","rated");r.querySelectorAll(".rp i").forEach(i=>i.classList.remove("sel"))});
  qrows.forEach((r,i)=>{setTimeout(()=>{qrows.forEach(x=>x.classList.remove("on"));r.classList.add("on");
@@ -512,7 +528,7 @@ function qualLoop(){
  setTimeout(()=>qsub.classList.add("press"),4900);
  setTimeout(()=>qual.classList.add("show"),5300);
  setTimeout(qualLoop,10300);}
-new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){qualLoop();o.disconnect()}},{threshold:.35}).observe(qual);
+new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){if(window.siteMotionOK)qualLoop();else qual.classList.add("show");o.disconnect()}},{threshold:.35}).observe(qual);
 </script>
 </body>
 </html>
