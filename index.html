@@ -378,7 +378,7 @@
   nav ul{display:flex;gap:20px;list-style:none;font-size:13px;color:var(--mut)}
   nav ul li{cursor:pointer;position:relative}nav ul li:hover{color:var(--ink)}
   /* Nav book-a-call button: white fill, spinning gradient ring, short label so intent is unambiguous */
-  .nav-book{background:#fff;color:var(--ink);border:2px solid var(--lime);border-radius:99px;padding:7px 14px 7px 10px;font-size:12px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+  .nav-book{background:#fff;color:var(--ink);border:2px solid var(--ink);border-radius:99px;padding:7px 14px 7px 10px;font-size:12px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
   .nav-book .ic{font-size:19px}
   .dd{position:absolute;top:34px;left:-40px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:10px;width:450px;box-shadow:0 24px 60px rgba(8,20,48,.18);opacity:0;visibility:hidden;transform:translateY(6px);transition:all .2s}
   li:hover .dd{opacity:1;visibility:visible;transform:none}
@@ -491,7 +491,16 @@
   .story .visit{font-weight:700;font-size:13px;display:inline-block}
   .story .visit:hover{text-decoration:underline}
   /* BIG QUIZ */
-  .quizbig{background:var(--ink);border-radius:28px;padding:64px 60px;color:#eef2fb;position:relative;overflow:hidden}
+  .quizbig{background:var(--ink);border-radius:28px;color:#eef2fb;position:relative;overflow:hidden}
+  .qb-top{padding:64px 60px 34px}
+  /* Book-a-call strip: attached inside the same card, same recipe used on the other pages */
+  .qb-book{border-top:1px solid rgba(53,224,200,.25);background:rgba(53,224,200,.07);padding:22px 60px;display:flex;align-items:center;justify-content:center;gap:40px;position:relative;z-index:1}
+  .qb-book .txt{font-size:16px;color:#cdd8ef;line-height:1.5;white-space:nowrap}
+  .qb-book .txt b{color:#fff}
+  @property --qba{syntax:'<angle>';initial-value:0deg;inherits:false}
+  .qb-book-cta{position:relative;background:var(--ink);color:#fff;padding:14px 30px;border-radius:99px;font-size:15px;font-weight:800;border:0;cursor:pointer;white-space:nowrap;z-index:1;flex-shrink:0}
+  .qb-book-cta::before{content:"";position:absolute;inset:-3px;border-radius:99px;padding:3px;background:conic-gradient(from var(--qba),var(--lime),var(--purple),var(--pink),var(--blue),var(--lime));-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:qbaspin 3.2s linear infinite;z-index:-1}
+  @keyframes qbaspin{to{--qba:360deg}}
   .quizbig::before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(53,224,200,.28),transparent 70%);top:-160px;right:-100px;pointer-events:none}
   .quizbig::after{content:"";position:absolute;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(194,64,141,.3),transparent 70%);bottom:-160px;left:-100px;pointer-events:none}
   .quizbig .qstep{color:var(--lime);font-size:12px;letter-spacing:2.5px}
@@ -547,7 +556,7 @@
   footer{padding:34px 40px;font-size:12.5px;color:var(--mut);max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:gap;gap:14px;flex-wrap:wrap}
   footer a:hover{color:var(--ink)}
   .mobile-sticky-cta{display:none}
-  @media(max-width:900px){body{padding-bottom:74px}nav ul{display:none}.navr>.cta{display:none}.navr>.nav-book{display:none}.mobile-menu-toggle{position:relative;display:grid;place-items:center;width:42px;height:42px;border:0;background:var(--ink);color:var(--lime);border-radius:50%;font-size:0;line-height:0;cursor:pointer;padding:0}nav.open ul{display:flex;position:absolute;top:calc(100% + 8px);left:0;right:0;flex-direction:column;gap:4px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:10px;box-shadow:0 18px 42px rgba(8,20,48,.18)}nav.open ul li{padding:10px}nav.open .dd{position:static;opacity:1;visibility:visible;transform:none;width:auto;box-shadow:none;border:0;padding:6px 0 0;background:transparent}nav.open .dd a{padding:10px}.mobile-sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;align-items:center;justify-content:center;background:var(--ink);color:var(--lime);border-radius:0;padding:17px 20px calc(17px + env(safe-area-inset-bottom));font-size:16px;font-weight:800;box-shadow:0 -10px 28px rgba(8,20,48,.18)}.mobile-sticky-cta::after{content:"\2192";display:inline-block;margin-left:10px;animation:stickyArrow 1.35s ease-in-out infinite}.hero,section{padding-left:20px;padding-right:20px}.hero h1 .hl{margin-top:10px}.bento{grid-template-columns:1fr}.s2,.s3,.s6{grid-column:span 1}.stories{grid-template-columns:1fr}.quizbig{padding:44px 26px}.why-frame{padding:28px 22px}.gauge-card{grid-template-columns:1fr}.gc-demo{border-left:none;border-top:1px solid var(--line)}.about-grid{grid-template-columns:1fr}.points{grid-template-columns:1fr}nav .cta{white-space:normal}.qopts{grid-template-columns:1fr}.gc-form{padding:24px 8px 18px}.gc-demo{padding:22px 18px}.gc-form .hs-form-frame{width:116%;max-width:116%;margin-left:-8%;overflow:visible}.gc-form .hs-form-frame iframe{width:100%!important;min-width:0!important;transform:none}.reveal{opacity:1;transform:none;transition:none}.final .desktop-break{display:none}}
+  @media(max-width:900px){body{padding-bottom:74px}nav ul{display:none}.navr>.cta{display:none}.navr>.nav-book{display:none}.mobile-menu-toggle{position:relative;display:grid;place-items:center;width:42px;height:42px;border:0;background:var(--ink);color:var(--lime);border-radius:50%;font-size:0;line-height:0;cursor:pointer;padding:0}nav.open ul{display:flex;position:absolute;top:calc(100% + 8px);left:0;right:0;flex-direction:column;gap:4px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:10px;box-shadow:0 18px 42px rgba(8,20,48,.18)}nav.open ul li{padding:10px}nav.open .dd{position:static;opacity:1;visibility:visible;transform:none;width:auto;box-shadow:none;border:0;padding:6px 0 0;background:transparent}nav.open .dd a{padding:10px}.mobile-sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;align-items:center;justify-content:center;background:var(--ink);color:var(--lime);border-radius:0;padding:17px 20px calc(17px + env(safe-area-inset-bottom));font-size:16px;font-weight:800;box-shadow:0 -10px 28px rgba(8,20,48,.18)}.mobile-sticky-cta::after{content:"\2192";display:inline-block;margin-left:10px;animation:stickyArrow 1.35s ease-in-out infinite}.hero,section{padding-left:20px;padding-right:20px}.hero h1 .hl{margin-top:10px}.bento{grid-template-columns:1fr}.s2,.s3,.s6{grid-column:span 1}.stories{grid-template-columns:1fr}.qb-top{padding:36px 16px 20px}.qb-book{padding:18px 16px;flex-wrap:wrap;text-align:center;gap:14px}.why-frame{padding:28px 22px}.gauge-card{grid-template-columns:1fr}.gc-demo{border-left:none;border-top:1px solid var(--line)}.about-grid{grid-template-columns:1fr}.points{grid-template-columns:1fr}nav .cta{white-space:normal}.qopts{grid-template-columns:1fr}.gc-form{padding:24px 8px 18px}.gc-demo{padding:22px 18px}.gc-form .hs-form-frame{width:116%;max-width:116%;margin-left:-8%;overflow:visible}.gc-form .hs-form-frame iframe{width:100%!important;min-width:0!important;transform:none}.reveal{opacity:1;transform:none;transition:none}.final .desktop-break{display:none}}
   @keyframes stickyArrow{0%,100%{transform:translateX(0);opacity:.68}50%{transform:translateX(6px);opacity:1}}
 </style>
 <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
@@ -623,10 +632,16 @@ I connect all three so your digital marketing is measured against qualified lead
 
 <section class="reveal" style="padding-top:0">
   <div class="quizbig" id="quizcell">
+    <div class="qb-top" id="qbtop">
     <div class="qstep" id="qs">Find your fastest win · Question 1 of 3</div>
     <h3 id="qq">What's your biggest growth challenge right now?</h3>
     <p class="qhint">3 quick questions · instant recommendation on where to focus first · no email needed</p>
     <div class="qopts" id="qo"></div>
+    </div>
+    <div class="qb-book">
+      <span class="txt">Would rather skip the quiz? <b>Let's talk it through, live - 30 minutes.</b></span>
+      <button class="qb-book-cta" type="button" onclick="Calendly.showPopupWidget('https://calendly.com/chris-your-digital-partner/30min');return false;">📅 Book your call →</button>
+    </div>
   </div>
 </section>
 
@@ -751,7 +766,7 @@ function renderQ(){document.getElementById("qq").textContent=Q[qi].q;
  const o=document.getElementById("qo");o.innerHTML="";
  const btns=Q[qi].o.map(([t,r])=>{const b=document.createElement("button");b.className="qopt";b.innerHTML=t+'<span class="qarr">→</span>';
   b.onclick=()=>{if(r&&qi===0)route=r;if(r&&qi===2)route=r;
-   if(qi<2){qi++;renderQ()}else{const R=ROUTES[route];document.getElementById("quizcell").innerHTML=
+   if(qi<2){qi++;renderQ()}else{const R=ROUTES[route];document.getElementById("qbtop").innerHTML=
    `<div class="qstep">Recommended for you</div><h3>→ ${R.t}</h3><p style="color:#93a5c1;font-size:15px;line-height:1.65;margin-top:8px;max-width:560px">${R.d}</p>
     <div style="display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;position:relative;z-index:1"><a class="cta" style="display:inline-block;background:var(--lime);color:var(--ink)" href="${R.u}">Explore ${R.t} →</a>
     <button class="cta" style="background:rgba(255,255,255,.12);color:#eef2fb" onclick="document.getElementById('scorecard').scrollIntoView()">Or get your free AEO audit</button></div>`}};
