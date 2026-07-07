@@ -38,6 +38,8 @@
   .dd a small{display:block;color:var(--mut);font-size:12px;line-height:1.5}
   .cta{background:var(--ink);color:var(--lime);border:none;padding:10px 20px;border-radius:99px;font-size:13px;font-weight:700;cursor:pointer;transition:transform .2s;white-space:nowrap;display:inline-block}
   .cta:hover{transform:scale(1.05)}
+  .mobile-menu-toggle{display:none}
+  .mobile-menu-toggle::before{content:"";width:18px;height:12px;background:linear-gradient(var(--lime),var(--lime)) top/100% 2px no-repeat,linear-gradient(var(--lime),var(--lime)) center/100% 2px no-repeat,linear-gradient(var(--lime),var(--lime)) bottom/100% 2px no-repeat}
   /* LAYOUT */
   section{padding:96px 40px}
   .wrap{max-width:1160px;margin:0 auto}
@@ -213,8 +215,9 @@
   .au-form .micro{font-size:11px;color:var(--mut);margin-top:10px;text-align:center}
   footer{padding:34px 40px;font-size:12.5px;color:var(--mut);max-width:1160px;margin:0 auto;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
   footer a:hover{color:var(--ink)}
-  @media(max-width:900px){nav ul{display:none}.hero{padding:120px 20px 40px}section{padding:70px 20px}
-   .journey,.gwrap,.intel,.funnels,.audit{grid-template-columns:1fr}.funnelbox,.audit{padding:36px 24px}.cta{white-space:normal}.au-form input{min-width:0}}
+  .mobile-sticky-cta{display:none}
+  @media(max-width:900px){body{padding-bottom:86px}nav ul{display:none}nav>.cta{display:none}.mobile-menu-toggle{display:grid;place-items:center;width:42px;height:42px;border:0;background:var(--ink);color:var(--lime);border-radius:50%;font-size:0;line-height:0;cursor:pointer;padding:0}nav.open ul{display:flex;position:absolute;top:calc(100% + 8px);left:0;right:0;flex-direction:column;gap:4px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:10px;box-shadow:0 18px 42px rgba(8,20,48,.18)}nav.open ul li{padding:10px}nav.open .dd{position:static;opacity:1;visibility:visible;transform:none;width:auto;box-shadow:none;border:0;padding:6px 0 0;background:transparent}nav.open .dd a{padding:10px}.mobile-sticky-cta{position:fixed;left:16px;right:16px;bottom:calc(14px + env(safe-area-inset-bottom));z-index:60;display:flex;align-items:center;justify-content:center;background:var(--ink);color:var(--lime);border-radius:99px;padding:16px 22px;font-size:15px;font-weight:800;box-shadow:0 14px 36px rgba(8,20,48,.28)}.hero{padding:120px 18px 40px}section{padding:64px 16px}.wrap{max-width:100%;min-width:0}
+   .journey,.gwrap,.intel,.funnels,.audit{grid-template-columns:1fr}.stagecard,.gcard,.icard,.funnelbox,.audit{min-width:0}.funnelbox{padding:36px 18px}.audit{padding:34px 14px;box-shadow:6px 6px 0 rgba(194,64,141,.12);gap:26px}nav .cta{white-space:normal}.au-form{padding:20px 8px;width:100%;max-width:none;overflow:visible}.au-form .hs-form-frame{width:100%;max-width:none;overflow:visible}.au-form .hs-form-frame iframe{width:100%!important;min-width:0!important;transform:scale(1.16);transform-origin:top center}.au-form input{min-width:0}.platchips{flex-wrap:wrap}.serp,.liad,.banner{min-width:0}}
 </style>
 </head>
 <body>
@@ -236,7 +239,9 @@
     <li><a href="#audit">Free ad audit</a></li>
   </ul>
   <a class="cta" href="#audit">Free ad audit</a>
+  <button class="mobile-menu-toggle" type="button" aria-label="Open menu" onclick="this.closest('nav').classList.toggle('open')">☰</button>
 </nav>
+<a class="mobile-sticky-cta" href="#audit">Free ad audit</a>
 
 <header class="hero">
   <div class="wrap">
