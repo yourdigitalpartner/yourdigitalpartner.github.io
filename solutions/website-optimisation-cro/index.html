@@ -117,8 +117,8 @@
   .p-formshort .ticker{font-size:10.5px;font-weight:700;color:var(--green);margin-top:8px}
   /* canvas states */
   .canvas .m1 .swap-in,.canvas .m2 .swap-in,.canvas .m3 .swap-in,.canvas .m4 .swap-in{display:none}
-  .canvas.st1 .m1 .swap-out,.canvas.st2 .m2 .swap-out,.canvas.st3 .m3 .swap-out,.canvas.st4 .m4 .swap-out{display:none}
-  .canvas.st1 .m1 .swap-in,.canvas.st2 .m2 .swap-in,.canvas.st3 .m3 .swap-in,.canvas.st4 .m4 .swap-in{display:block;animation:snapin .55s cubic-bezier(.3,1.5,.5,1)}
+  .canvas.st1 .m3 .swap-out,.canvas.st2 .m2 .swap-out,.canvas.st3 .m4 .swap-out{display:none}
+  .canvas.st1 .m3 .swap-in,.canvas.st2 .m2 .swap-in,.canvas.st3 .m4 .swap-in{display:block;animation:snapin .55s cubic-bezier(.3,1.5,.5,1)}
   @keyframes snapin{from{transform:scale(.92);opacity:0}}
   /* edit cursor + stat chip */
   .edcur{position:absolute;font-size:20px;z-index:5;transition:top .8s cubic-bezier(.4,0,.2,1),left .8s cubic-bezier(.4,0,.2,1);filter:drop-shadow(0 2px 4px rgba(0,0,0,.3))}
@@ -136,6 +136,34 @@
   .e2 .snum,.e2 .res{color:var(--pink);border-color:var(--pink)}
   .e3 .snum,.e3 .res{color:var(--purple);border-color:var(--purple)}
   .e4 .snum,.e4 .res{color:var(--green);border-color:var(--green)}
+  /* qualifier module */
+  .caret::after{content:"▌";color:var(--green);animation:qblink 1s steps(1) infinite}
+  @keyframes qblink{50%{opacity:0}}
+  .qual{background:#f8fafd;border:1px solid var(--line);border-radius:16px;padding:22px;position:relative}
+  .qrow{display:flex;justify-content:space-between;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin-bottom:8px;font-size:13.5px;font-weight:700;transition:all .3s;opacity:.55}
+  .qrow.on{opacity:1;border-color:var(--purple);box-shadow:0 6px 14px rgba(123,92,250,.15)}
+  .qrow.rated{opacity:1}
+  .rp{display:flex;gap:6px}
+  .rp i{font-style:normal;font-size:10.5px;font-weight:800;border:1px solid var(--line);border-radius:99px;padding:4px 11px;color:#9aa7bd;transition:all .3s}
+  .rp i.sel{background:var(--purple);border-color:var(--purple);color:#fff}
+  .qmail{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 16px;font-size:13px;margin:12px 0 10px;min-height:42px}
+  .qsub{background:var(--ink);color:var(--lime);border-radius:12px;padding:13px;text-align:center;font-size:14px;font-weight:800;transition:transform .2s}
+  .qsub.press{transform:scale(.96)}
+  .qual-done{display:none}
+  .qual.show .qual-form{display:none}
+  .qual.show .qual-done{display:block;animation:qfade .5s}
+  @keyframes qfade{from{opacity:0;transform:translateY(8px)}}
+  .qdh{font-size:15px;font-weight:800;margin-bottom:14px}
+  .qdh b{color:var(--purple)}
+  .vids{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+  .vid{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;font-size:12px;opacity:0;transform:scale(.9);transition:all .4s}
+  .qual.show .vid{opacity:1;transform:none}
+  .qual.show .vid:nth-child(2){transition-delay:.18s}
+  .qual.show .vid:nth-child(3){transition-delay:.36s}
+  .vid .vp{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--purple);color:#fff;font-size:12px;margin-bottom:10px}
+  .vid b{display:block;font-size:13.5px;margin-bottom:3px}
+  .vid small{color:var(--mut)}
+  .qdn{font-size:12px;color:var(--mut);margin-top:14px;font-weight:600}
   /* ===== DATA DEMOS ===== */
   .demos{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:46px}
   .demo{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;transition:transform .25s,box-shadow .25s}
@@ -204,7 +232,7 @@
   footer a:hover{color:var(--ink)}
   @media(max-width:900px){nav ul{display:none}.hero{padding:120px 20px 40px}section{padding:70px 20px}.editor-sec{padding:20px 20px 60px}
    .ed-grid{grid-template-columns:1fr}.canvas-stick{position:relative;top:0}.estep{min-height:0;padding:34px 0;opacity:1}
-   .demos,.review-box,.leadgrid{grid-template-columns:1fr}.review-box{padding:40px 26px}.cta{white-space:normal}.td-form input{min-width:0}}
+   .demos,.review-box,.leadgrid{grid-template-columns:1fr}.review-box{padding:40px 26px}.cta{white-space:normal}.td-form input{min-width:0}.vids{grid-template-columns:1fr}.qrow{flex-wrap:wrap}}
 </style>
 </head>
 <body>
@@ -247,18 +275,14 @@
         </div>
         <div class="ed-body">
           <div class="palette">
-            <span class="pal" data-p="1">🎬</span>
+            <span class="pal" data-p="1">👤</span>
             <span class="pal" data-p="2">🧭</span>
-            <span class="pal" data-p="3">👤</span>
-            <span class="pal" data-p="4">✉️</span>
+            <span class="pal" data-p="3">✉️</span>
           </div>
           <div class="page">
             <div class="p-nav"><u></u><u></u><u></u><u></u></div>
             <div class="mod m1">
-              <div class="swap-out p-heroimg">Static stock image</div>
-              <div class="swap-in">
-                <div class="p-video"><span class="play">▶</span><span class="vemail">Watch the 2-min demo <b>· just your email</b></span></div>
-              </div>
+              <div class="swap-out p-heroimg">Hero image</div>
             </div>
             <div class="mod m3">
               <div class="swap-out p-head">One generic headline for everyone</div>
@@ -295,26 +319,20 @@
     </div>
 
     <div class="steps-col">
-      <div class="estep e1" data-st="1" data-chip="+32% demo requests" data-cur="90,120">
-        <span class="snum">Edit 01 · Show, don't tell</span>
-        <h3>Swap the stock image for a video demo — gated by just an email.</h3>
-        <p>Session recordings showed visitors scrolling straight past the hero. A short product demo behind a single email field turns passive scrolling into your highest-intent conversion point — no seven-field form required.</p>
-        <span class="res">Result: +32% demo requests</span>
-      </div>
-      <div class="estep e3" data-st="2" data-chip="2.3× engagement" data-cur="150,110">
-        <span class="snum">Edit 02 · Speak to the person</span>
+      <div class="estep e3" data-st="1" data-chip="2.3× engagement" data-cur="150,110">
+        <span class="snum">Edit 01 · Speak to the person</span>
         <h3>One headline for everyone becomes a persona-matched message.</h3>
         <p>Your analytics already know who's visiting. Persona-matched headlines, content and CTAs mean a marketing leader and a finance director each see the value that matters to them — personalisation that lifts engagement across every page.</p>
         <span class="res">Result: 2.3× content engagement</span>
       </div>
-      <div class="estep e2" data-st="3" data-chip="+40% self-serve journeys" data-cur="230,120">
-        <span class="snum">Edit 03 · Let them self-serve</span>
+      <div class="estep e2" data-st="2" data-chip="+40% self-serve journeys" data-cur="230,120">
+        <span class="snum">Edit 02 · Let them self-serve</span>
         <h3>A wall of text becomes an interactive solution finder.</h3>
         <p>Heatmaps show which sections get used and which get ignored. Where attention dies, interactive modules — solution finders, product quizzes, calculators — pull visitors in and route them to the right page in seconds.</p>
         <span class="res">Result: +40% self-serve journeys</span>
       </div>
-      <div class="estep e4" data-st="4" data-chip="−16% drop-off" data-cur="300,110">
-        <span class="snum">Edit 04 · Remove the toll booth</span>
+      <div class="estep e4" data-st="3" data-chip="−16% drop-off" data-cur="300,110">
+        <span class="snum">Edit 03 · Remove the toll booth</span>
         <h3>Seven form fields become one — and leads start flowing.</h3>
         <p>Every field you ask for costs you leads. Funnel analysis finds exactly where drop-off happens; progressive profiling collects the rest later. Shorter forms, smarter follow-up, measurably more pipeline.</p>
         <span class="res">Result: −16% drop-off, +18% MQLs</span>
@@ -322,6 +340,34 @@
     </div>
   </div>
 </div>
+
+<section class="reveal bg-white">
+  <div class="wrap">
+    <span class="eyebrow">Interactive modules</span>
+    <h2 class="sec">Modules that qualify leads while they engage.</h2>
+    <p class="lead">Interactive tools give visitors something useful — and quietly qualify them at the same time. This one asks five quick questions, gates the payoff with just an email, then serves demo videos tailored to the answers. Watch it work:</p>
+    <div class="qual" id="qual" style="margin-top:38px">
+      <div class="qual-form">
+        <div class="qrow" data-pick="0"><span>Cutting invoice admin</span><span class="rp"><i>Important</i><i>Somewhat</i><i>Not</i></span></div>
+        <div class="qrow" data-pick="1"><span>Faster supplier payments</span><span class="rp"><i>Important</i><i>Somewhat</i><i>Not</i></span></div>
+        <div class="qrow" data-pick="0"><span>Live project visibility</span><span class="rp"><i>Important</i><i>Somewhat</i><i>Not</i></span></div>
+        <div class="qrow" data-pick="2"><span>Compliance &amp; audit trail</span><span class="rp"><i>Important</i><i>Somewhat</i><i>Not</i></span></div>
+        <div class="qrow" data-pick="0"><span>Integrating with your ERP</span><span class="rp"><i>Important</i><i>Somewhat</i><i>Not</i></span></div>
+        <div class="qmail">✉️ <span id="qmailtxt"></span></div>
+        <div class="qsub" id="qsub">See my tailored demos →</div>
+      </div>
+      <div class="qual-done">
+        <div class="qdh">🎬 Your tailored demos — based on what you rated <b>Important</b></div>
+        <div class="vids">
+          <div class="vid"><span class="vp">▶</span><b>Invoice automation</b><small>2-min demo</small></div>
+          <div class="vid"><span class="vp">▶</span><b>Project visibility</b><small>3-min demo</small></div>
+          <div class="vid"><span class="vp">▶</span><b>ERP integration</b><small>90-sec demo</small></div>
+        </div>
+        <div class="qdn">High-intent leads that arrive pre-qualified — with their priorities already on the CRM record.</div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="reveal bg-blue">
   <div class="wrap">
@@ -404,7 +450,7 @@
 
 <footer>
   <span>© Your Digital Partner · Chris Chapman, your on-demand digital marketing partner</span>
-  <span><a href="/solutions/seo-aeo-visibility">SEO &amp; AEO</a> · <a href="/solutions/website-optimisation-cro">CRO</a> · <a href="/solutions/paid-campaigns">Paid</a> · <a href="/privacy">Privacy</a></span>
+  <span><a href="/solutions/seo-aeo-visibility">SEO &amp; AEO</a> · <a href="/solutions/website-optimisation-cro">CRO</a> · <a href="/solutions/paid-campaigns">Paid</a></span>
 </footer>
 
 <script>
@@ -427,7 +473,7 @@ const stObs=new IntersectionObserver(es=>{
    chip.textContent=e.target.dataset.chip;
    chip.style.top=(+t-26)+"px";
    chip.classList.remove("hidden");
-   if(st===4)startTicker();
+   if(st===3)startTicker();
   }
  });
 },{threshold:.55});
@@ -453,6 +499,20 @@ new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){
    mqlEl.textContent=m;pipEl.textContent="£"+p+"k";
    if(m===42&&p===680){clearInterval(iv);setTimeout(run,2600);}},60);}
  run();o.disconnect();}},{threshold:.4}).observe(mqlEl);
+
+// Lead qualifier auto-demo loop
+const qual=document.getElementById("qual"),qrows=qual.querySelectorAll(".qrow"),qmail=document.getElementById("qmailtxt"),qsub=document.getElementById("qsub");
+const QEMAIL="jane@yourcompany.co.uk";
+function qualLoop(){
+ qual.classList.remove("show");qmail.textContent="";qsub.classList.remove("press");
+ qrows.forEach(r=>{r.classList.remove("on","rated");r.querySelectorAll(".rp i").forEach(i=>i.classList.remove("sel"))});
+ qrows.forEach((r,i)=>{setTimeout(()=>{qrows.forEach(x=>x.classList.remove("on"));r.classList.add("on");
+   setTimeout(()=>{r.querySelectorAll(".rp i")[+r.dataset.pick].classList.add("sel");r.classList.add("rated");r.classList.remove("on")},320);},400+i*600);});
+ setTimeout(()=>{let i=0;(function t(){i++;qmail.innerHTML=QEMAIL.slice(0,i)+'<span class="caret"></span>';if(i<QEMAIL.length)setTimeout(t,38);else qmail.textContent=QEMAIL;})();},3700);
+ setTimeout(()=>qsub.classList.add("press"),4900);
+ setTimeout(()=>qual.classList.add("show"),5300);
+ setTimeout(qualLoop,10300);}
+new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){qualLoop();o.disconnect()}},{threshold:.35}).observe(qual);
 </script>
 </body>
 </html>

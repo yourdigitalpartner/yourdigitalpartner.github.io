@@ -189,11 +189,59 @@
   .dbar{display:grid;grid-template-columns:86px 1fr 34px;gap:8px;align-items:center;font-size:10.5px;font-weight:700;color:var(--mut);margin-bottom:7px}
   .dbar .dt{height:9px;background:#eef2fb;border-radius:99px;overflow:hidden}
   .dbar .df{height:100%;background:linear-gradient(90deg,var(--purple),#a78bfa);border-radius:99px;width:0;transition:width 1.3s cubic-bezier(.2,.8,.2,1)}
+  /* qualifier mock */
+  .qual{background:#f8fafd;border:1px solid var(--line);border-radius:14px;padding:14px;position:relative}
+  .qrow{display:flex;justify-content:space-between;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px 10px;margin-bottom:7px;font-size:11px;font-weight:700;transition:all .3s;opacity:.55}
+  .qrow.on{opacity:1;border-color:var(--purple);box-shadow:0 6px 14px rgba(123,92,250,.15)}
+  .qrow.rated{opacity:1}
+  .rp{display:flex;gap:4px}
+  .rp i{font-style:normal;font-size:8.5px;font-weight:800;border:1px solid var(--line);border-radius:99px;padding:3px 7px;color:#9aa7bd;transition:all .3s}
+  .rp i.sel{background:var(--purple);border-color:var(--purple);color:#fff}
+  .qmail{background:#fff;border:1px solid var(--line);border-radius:10px;padding:9px 11px;font-size:11px;margin:10px 0 8px;min-height:34px}
+  .qsub{background:var(--ink);color:var(--lime);border-radius:10px;padding:10px;text-align:center;font-size:11.5px;font-weight:800;transition:transform .2s}
+  .qsub.press{transform:scale(.95)}
+  .qual-done{display:none}
+  .qual.show .qual-form{display:none}
+  .qual.show .qual-done{display:block;animation:qfade .5s}
+  @keyframes qfade{from{opacity:0;transform:translateY(8px)}}
+  .qdh{font-size:11.5px;font-weight:800;margin-bottom:10px}
+  .qdh b{color:var(--purple)}
+  .vids{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+  .vid{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px;font-size:10px;opacity:0;transform:scale(.9);transition:all .4s}
+  .qual.show .vid{opacity:1;transform:none}
+  .qual.show .vid:nth-child(2){transition-delay:.18s}
+  .qual.show .vid:nth-child(3){transition-delay:.36s}
+  .vid .vp{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--purple);color:#fff;font-size:10px;margin-bottom:6px}
+  .vid b{display:block;font-size:10.5px;margin-bottom:2px}
+  .vid small{color:var(--mut)}
+  .qdn{font-size:10.5px;color:var(--mut);margin-top:10px;font-weight:600}
   /* web stats row */
   .webstats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
   .ws{background:#fff;border:1px solid var(--line);border-left:5px solid var(--blue);border-radius:14px;padding:18px 20px}
   .ws b{font-size:24px;color:var(--blue);display:block}
   .ws span{font-size:12px;color:var(--mut);line-height:1.5;display:block;margin-top:3px}
+  /* ABOUT */
+  .why-frame{background:#fff;border:1.5px solid var(--ink);border-radius:26px;padding:52px;box-shadow:10px 10px 0 rgba(8,20,48,.07)}
+  .about-grid{display:grid;grid-template-columns:290px 1fr;gap:48px;align-items:center}
+  .headshot-card{text-align:center}
+  .headshot{width:100%;max-width:260px;aspect-ratio:1;object-fit:cover;border-radius:24px;box-shadow:0 20px 44px rgba(8,20,48,.2);display:block;margin:0 auto}
+  .hs-fallback{display:none;width:260px;aspect-ratio:1;border-radius:24px;background:var(--ink);color:var(--lime);place-items:center;font-size:64px;font-weight:800;margin:0 auto}
+  .hname{font-weight:800;font-size:17px;margin-top:16px}
+  .hrole{font-size:12.5px;color:var(--mut);margin-bottom:16px}
+  .points{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:26px 0}
+  .point{display:flex;gap:13px;align-items:flex-start}
+  .point .pic{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;font-size:19px;flex-shrink:0}
+  .pic.g{background:#dcf3ef}.pic.b{background:#e8effe}.pic.p{background:#fceaf3}.pic.o{background:#ffefe0}
+  .point b{display:block;font-size:15px;margin-bottom:2px}
+  .point span{font-size:12.5px;color:var(--mut);line-height:1.55;display:block}
+  .fact{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px;font-size:13.5px;line-height:1.55;color:var(--mut)}
+  .fact b{color:var(--ink)}
+  .li-banner{display:flex;align-items:center;gap:16px;background:#0a66c2;border:none;color:#dcebff;font-size:14px;cursor:pointer;transition:transform .2s,box-shadow .2s}
+  .li-banner b{color:#fff;font-size:15.5px}
+  .li-banner .in{background:#fff;color:#0a66c2;font-weight:900;font-size:18px;border-radius:8px;padding:6px 10px;flex-shrink:0}
+  .li-banner .li-arrow{margin-left:auto;font-size:20px;color:#fff;transition:transform .2s}
+  .li-banner:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(10,102,194,.35)}
+  .li-banner:hover .li-arrow{transform:translateX(5px)}
   /* FINAL */
   .final{text-align:center}
   .contact-grid .hs-form-frame{margin:-4px 0 -10px;width:100%;min-width:0}
@@ -207,7 +255,7 @@
   footer{padding:34px 40px;font-size:12.5px;color:var(--mut);max-width:1160px;margin:0 auto;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
   footer a:hover{color:var(--ink)}
   @media(max-width:900px){nav ul{display:none}.hero{padding:120px 20px 40px}section{padding:64px 20px}
-   .gmock,.charts,.paidgrid,.webgrid{grid-template-columns:1fr}.optstrip,.webstats{grid-template-columns:1fr}.pf-prods{grid-template-columns:1fr}.cta{white-space:normal}.contact-grid{grid-template-columns:1fr}.sovrow{grid-template-columns:88px 1fr 40px}.hstat{flex:1;min-width:130px}}
+   .gmock,.charts,.paidgrid,.webgrid{grid-template-columns:1fr}.optstrip,.webstats{grid-template-columns:1fr}.pf-prods{grid-template-columns:1fr}.cta{white-space:normal}.contact-grid,.about-grid,.points{grid-template-columns:1fr}.why-frame{padding:28px 22px}.sovrow{grid-template-columns:88px 1fr 40px}.hstat{flex:1;min-width:130px}}
 </style>
 </head>
 <body>
@@ -226,6 +274,7 @@
       </div>
     </li>
     <li><a href="/success-stories">Success Stories</a></li>
+    <li><a href="#about">About</a></li>
   </ul>
   <a class="cta" href="#contact">Let's talk growth</a>
 </nav>
@@ -493,17 +542,27 @@
         </div>
       </div>
       <div class="modcard">
-        <h3>Live value dashboard</h3>
-        <div class="csub">An on-site module that shows prospects the value as it's delivered — hours saved, adoption, goals — turning "trust us" into "see for yourself".</div>
-        <div class="dash" id="dash">
-          <div class="dash-kpis">
-            <div class="kpi"><small>Hours returned</small><b data-n="1240" data-suf="/mo">0</b></div>
-            <div class="kpi"><small>Active adoption</small><b data-n="78" data-suf="%">0</b></div>
+        <h3>Interactive lead qualifier</h3>
+        <div class="csub">Five quick questions rate what matters to the visitor, an email unlocks demo videos tailored to their answers — every submission a self-qualified, sales-ready lead. Watch it work:</div>
+        <div class="qual" id="qual">
+          <div class="qual-form">
+            <div class="qrow" data-pick="0"><span>Cutting invoice admin</span><span class="rp"><i>Important</i><i>Somewhat</i><i>Not</i></span></div>
+            <div class="qrow" data-pick="1"><span>Faster supplier payments</span><span class="rp"><i>Important</i><i>Somewhat</i><i>Not</i></span></div>
+            <div class="qrow" data-pick="0"><span>Live project visibility</span><span class="rp"><i>Important</i><i>Somewhat</i><i>Not</i></span></div>
+            <div class="qrow" data-pick="2"><span>Compliance &amp; audit trail</span><span class="rp"><i>Important</i><i>Somewhat</i><i>Not</i></span></div>
+            <div class="qrow" data-pick="0"><span>Integrating with your ERP</span><span class="rp"><i>Important</i><i>Somewhat</i><i>Not</i></span></div>
+            <div class="qmail">✉️ <span id="qmailtxt"></span></div>
+            <div class="qsub" id="qsub">See my tailored demos →</div>
           </div>
-          <div class="dbar"><span>Estimating</span><div class="dt"><div class="df" data-w="86"></div></div><span>86%</span></div>
-          <div class="dbar"><span>AP / Trading</span><div class="dt"><div class="df" data-w="72"></div></div><span>72%</span></div>
-          <div class="dbar"><span>Network</span><div class="dt"><div class="df" data-w="64"></div></div><span>64%</span></div>
-          <div class="dbar"><span>Job mgmt</span><div class="dt"><div class="df" data-w="63"></div></div><span>63%</span></div>
+          <div class="qual-done">
+            <div class="qdh">🎬 Your tailored demos — based on what you rated <b>Important</b></div>
+            <div class="vids">
+              <div class="vid"><span class="vp">▶</span><b>Invoice automation</b><small>2-min demo</small></div>
+              <div class="vid"><span class="vp">▶</span><b>Project visibility</b><small>3-min demo</small></div>
+              <div class="vid"><span class="vp">▶</span><b>ERP integration</b><small>90-sec demo</small></div>
+            </div>
+            <div class="qdn">High-intent leads that arrive pre-qualified — with their priorities already on the CRM record.</div>
+          </div>
         </div>
       </div>
     </div>
@@ -531,9 +590,41 @@
   </div>
 </section>
 
+<section class="reveal" id="about">
+  <div class="wrap">
+  <div class="why-frame">
+  <div class="about-grid">
+    <div class="headshot-card">
+      <img class="headshot" src="https://146760313.fs1.hubspotusercontent-eu1.net/hubfs/146760313/6B24F59D-9FF0-4D55-BBBA-9A13BC08B8A5.png" alt="Chris Chapman — Your Digital Partner" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+      <div class="hs-fallback">CC</div>
+      <div class="hname">Chris Chapman</div>
+      <div class="hrole">Founder · Your Digital Partner</div>
+      <a class="fact li-banner" href="https://linkedin.com/in/chrischapman89" target="_blank" rel="noopener" style="text-align:left">
+        <span class="in">in</span>
+        <span><b>Connect on LinkedIn</b></span>
+        <span class="li-arrow">→</span>
+      </a>
+    </div>
+    <div>
+      <h2 class="sec">About.</h2>
+      <p class="lead" style="max-width:100%">Senior digital marketing, without the agency overhead. One expert who's owned the numbers in-house — strategy, execution and reporting from the same pair of hands.</p>
+      <div class="points">
+        <div class="point"><span class="pic g">🏁</span><div><b>13+ years in digital</b><span>Trained at Mercedes-Benz &amp; Volkswagen Group</span></div></div>
+        <div class="point"><span class="pic b">📈</span><div><b>£4m+ pipeline</b><span>Generated in the last three years</span></div></div>
+        <div class="point"><span class="pic p">🧪</span><div><b>Data decides</b><span>Heatmaps, A/B tests, analytics — proof over opinion</span></div></div>
+        <div class="point"><span class="pic o">🤖</span><div><b>AI-first</b><span>AEO &amp; AI embedded in everything I build</span></div></div>
+      </div>
+      <a href="#contact" style="font-weight:700;color:#0d9488">Start the conversation →</a>
+    </div>
+  </div>
+  </div>
+  </div>
+</section>
+
+
 <footer>
   <span>© Your Digital Partner · Chris Chapman, your on-demand digital marketing partner</span>
-  <span><a href="/solutions/seo-aeo-visibility">SEO &amp; AEO</a> · <a href="/solutions/website-optimisation-cro">CRO</a> · <a href="/solutions/paid-campaigns">Paid</a> · <a href="/privacy">Privacy</a></span>
+  <span><a href="/solutions/seo-aeo-visibility">SEO &amp; AEO</a> · <a href="/solutions/website-optimisation-cro">CRO</a> · <a href="/solutions/paid-campaigns">Paid</a></span>
 </footer>
 
 <script>
@@ -573,6 +664,20 @@ function pfLoop(){
   q(".s2").classList.remove("on");q(".s3").classList.add("on");pf.classList.add("done");cur.style.left="82%";cur.style.top="120px";},3400);
  setTimeout(pfLoop,7600);}
 new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){pf.style.position="relative";pfLoop();o.disconnect()}},{threshold:.35}).observe(pf);
+
+// Lead qualifier auto-demo loop
+const qual=document.getElementById("qual"),qrows=qual.querySelectorAll(".qrow"),qmail=document.getElementById("qmailtxt"),qsub=document.getElementById("qsub");
+const EMAIL="jane@yourcompany.co.uk";
+function qualLoop(){
+ qual.classList.remove("show");qmail.textContent="";qsub.classList.remove("press");
+ qrows.forEach(r=>{r.classList.remove("on","rated");r.querySelectorAll(".rp i").forEach(i=>i.classList.remove("sel"))});
+ qrows.forEach((r,i)=>{setTimeout(()=>{qrows.forEach(x=>x.classList.remove("on"));r.classList.add("on");
+   setTimeout(()=>{r.querySelectorAll(".rp i")[+r.dataset.pick].classList.add("sel");r.classList.add("rated");r.classList.remove("on")},320);},400+i*600);});
+ setTimeout(()=>{let i=0;(function t(){i++;qmail.innerHTML=EMAIL.slice(0,i)+'<span class="caret"></span>';if(i<EMAIL.length)setTimeout(t,38);else qmail.textContent=EMAIL;})();},3700);
+ setTimeout(()=>qsub.classList.add("press"),4900);
+ setTimeout(()=>qual.classList.add("show"),5300);
+ setTimeout(qualLoop,10300);}
+new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){qualLoop();o.disconnect()}},{threshold:.35}).observe(qual);
 </script>
 </body>
 </html>
