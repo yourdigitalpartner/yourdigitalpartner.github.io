@@ -166,8 +166,11 @@
   /* first option highlighted by default so visitors know these are clickable */
   .quizbig .qopts .qopt:first-child{background:var(--lime);border-color:var(--lime);color:var(--ink)}
   .quizbig .qopts .qopt:first-child .qarr{opacity:1;transform:none}
-  .quizbig .qopts:hover .qopt:first-child:not(:hover){background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.2);color:#eef2fb}
-  .quizbig .qopts:hover .qopt:first-child:not(:hover) .qarr{opacity:0}
+  .quizbig .qopts.challenge-options .qopt:nth-child(n+2){border-color:var(--lime)}
+  .quizbig .qopts.quiz-intro .qopt:nth-child(2){animation:challengeBorder 1.2s ease .25s 1}
+  .quizbig .qopts.quiz-intro .qopt:nth-child(3){animation:challengeBorder 1.2s ease 1.45s 1}
+  .quizbig .qopts.quiz-intro .qopt:nth-child(4){animation:challengeBorder 1.2s ease 2.65s 1}
+  @keyframes challengeBorder{0%,100%{box-shadow:none;transform:none}45%,65%{box-shadow:0 0 0 4px rgba(53,224,200,.22),0 14px 28px rgba(53,224,200,.18);transform:translateY(-2px)}}
   .quizbig p{position:relative;z-index:1}
   .qhint{color:#93a5c1;font-size:13.5px;margin-top:6px}
   /* ABOUT */
@@ -399,7 +402,8 @@ const Q=[{q:"What's your biggest growth challenge right now?",o:[["Not visible e
 let qi=0,route="aeo";
 function renderQ(){document.getElementById("qq").textContent=Q[qi].q;
  document.getElementById("qs").textContent=`Find your fastest win · Question ${qi+1} of 3`;
- const o=document.getElementById("qo");o.innerHTML="";
+ const o=document.getElementById("qo");o.innerHTML="";o.classList.toggle("challenge-options",qi===0);o.classList.toggle("quiz-intro",qi===0);
+ if(qi===0)setTimeout(()=>o.classList.remove("quiz-intro"),4200);
  Q[qi].o.forEach(([t,r])=>{const b=document.createElement("button");b.className="qopt";b.innerHTML=t+'<span class="qarr">→</span>';
   b.onclick=()=>{if(r&&qi===0)route=r;if(r&&qi===2)route=r;
    if(qi<2){qi++;renderQ()}else{const R=ROUTES[route];document.getElementById("quizcell").innerHTML=
