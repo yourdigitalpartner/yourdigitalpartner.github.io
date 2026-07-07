@@ -1,0 +1,25 @@
+name: Site checks
+
+on:
+  pull_request:
+    paths:
+      - '**.html'
+      - '**.css'
+      - '**.js'
+      - '**.xml'
+      - '**.txt'
+      - 'scripts/check_site.py'
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate HTML, links and required files
+        run: python scripts/check_site.py
