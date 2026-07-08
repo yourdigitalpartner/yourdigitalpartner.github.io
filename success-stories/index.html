@@ -23,11 +23,105 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Success Stories",
-  "url": "https://your-digital-partner.co.uk/success-stories",
-  "description": "Documented results across AEO & AI visibility, paid media and website conversion for B2B brands.",
-  "isPartOf": {"@type": "WebSite", "name": "Your Digital Partner", "url": "https://your-digital-partner.co.uk"}
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://your-digital-partner.co.uk/#organization",
+      "name": "Your Digital Partner",
+      "url": "https://your-digital-partner.co.uk/",
+      "slogan": "More visibility. More leads. Measurable growth.",
+      "description": "UK-based B2B digital marketing consultancy providing SEO and AI visibility, website optimisation and CRO, paid campaign support, and practical AI-enabled digital marketing for B2B and SaaS companies.",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://your-digital-partner.co.uk/#logo",
+        "url": "https://your-digital-partner.co.uk/assets/logo-icon.svg",
+        "contentUrl": "https://your-digital-partner.co.uk/assets/logo-icon.svg",
+        "caption": "Your Digital Partner"
+      },
+      "founder": {
+        "@id": "https://your-digital-partner.co.uk/#chris-chapman"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United Kingdom"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/chrischapman89"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://your-digital-partner.co.uk/#chris-chapman",
+      "name": "Chris Chapman",
+      "jobTitle": "B2B Digital Marketing Consultant",
+      "url": "https://your-digital-partner.co.uk/#approach",
+      "worksFor": {
+        "@id": "https://your-digital-partner.co.uk/#organization"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/chrischapman89"
+      ],
+      "knowsAbout": [
+        "B2B digital marketing",
+        "SEO",
+        "AEO",
+        "AI search optimisation",
+        "AI visibility",
+        "Website optimisation",
+        "CRO",
+        "Google Ads",
+        "LinkedIn Ads",
+        "Marketing analytics",
+        "Marketing automation",
+        "AI in digital marketing"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://your-digital-partner.co.uk/#website",
+      "url": "https://your-digital-partner.co.uk/",
+      "name": "Your Digital Partner",
+      "publisher": {
+        "@id": "https://your-digital-partner.co.uk/#organization"
+      },
+      "inLanguage": "en-GB"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://your-digital-partner.co.uk/success-stories/#webpage",
+      "url": "https://your-digital-partner.co.uk/success-stories/",
+      "name": "Success Stories | AEO, CRO & Paid Media Results | Your Digital Partner",
+      "description": "Documented results across AEO and AI visibility, paid media and website conversion for B2B brands: 44% AI share of voice, #1 cited domain for commercial prompts, and GBP 1m pipeline from GBP 65k ad spend.",
+      "isPartOf": {
+        "@id": "https://your-digital-partner.co.uk/#website"
+      },
+      "breadcrumb": {
+        "@id": "https://your-digital-partner.co.uk/success-stories/#breadcrumb"
+      },
+      "publisher": {
+        "@id": "https://your-digital-partner.co.uk/#organization"
+      },
+      "inLanguage": "en-GB"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://your-digital-partner.co.uk/success-stories/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://your-digital-partner.co.uk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Success Stories",
+          "item": "https://your-digital-partner.co.uk/success-stories/"
+        }
+      ]
+    }
+  ]
 }
 </script>
 <style>
