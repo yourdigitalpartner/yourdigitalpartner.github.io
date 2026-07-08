@@ -400,10 +400,13 @@
 .au-cal .tag{color:#6444ee}.msg.user{background:#c74a2c}nav ul{color:#4d5b6e}.eyebrow.e-green{color:#0f766e}.md-live{color:#0f766e}.move.up{color:#0f766e}.platcard .pbadge{color:#0d6a63}.opp{color:#6444ee}.ca-tag{color:#c74a2c}.eyebrow.e-hs{color:#c74a2c}.eyebrow.e-purple{color:#6b46f2}.cal-fallback{background:#6b46f2}.logo b{color:#0d6a63}
 </style>
 <script>
-function ydpCalLoad(cb){if(window.__ydpCalP){window.__ydpCalP.then(cb);return}
-window.__ydpCalP=new Promise(function(res){var d=document,l=d.createElement("link");l.rel="stylesheet";l.href="https://assets.calendly.com/assets/external/widget.css";d.head.appendChild(l);
-var s=d.createElement("script");s.src="https://assets.calendly.com/assets/external/widget.js";s.async=!0;s.onload=res;d.head.appendChild(s)});window.__ydpCalP.then(cb)}
-function ydpCal(u){if(window.Calendly&&Calendly.showPopupWidget){Calendly.showPopupWidget(u)}else{ydpCalLoad(function(){Calendly.showPopupWidget(u)})}return false}
+function ydpCalLoad(cb){if(window.__ydpCalP){window.__ydpCalP.then(cb,cb);return}
+window.__ydpCalP=new Promise(function(res){var d=document,done=!1;function finish(){if(done)return;done=!0;res()}
+var l=d.createElement("link");l.rel="stylesheet";l.href="https://assets.calendly.com/assets/external/widget.css";l.onerror=finish;d.head.appendChild(l);
+var s=d.createElement("script");s.src="https://assets.calendly.com/assets/external/widget.js";s.async=!0;s.onload=finish;s.onerror=finish;d.head.appendChild(s);
+setTimeout(finish,4000)});window.__ydpCalP.then(cb,cb)}
+function ydpCal(u){if(window.Calendly&&Calendly.showPopupWidget){Calendly.showPopupWidget(u);return false}
+ydpCalLoad(function(){if(window.Calendly&&Calendly.showPopupWidget){Calendly.showPopupWidget(u)}else{window.open(u,"_blank")}});return false}
 (function(){function warm(){ydpCalLoad(function(){})}["pointermove","touchstart","keydown","scroll"].forEach(function(e){addEventListener(e,warm,{once:!0,passive:!0})})})();
 </script>
 </head>
@@ -1039,7 +1042,7 @@ new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){ runChat(); o.disconn
   var CAL_URL="https://calendly.com/chris-your-digital-partner/30min", loaded=false;
   function mount(){
     if(loaded) return; loaded=true;
-    function go(){ box.innerHTML=""; box.style.padding="0"; box.style.width="100%"; box.style.height="720px"; Calendly.initInlineWidget({url:CAL_URL,parentElement:box}); }
+    function go(){ if(window.Calendly&&Calendly.initInlineWidget){ box.innerHTML=""; box.style.padding="0"; box.style.width="100%"; box.style.height="720px"; Calendly.initInlineWidget({url:CAL_URL,parentElement:box}); } else { box.innerHTML='<a class="cal-fallback" href="'+CAL_URL+'" target="_blank" rel="noopener">📅 Choose a time to book your free AI review call →</a>'; } }
     if(window.Calendly && Calendly.initInlineWidget){ go(); }
     else{ ydpCalLoad(go); }
   }

@@ -258,10 +258,13 @@
 .au-form .tag{color:#a82b78}nav ul{color:#4d5b6e}.audrow .cv.good{color:#0f766e}.eyebrow.e-google{color:#175dbe}.gcard .gt{color:#175dbe}.cv.bad{color:#b04434}.gad2 .sp,.gad2 .gurl,.gad2 .ghead,.gad2 .gdesc{color:#5b6b80}.logo b{color:#0d6a63}.fmedia .prefill{color:#0f766e}.stagecard.hi .stg,.stagecard.hi p{color:#eaf3fc}
 </style>
 <script>
-function ydpCalLoad(cb){if(window.__ydpCalP){window.__ydpCalP.then(cb);return}
-window.__ydpCalP=new Promise(function(res){var d=document,l=d.createElement("link");l.rel="stylesheet";l.href="https://assets.calendly.com/assets/external/widget.css";d.head.appendChild(l);
-var s=d.createElement("script");s.src="https://assets.calendly.com/assets/external/widget.js";s.async=!0;s.onload=res;d.head.appendChild(s)});window.__ydpCalP.then(cb)}
-function ydpCal(u){if(window.Calendly&&Calendly.showPopupWidget){Calendly.showPopupWidget(u)}else{ydpCalLoad(function(){Calendly.showPopupWidget(u)})}return false}
+function ydpCalLoad(cb){if(window.__ydpCalP){window.__ydpCalP.then(cb,cb);return}
+window.__ydpCalP=new Promise(function(res){var d=document,done=!1;function finish(){if(done)return;done=!0;res()}
+var l=d.createElement("link");l.rel="stylesheet";l.href="https://assets.calendly.com/assets/external/widget.css";l.onerror=finish;d.head.appendChild(l);
+var s=d.createElement("script");s.src="https://assets.calendly.com/assets/external/widget.js";s.async=!0;s.onload=finish;s.onerror=finish;d.head.appendChild(s);
+setTimeout(finish,4000)});window.__ydpCalP.then(cb,cb)}
+function ydpCal(u){if(window.Calendly&&Calendly.showPopupWidget){Calendly.showPopupWidget(u);return false}
+ydpCalLoad(function(){if(window.Calendly&&Calendly.showPopupWidget){Calendly.showPopupWidget(u)}else{window.open(u,"_blank")}});return false}
 (function(){function warm(){ydpCalLoad(function(){})}["pointermove","touchstart","keydown","scroll"].forEach(function(e){addEventListener(e,warm,{once:!0,passive:!0})})})();
 </script>
 </head>
@@ -484,9 +487,10 @@ function ydpCal(u){if(window.Calendly&&Calendly.showPopupWidget){Calendly.showPo
       <div class="au-form">
         <div class="tag">Get your free ads audit</div>
 <script>
-(function(){var f=document.querySelectorAll(".hs-form-frame");if(!f.length)return;var done=!1;
+(function(){function init(){var f=document.querySelectorAll(".hs-form-frame");if(!f.length)return;var done=!1;
 function load(){if(done)return;done=!0;var s=document.createElement("script");s.src="https://js-eu1.hsforms.net/forms/embed/146760313.js";s.defer=!0;document.body.appendChild(s)}
-if("IntersectionObserver"in window){var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){load();o.disconnect()}})},{rootMargin:"900px"});f.forEach(function(el){o.observe(el)})}else load()})();
+if("IntersectionObserver"in window){var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){load();o.disconnect()}})},{rootMargin:"900px"});f.forEach(function(el){o.observe(el)})}else load()}
+if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",init)}else{init()}})();
 </script>
 <div class="hs-form-frame" data-region="eu1" data-form-id="423b14b0-1223-414e-a002-40af633b39b3" data-portal-id="146760313"></div>
         <div class="micro">Reviewed personally by me. Your data stays private.</div>
