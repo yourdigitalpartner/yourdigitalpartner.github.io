@@ -593,6 +593,11 @@
 /* a11y contrast (WCAG AA) */
 .au-cal .tag{color:#6444ee}.msg.user{background:#c74a2c}nav ul{color:#4d5b6e}.eyebrow.e-green{color:#0f766e}.md-live{color:#0f766e}.move.up{color:#0f766e}.platcard .pbadge{color:#0d6a63}.opp{color:#6444ee}.ca-tag{color:#c74a2c}.eyebrow.e-hs{color:#c74a2c}.eyebrow.e-purple{color:#6b46f2}.cal-fallback{background:#6b46f2}.logo b{color:#0d6a63}
 </style>
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<script>
+document.addEventListener("click",function(e){var b=e.target.closest("[data-book]");if(!b)return;e.preventDefault();var u="https://calendly.com/chris-your-digital-partner/30min";if(window.Calendly&&Calendly.initPopupWidget){Calendly.initPopupWidget({url:u});}else{window.open(u,"_blank");}});
+</script>
 </head>
 <body>
 
@@ -1099,7 +1104,7 @@
       </div>
       <div class="au-cal">
         <div class="tag">Pick a time that suits you</div>
-        <div id="calBox" class="calembed" data-book-embed></div>
+        <div id="calBox" class="calendly-inline-widget" data-url="https://calendly.com/chris-your-digital-partner/30min" style="min-width:320px;height:700px;"></div>
       </div>
       </div>
     </div>
