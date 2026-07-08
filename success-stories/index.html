@@ -274,6 +274,14 @@
   @media(max-width:900px){body{padding-bottom:74px}nav ul{display:none}.navr>.cta{display:none}.navr>.nav-book{display:none}.mobile-menu-toggle{position:relative;display:grid;place-items:center;width:42px;height:42px;border:0;background:var(--ink);color:var(--lime);border-radius:50%;font-size:0;line-height:0;cursor:pointer;padding:0}nav.open ul{display:flex;position:absolute;top:calc(100% + 8px);left:0;right:0;flex-direction:column;gap:4px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:10px;box-shadow:0 18px 42px rgba(8,20,48,.18)}nav.open ul li{padding:10px}nav.open .dd{position:static;opacity:1;visibility:visible;transform:none;width:auto;box-shadow:none;border:0;padding:6px 0 0;background:transparent}nav.open .dd a{padding:10px}.mobile-sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;align-items:center;justify-content:center;background:var(--ink);color:var(--lime);border-radius:0;padding:17px 20px calc(17px + env(safe-area-inset-bottom));font-size:16px;font-weight:800;box-shadow:0 -10px 28px rgba(8,20,48,.18)}.mobile-sticky-cta::after{content:"\2192";display:inline-block;margin-left:10px;animation:stickyArrow 1.35s ease-in-out infinite}.hero{padding:120px 20px 40px}section{padding:64px 20px}
    .gmock,.charts,.paidgrid,.webgrid{grid-template-columns:1fr}.optstrip,.webstats{grid-template-columns:1fr}.pf-prods{grid-template-columns:1fr}nav .cta{white-space:normal}.contact-grid,.about-grid,.points{grid-template-columns:1fr}.contact-grid{padding:36px 14px 20px}.cg-book{padding:18px 16px;flex-wrap:wrap;justify-content:center;text-align:center;gap:10px}.cg-book .txt{white-space:normal}.contact-grid>div{min-width:0}.contact-grid>div:last-child{width:100%;margin-left:0;margin-right:0;padding:20px 8px 12px!important;overflow:visible}.contact-grid>div:last-child>div:first-child{font-size:21px!important;letter-spacing:0!important;text-transform:none!important;line-height:1.25;margin-bottom:12px!important}.contact-grid .hs-form-frame{width:116%;max-width:116%;margin-left:-8%;overflow:visible}.contact-grid .hs-form-frame iframe{width:100%!important;min-width:0!important;transform:none}.why-frame{padding:28px 22px}.sovrow{grid-template-columns:88px 1fr 40px}.hstat{flex:1;min-width:130px}.reveal{opacity:1;transform:none;transition:none}}
   @keyframes stickyArrow{0%,100%{transform:translateX(0);opacity:.68}50%{transform:translateX(6px);opacity:1}}
+
+  .dd .ic .ai-mark{font-weight:900;font-size:14.5px;letter-spacing:.5px;color:#7b5cfa}
+  .nav-mob-cta-li{display:none}
+  @media(max-width:980px){
+    nav.open ul .nav-mob-cta-li{display:block;padding:8px 4px 4px;margin-top:6px;border-top:1px solid #d8e0ec}
+    .nav-mob-cta{width:100%;background:#35e0c8;color:#0a1733;border:0;border-radius:12px;padding:15px;font-size:15.5px;font-weight:800;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 8px 20px rgba(53,224,200,.35)}
+    .nav-mob-cta .ic{font-size:18px}
+  }
 </style>
 <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
@@ -290,11 +298,13 @@
       <div class="dd">
         <a href="/solutions/seo-aeo-visibility"><span class="ic g">🔍</span><span><b>SEO &amp; AEO Visibility</b><small>Rank on Google and get cited by ChatGPT, Gemini &amp; Perplexity</small></span></a>
         <a href="/solutions/website-optimisation-cro"><span class="ic b">📈</span><span><b>Website Optimisation &amp; CRO</b><small>Heatmaps, A/B testing &amp; personalisation that turn traffic into pipeline</small></span></a>
-        <a href="/solutions/paid-campaigns"><span class="ic p">🎯</span><span><b>Paid Campaigns</b><small>Google &amp; LinkedIn Ads accountable to revenue, not clicks</small></span></a>
+        <a href="/solutions/ai-marketing"><span class="ic pu"><b class="ai-mark">AI</b></span><span><b>AI-Enabled Digital Marketing</b><small>Practical AI across reporting, SEO, conversion &amp; HubSpot</small></span></a>
+        <a href="/solutions/paid-campaigns"><span class="ic p">🎯</span><span><b>Performance Marketing</b><small>Google &amp; LinkedIn Ads accountable to revenue, not clicks</small></span></a>
       </div>
     </li>
     <li><a href="/success-stories">Success Stories</a></li>
     <li><a href="#about">About</a></li>
+      <li class="nav-mob-cta-li"><button class="nav-mob-cta" type="button" onclick="document.querySelector('nav').classList.remove('open');Calendly.showPopupWidget('https://calendly.com/chris-your-digital-partner/30min');return false;"><span class="ic">📅</span> Book a meeting</button></li>
   </ul>
   <div class="navr">
   <a class="cta" href="#contact">Let's talk growth</a>
