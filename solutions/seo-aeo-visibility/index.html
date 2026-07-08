@@ -2,6 +2,9 @@
 <html lang="en-GB">
 <head>
 <meta charset="UTF-8">
+<link rel="preconnect" href="https://calendly.com" crossorigin>
+<link rel="preconnect" href="https://assets.calendly.com" crossorigin>
+
 <link rel="icon" type="image/svg+xml" href="/assets/logo-icon.svg">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SEO &amp; AEO Visibility | Get Ranked by Google, Cited by AI | Your Digital Partner</title>
@@ -467,7 +470,6 @@
 (function(){
 var CAL="https://calendly.com/chris-your-digital-partner/30min";
 var SRC=CAL+"?embed_domain="+location.hostname+"&embed_type=PopupWidget&hide_gdpr_banner=1";
-["https://calendly.com","https://assets.calendly.com"].forEach(function(h){var l=document.createElement("link");l.rel="preconnect";l.href=h;l.crossOrigin="";document.head.appendChild(l);});
 var css=document.createElement("style");
 css.textContent="#ydpCalOverlay{position:fixed;inset:0;z-index:9999;visibility:hidden;opacity:0;transition:opacity .18s ease}#ydpCalOverlay.open{visibility:visible;opacity:1}.ydp-cal-back{position:absolute;inset:0;background:rgba(8,20,48,.55)}.ydp-cal-box{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:min(1000px,calc(100vw - 24px));height:min(740px,calc(100vh - 40px));background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 30px 80px rgba(8,20,48,.4)}.ydp-cal-box iframe{width:100%;height:100%;border:0;opacity:0;transition:opacity .25s}#ydpCalOverlay.frameready .ydp-cal-box iframe{opacity:1}#ydpCalOverlay.frameready .ydp-cal-spin{display:none}.ydp-cal-spin{position:absolute;top:50%;left:50%;width:36px;height:36px;margin:-18px 0 0 -18px;border:3px solid #d8e0ec;border-top-color:#35e0c8;border-radius:50%;animation:ydpspin .8s linear infinite}@keyframes ydpspin{to{transform:rotate(360deg)}}.ydp-cal-x{position:absolute;top:10px;right:10px;z-index:2;width:36px;height:36px;border:0;border-radius:50%;background:#0a1733;color:#fff;font-size:20px;cursor:pointer;line-height:1;display:grid;place-items:center}html.ydp-cal-lock,html.ydp-cal-lock body{overflow:hidden}";
 document.head.appendChild(css);
@@ -491,10 +493,7 @@ function build(){
 function hide(){if(ov){ov.classList.remove("open");document.documentElement.classList.remove("ydp-cal-lock")}}
 window.ydpCal=function(){build();ov.classList.add("open");document.documentElement.classList.add("ydp-cal-lock");return false};
 window.ydpCalBuild=build;
-function warm(){build()}
-["pointermove","touchstart","keydown","scroll"].forEach(function(e){addEventListener(e,warm,{once:!0,passive:!0})});
-if(document.body){warmIdle()}else{addEventListener("DOMContentLoaded",warmIdle)}
-function warmIdle(){if("requestIdleCallback" in window){requestIdleCallback(warm,{timeout:5000})}else{setTimeout(warm,5000)}}
+if(document.body){build()}else{addEventListener("DOMContentLoaded",build,{once:!0})}
 })();
 </script>
 </head>
