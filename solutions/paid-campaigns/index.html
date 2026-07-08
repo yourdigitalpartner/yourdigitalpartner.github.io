@@ -443,11 +443,14 @@
 /* a11y contrast (WCAG AA) */
 .au-form .tag{color:#a82b78}nav ul{color:#4d5b6e}.audrow .cv.good{color:#0f766e}.eyebrow.e-google{color:#175dbe}.gcard .gt{color:#175dbe}.cv.bad{color:#b04434}.gad2 .sp,.gad2 .gurl,.gad2 .ghead,.gad2 .gdesc{color:#5b6b80}.logo b{color:#0d6a63}.fmedia .prefill{color:#0f766e}.stagecard.hi .stg,.stagecard.hi p{color:#eaf3fc}
 </style>
-<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-<script>
-document.addEventListener("click",function(e){var b=e.target.closest("[data-book]");if(!b)return;e.preventDefault();var u="https://calendly.com/chris-your-digital-partner/30min";if(window.Calendly&&Calendly.initPopupWidget){Calendly.initPopupWidget({url:u});}else{window.open(u,"_blank");}});
-</script>
+<style>
+.hs-book-modal{display:none;position:fixed;inset:0;z-index:99999}
+.hs-book-modal.open{display:block}
+.hs-book-overlay{position:absolute;inset:0;background:rgba(8,20,48,.55)}
+.hs-book-dialog{position:relative;background:#fff;max-width:900px;width:calc(100% - 32px);margin:4vh auto;border-radius:16px;box-shadow:0 30px 80px rgba(8,20,48,.35);padding:14px 14px 8px;max-height:92vh;overflow:auto}
+.hs-book-x{position:absolute;top:6px;right:12px;border:0;background:transparent;font-size:30px;line-height:1;cursor:pointer;color:#0a1733;z-index:2}
+.hs-book-dialog .meetings-iframe-container{min-height:660px}
+</style>
 </head>
 <body>
 
@@ -740,6 +743,17 @@ new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){
   (function t(){c=Math.min(n,c+st);el.textContent=pre+(dec?c.toFixed(1):Math.round(c))+suf;
    if(c<n)setTimeout(t,40)})();});
  o.disconnect()}},{threshold:.35}).observe(document.getElementById("funnels"));
+</script>
+<div id="hsBookModal" class="hs-book-modal" aria-hidden="true">
+  <div class="hs-book-overlay" data-book-close></div>
+  <div class="hs-book-dialog" role="dialog" aria-modal="true" aria-label="Book a meeting">
+    <button class="hs-book-x" type="button" aria-label="Close" data-book-close>&times;</button>
+    <div class="meetings-iframe-container" data-src="https://meetings-eu1.hubspot.com/cchapman?embed=true"></div>
+  </div>
+</div>
+<script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
+<script>
+(function(){var m=document.getElementById("hsBookModal");if(!m)return;function close(){m.classList.remove("open");document.body.style.overflow="";}document.addEventListener("click",function(e){if(e.target.closest("[data-book]")){e.preventDefault();m.classList.add("open");document.body.style.overflow="hidden";return;}if(e.target.closest("[data-book-close]")){close();}});document.addEventListener("keydown",function(e){if(e.key==="Escape")close();});})();
 </script>
 </body>
 </html>
