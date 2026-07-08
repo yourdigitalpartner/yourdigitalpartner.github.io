@@ -462,14 +462,6 @@
 /* a11y contrast (WCAG AA) */
 .sbtag{color:#0f766e}nav ul{color:#4d5b6e}.ag-cap b.g{color:#0f766e}.ag-node.n1{color:#0f766e}.help .num{color:#0f766e}.logo b{color:#0d6a63}.eyebrow.e-purple{color:#6b46f2}.panel.now .ptag{color:#0f766e}
 </style>
-<link rel="preconnect" href="https://assets.calendly.com" crossorigin>
-<link rel="preconnect" href="https://calendly.com" crossorigin>
-<link rel="dns-prefetch" href="https://calendly.com">
-<link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css">
-<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
-<script>
-function ydpCal(u){if(window.Calendly&&Calendly.initPopupWidget){Calendly.initPopupWidget({url:u})}else{window.open(u,"_blank")}return false}
-</script>
 </head>
 <body>
 
@@ -490,11 +482,11 @@ function ydpCal(u){if(window.Calendly&&Calendly.initPopupWidget){Calendly.initPo
     <li><a href="/success-stories/">Success Stories</a></li>
     <li><a href="#scorecard">Free AEO audit</a></li>
     <li><a href="#faq">FAQs</a></li>
-      <li class="nav-mob-cta-li"><button class="nav-mob-cta" type="button" onclick="document.querySelector('nav').classList.remove('open');return ydpCal('https://calendly.com/chris-your-digital-partner/30min');"><span class="ic">📅</span> Book a meeting</button></li>
+      <li class="nav-mob-cta-li"><button class="nav-mob-cta" type="button" onclick="document.querySelector('nav').classList.remove('open');return false;" data-book><span class="ic">📅</span> Book a meeting</button></li>
   </ul>
   <div class="navr">
   <a class="cta" href="#scorecard">Free AEO audit</a>
-  <button class="nav-book" type="button" title="Book a 30-minute call" aria-label="Book a 30-minute call" onclick="return ydpCal('https://calendly.com/chris-your-digital-partner/30min');"><span class="ic">📅</span>Call</button>
+  <button class="nav-book" type="button" title="Book a 30-minute call" aria-label="Book a 30-minute call" data-book><span class="ic">📅</span>Call</button>
   <button class="mobile-menu-toggle" type="button" aria-label="Open menu" onclick="this.closest('nav').classList.toggle('open')">☰</button>
   </div>
 </nav>
@@ -507,7 +499,7 @@ function ydpCal(u){if(window.Calendly&&Calendly.initPopupWidget){Calendly.initPo
     <p>Search has changed. Before they ever reach your website, your buyers are asking ChatGPT, Gemini, Claude, Perplexity and Copilot what to buy, who to trust and which suppliers to shortlist. If those tools can't read, understand and cite your site, you're invisible in the conversations that decide deals - no matter how good your traditional rankings are.</p>
     <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:6px">
       <a class="cta" href="#scorecard" style="padding:14px 28px;font-size:14px;background:transparent;color:var(--ink);border:2px solid var(--ink)">Get your free AEO audit →</a>
-      <button class="sb-book-cta" type="button" onclick="return ydpCal('https://calendly.com/chris-your-digital-partner/30min');">📅 Book your call →</button>
+      <button class="sb-book-cta" type="button" data-book>📅 Book your call →</button>
     </div>
   </div>
   <div class="chatbox">
@@ -633,7 +625,7 @@ if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded"
     </div>
     <div class="sb-book">
       <span class="txt">Want to increase your AI visibility today? <b>Book 30 minutes and let's talk it through, live.</b></span>
-      <button class="sb-book-cta" type="button" onclick="return ydpCal('https://calendly.com/chris-your-digital-partner/30min');">📅 Book your call →</button>
+      <button class="sb-book-cta" type="button" data-book>📅 Book your call →</button>
     </div>
   </div>
   </div>

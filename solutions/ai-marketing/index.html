@@ -593,14 +593,6 @@
 /* a11y contrast (WCAG AA) */
 .au-cal .tag{color:#6444ee}.msg.user{background:#c74a2c}nav ul{color:#4d5b6e}.eyebrow.e-green{color:#0f766e}.md-live{color:#0f766e}.move.up{color:#0f766e}.platcard .pbadge{color:#0d6a63}.opp{color:#6444ee}.ca-tag{color:#c74a2c}.eyebrow.e-hs{color:#c74a2c}.eyebrow.e-purple{color:#6b46f2}.cal-fallback{background:#6b46f2}.logo b{color:#0d6a63}
 </style>
-<link rel="preconnect" href="https://assets.calendly.com" crossorigin>
-<link rel="preconnect" href="https://calendly.com" crossorigin>
-<link rel="dns-prefetch" href="https://calendly.com">
-<link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css">
-<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
-<script>
-function ydpCal(u){if(window.Calendly&&Calendly.initPopupWidget){Calendly.initPopupWidget({url:u})}else{window.open(u,"_blank")}return false}
-</script>
 </head>
 <body>
 
@@ -620,11 +612,11 @@ function ydpCal(u){if(window.Calendly&&Calendly.initPopupWidget){Calendly.initPo
     </li>
     <li><a href="/success-stories/">Success Stories</a></li>
     <li><a href="#audit">Free AI audit</a></li>
-    <li class="nav-mob-cta-li"><button class="nav-mob-cta" type="button" onclick="document.querySelector('nav').classList.remove('open');return ydpCal('https://calendly.com/chris-your-digital-partner/30min');"><span class="ic">&#128197;</span> Book a meeting</button></li>
+    <li class="nav-mob-cta-li"><button class="nav-mob-cta" type="button" onclick="document.querySelector('nav').classList.remove('open');return false;" data-book><span class="ic">&#128197;</span> Book a meeting</button></li>
   </ul>
   <div class="navr">
   <a class="cta" href="#audit">Free AI audit</a>
-  <button class="nav-book" type="button" title="Book a 30-minute call" aria-label="Book a 30-minute call" onclick="return ydpCal('https://calendly.com/chris-your-digital-partner/30min');"><span class="ic">&#128197;</span>Call</button>
+  <button class="nav-book" type="button" title="Book a 30-minute call" aria-label="Book a 30-minute call" data-book><span class="ic">&#128197;</span>Call</button>
   <button class="mobile-menu-toggle" type="button" aria-label="Open menu" onclick="this.closest('nav').classList.toggle('open')">&#9776;</button>
   </div>
 </nav>
@@ -1107,7 +1099,7 @@ function ydpCal(u){if(window.Calendly&&Calendly.initPopupWidget){Calendly.initPo
       </div>
       <div class="au-cal">
         <div class="tag">Pick a time that suits you</div>
-        <div id="calBox" class="calembed"><a class="cal-fallback" href="https://calendly.com/chris-your-digital-partner/30min" target="_blank" rel="noopener">&#128197; Choose a time to book your free AI readiness audit &#8594;</a></div>
+        <div id="calBox" class="calembed" data-book-embed></div>
       </div>
       </div>
     </div>
@@ -1252,22 +1244,6 @@ function runChat(){
   step();
 }
 new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){ runChat(); o.disconnect()}},{threshold:.35}).observe(document.getElementById("chatBody"));
-
-// Calendly inline calendar - only initialise when the audit section scrolls into view
-(function(){
-  var box=document.getElementById("calBox"); if(!box) return;
-  var CAL_URL="https://calendly.com/chris-your-digital-partner/30min", loaded=false;
-  function mount(){
-    if(loaded) return; loaded=true;
-    function go(tries){ tries=tries||0;
-      if(window.Calendly&&Calendly.initInlineWidget){ box.innerHTML=""; box.style.padding="0"; box.style.width="100%"; box.style.height="720px"; Calendly.initInlineWidget({url:CAL_URL,parentElement:box}); }
-      else if(tries<15){ setTimeout(function(){ go(tries+1); },300); }
-      else { box.innerHTML='<a class="cal-fallback" href="'+CAL_URL+'" target="_blank" rel="noopener">📅 Choose a time to book your free AI review call →</a>'; }
-    }
-    go();
-  }
-  new IntersectionObserver(function(es,o){ if(es[0].isIntersecting){ mount(); o.disconnect(); } },{threshold:.15,rootMargin:"200px"}).observe(box);
-})();
 
 </script>
 </body>

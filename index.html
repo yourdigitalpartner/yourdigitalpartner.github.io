@@ -583,14 +583,6 @@
 /* a11y contrast (WCAG AA) */
 nav ul{color:#4d5b6e}.t-green .tag{color:#0f766e}.logo b{color:#0d6a63}.logos span{color:#5b6b80}
 </style>
-<link rel="preconnect" href="https://assets.calendly.com" crossorigin>
-<link rel="preconnect" href="https://calendly.com" crossorigin>
-<link rel="dns-prefetch" href="https://calendly.com">
-<link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css">
-<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
-<script>
-function ydpCal(u){if(window.Calendly&&Calendly.initPopupWidget){Calendly.initPopupWidget({url:u})}else{window.open(u,"_blank")}return false}
-</script>
 </head>
 <body>
 
@@ -610,11 +602,11 @@ function ydpCal(u){if(window.Calendly&&Calendly.initPopupWidget){Calendly.initPo
     </li>
     <li><a href="/success-stories/">Success Stories</a></li>
     <li><a href="#approach">About</a></li>
-      <li class="nav-mob-cta-li"><button class="nav-mob-cta" type="button" onclick="document.querySelector('nav').classList.remove('open');return ydpCal('https://calendly.com/chris-your-digital-partner/30min');"><span class="ic">📅</span> Book a meeting</button></li>
+      <li class="nav-mob-cta-li"><button class="nav-mob-cta" type="button" onclick="document.querySelector('nav').classList.remove('open');return false;" data-book><span class="ic">📅</span> Book a meeting</button></li>
   </ul>
   <div class="navr">
   <button class="cta" onclick="document.getElementById('scorecard').scrollIntoView()">Free AEO audit</button>
-  <button class="nav-book" type="button" title="Book a 30-minute call" aria-label="Book a 30-minute call" onclick="return ydpCal('https://calendly.com/chris-your-digital-partner/30min');"><span class="ic">📅</span>Call</button>
+  <button class="nav-book" type="button" title="Book a 30-minute call" aria-label="Book a 30-minute call" data-book><span class="ic">📅</span>Call</button>
   <button class="mobile-menu-toggle" type="button" aria-label="Open menu" onclick="this.closest('nav').classList.toggle('open')">☰</button>
   </div>
 </nav>
@@ -677,7 +669,7 @@ I connect all three so your digital marketing is measured against qualified lead
     </div>
     <div class="qb-book">
       <span class="txt">Would you rather skip the quiz? <b>Let's talk through your goals and challenges instead - 30 minutes, live.</b></span>
-      <button class="qb-book-cta" type="button" onclick="return ydpCal('https://calendly.com/chris-your-digital-partner/30min');">📅 Let's talk now →</button>
+      <button class="qb-book-cta" type="button" data-book>📅 Let's talk now →</button>
     </div>
   </div>
 </section>

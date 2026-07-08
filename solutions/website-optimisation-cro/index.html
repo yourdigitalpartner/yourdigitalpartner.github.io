@@ -476,14 +476,6 @@
 /* a11y contrast (WCAG AA) */
 .p-formshort .ticker{color:#0d6a63}#wk{color:#0d6a63}.qrow .rp i.sel{background:#6b46f2;border-color:#6b46f2}nav ul{color:#4d5b6e}.rp i{color:#5b6b80}.e2 .snum{color:#b02f7e}.logo b{color:#0d6a63}.p-persona .pc span.sel{color:#6b46f2}.p-persona .rot{color:#6b46f2}.e3 .snum,.e3 .res{color:#6b46f2}.e4 .snum,.e4 .res{color:#0f766e}
 </style>
-<link rel="preconnect" href="https://assets.calendly.com" crossorigin>
-<link rel="preconnect" href="https://calendly.com" crossorigin>
-<link rel="dns-prefetch" href="https://calendly.com">
-<link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css">
-<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
-<script>
-function ydpCal(u){if(window.Calendly&&Calendly.initPopupWidget){Calendly.initPopupWidget({url:u})}else{window.open(u,"_blank")}return false}
-</script>
 </head>
 <body>
 
@@ -503,11 +495,11 @@ function ydpCal(u){if(window.Calendly&&Calendly.initPopupWidget){Calendly.initPo
     </li>
     <li><a href="/success-stories/">Success Stories</a></li>
     <li><a href="#review">Free website review</a></li>
-      <li class="nav-mob-cta-li"><button class="nav-mob-cta" type="button" onclick="document.querySelector('nav').classList.remove('open');return ydpCal('https://calendly.com/chris-your-digital-partner/30min');"><span class="ic">📅</span> Book a meeting</button></li>
+      <li class="nav-mob-cta-li"><button class="nav-mob-cta" type="button" onclick="document.querySelector('nav').classList.remove('open');return false;" data-book><span class="ic">📅</span> Book a meeting</button></li>
   </ul>
   <div class="navr">
   <a class="cta" href="#review">Free website review</a>
-  <button class="nav-book" type="button" title="Book a 30-minute call" aria-label="Book a 30-minute call" onclick="return ydpCal('https://calendly.com/chris-your-digital-partner/30min');"><span class="ic">📅</span>Call</button>
+  <button class="nav-book" type="button" title="Book a 30-minute call" aria-label="Book a 30-minute call" data-book><span class="ic">📅</span>Call</button>
   <button class="mobile-menu-toggle" type="button" aria-label="Open menu" onclick="this.closest('nav').classList.toggle('open')">☰</button>
   </div>
 </nav>
@@ -710,7 +702,7 @@ if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded"
       </div>
       <div class="rb-book">
         <span class="txt">Want more conversions from your website? <b>Let's talk it through, live - 30 minutes.</b></span>
-        <button class="rb-book-cta" type="button" onclick="return ydpCal('https://calendly.com/chris-your-digital-partner/30min');">📅 Book your call →</button>
+        <button class="rb-book-cta" type="button" data-book>📅 Book your call →</button>
       </div>
     </div>
   </div>
