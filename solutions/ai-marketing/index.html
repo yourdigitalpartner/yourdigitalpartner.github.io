@@ -694,7 +694,7 @@
 <section class="reveal bg-blue" id="ads">
   <div class="wrap">
     <span class="eyebrow e-blue">AI ad performance analysis</span>
-    <h2 class="sec">Cut wasted ad spend and double down on what’s converting — automatically.</h2>
+    <h2 class="sec">Cut wasted ad spend and double down on what’s converting.</h2>
     <p class="lead">AI reads through the noise across every campaign - flagging wasted spend, surfacing which audiences and keywords are actually converting, and comparing Google against LinkedIn so budget goes where it's working hardest. I can set this dashboard up for your team to run, or monitor it myself and send you the findings.</p>
 
     <div class="megadash">
@@ -1230,7 +1230,7 @@ function typeInto(el,text){
 }
 
 // AI summary typewriter (SEO section)
-const AI_SUMMARY="Organic clicks are up 9% week over week, driven mostly by /integrations/hubspot climbing to position 2. /pricing has slipped 3 places - likely a content freshness issue rather than a technical one. The biggest open opportunity is the featured snippet gap on your software comparison term: a clearer, structured answer near the top of that page could win it within a few weeks.";
+const AI_SUMMARY="Organic clicks are up 15% week over week, driven mostly by /solutions/product climbing to position 2. /pricing has slipped 3 places - likely a content freshness issue rather than a technical one. The biggest open opportunity is the featured snippet gap on your software comparison term: a clearer, structured answer near the top of that page could win it within a few weeks.";
 const aiEl=document.getElementById("aitype");
 new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){ typeInto(aiEl,AI_SUMMARY); o.disconnect()}},{threshold:.4}).observe(document.querySelector(".ai-summary"));
 
