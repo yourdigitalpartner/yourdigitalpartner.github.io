@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <!-- Your Digital Partner — icon. Lens = search (SEO), rising line = data-led growth (CRO), spark = AI (AEO) -->
-  <rect width="64" height="64" rx="16" fill="#0a1733"/>
-  <circle cx="28" cy="28" r="13.5" fill="none" stroke="#35e0c8" stroke-width="4"/>
-  <path d="M38 38 L48.5 48.5" stroke="#35e0c8" stroke-width="5.5" stroke-linecap="round"/>
-  <path d="M21 33.5 L26.5 26.5 L29.5 29.5 L35 22.5" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M30.5 21.5 L35.5 21.9 L35.1 26.9" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M50 9 l1.9 4.2 4.2 1.9 -4.2 1.9 -1.9 4.2 -1.9 -4.2 -4.2 -1.9 4.2 -1.9 z" fill="#35e0c8"/>
-</svg>
