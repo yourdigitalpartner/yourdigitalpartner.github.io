@@ -443,11 +443,13 @@
 /* a11y contrast (WCAG AA) */
 .au-form .tag{color:#a82b78}nav ul{color:#4d5b6e}.audrow .cv.good{color:#0f766e}.eyebrow.e-google{color:#175dbe}.gcard .gt{color:#175dbe}.cv.bad{color:#b04434}.gad2 .sp,.gad2 .gurl,.gad2 .ghead,.gad2 .gdesc{color:#5b6b80}.logo b{color:#0d6a63}.fmedia .prefill{color:#0f766e}.stagecard.hi .stg,.stagecard.hi p{color:#eaf3fc}
 </style>
-<link rel="preload" as="style" href="https://assets.calendly.com/assets/external/widget.css" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css"></noscript>
+<link rel="preconnect" href="https://assets.calendly.com" crossorigin>
+<link rel="preconnect" href="https://calendly.com" crossorigin>
+<link rel="dns-prefetch" href="https://calendly.com">
+<link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css">
 <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 <script>
-function ydpCal(u){if(window.Calendly&&Calendly.showPopupWidget){Calendly.showPopupWidget(u)}else{window.open(u,"_blank")}return false}
+function ydpCal(u){if(window.Calendly&&Calendly.initPopupWidget){Calendly.initPopupWidget({url:u})}else{window.open(u,"_blank")}return false}
 </script>
 </head>
 <body>

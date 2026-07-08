@@ -593,11 +593,13 @@
 /* a11y contrast (WCAG AA) */
 .au-cal .tag{color:#6444ee}.msg.user{background:#c74a2c}nav ul{color:#4d5b6e}.eyebrow.e-green{color:#0f766e}.md-live{color:#0f766e}.move.up{color:#0f766e}.platcard .pbadge{color:#0d6a63}.opp{color:#6444ee}.ca-tag{color:#c74a2c}.eyebrow.e-hs{color:#c74a2c}.eyebrow.e-purple{color:#6b46f2}.cal-fallback{background:#6b46f2}.logo b{color:#0d6a63}
 </style>
-<link rel="preload" as="style" href="https://assets.calendly.com/assets/external/widget.css" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css"></noscript>
+<link rel="preconnect" href="https://assets.calendly.com" crossorigin>
+<link rel="preconnect" href="https://calendly.com" crossorigin>
+<link rel="dns-prefetch" href="https://calendly.com">
+<link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css">
 <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 <script>
-function ydpCal(u){if(window.Calendly&&Calendly.showPopupWidget){Calendly.showPopupWidget(u)}else{window.open(u,"_blank")}return false}
+function ydpCal(u){if(window.Calendly&&Calendly.initPopupWidget){Calendly.initPopupWidget({url:u})}else{window.open(u,"_blank")}return false}
 </script>
 </head>
 <body>
