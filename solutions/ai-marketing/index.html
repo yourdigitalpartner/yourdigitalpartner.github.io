@@ -540,8 +540,8 @@
   .au-cal{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px}
   .au-cal .tag{font-size:18px;letter-spacing:0;text-transform:none;line-height:1.25;color:var(--purple);font-weight:800;margin-bottom:14px}
   .calembed{min-height:130px;border-radius:12px;overflow:hidden;background:#fff;display:flex;align-items:center;justify-content:center;padding:12px}
-  #calBox{border-radius:14px;overflow:hidden;width:100%}
-  #calBox iframe{border-radius:14px;display:block;width:100%;max-width:100%}
+  #calBox{border-radius:24px;overflow:hidden;width:100%}
+  #calBox iframe{border-radius:24px;display:block;width:100%;max-width:100%}
   .cal-fallback{display:inline-block;background:var(--purple);color:#fff;font-weight:800;font-size:15px;line-height:1.35;padding:16px 24px;border-radius:12px;text-align:center;animation:purplepulse 2.4s ease-out infinite}
   @keyframes purplepulse{0%{box-shadow:0 0 0 0 rgba(123,92,250,.45)}70%{box-shadow:0 0 0 14px rgba(123,92,250,0)}100%{box-shadow:0 0 0 0 rgba(123,92,250,0)}}
   .au-cal .micro{font-size:11px;color:var(--mut);margin-top:10px;text-align:center}
@@ -620,7 +620,8 @@
 .hs-book-overlay{position:absolute;inset:0;background:rgba(8,20,48,.55)}
 .hs-book-dialog{position:relative;background:#fff;max-width:1040px;width:calc(100% - 40px);margin:4vh auto;border-radius:16px;box-shadow:0 30px 80px rgba(8,20,48,.35);padding:32px 34px 24px;max-height:92vh;overflow:auto}
 .hs-book-x{position:absolute;top:6px;right:12px;border:0;background:transparent;font-size:30px;line-height:1;cursor:pointer;color:#0a1733;z-index:2}
-.hs-book-dialog .meetings-iframe-container{min-height:660px;border-radius:14px;overflow:hidden}
+.hs-book-dialog .meetings-iframe-container{min-height:660px;border-radius:24px;overflow:hidden}
+.hs-book-dialog .meetings-iframe-container iframe{border-radius:24px}
 @media(max-width:600px){.hs-book-dialog{width:calc(100% - 20px);padding:16px 12px 12px}.hs-book-x{top:4px;right:8px}}
 </style>
 </head>
