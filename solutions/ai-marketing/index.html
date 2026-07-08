@@ -245,8 +245,8 @@
   .dd a{display:flex;gap:14px;align-items:flex-start;padding:14px;border-radius:14px;font-size:14px;color:var(--ink);transition:background .15s}
   .dd a:hover{background:var(--soft)}
   .dd .ic{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;font-size:19px;flex-shrink:0}
-  .dd .ic.g{background:#dcf3ef}.dd .ic.b{background:#e8effe}.dd .ic.p{background:#fceaf3}.dd .ic.pu{background:var(--purpleSoft)}
-  .dd .ic .ai-mark{font-weight:900;font-size:14.5px;letter-spacing:.5px;color:var(--purple)}
+  .dd .ic.g{background:#dcf3ef}.dd .ic.b{background:#e8effe}.dd .ic.p{background:#fceaf3}.dd .ic.pu{background:var(--ink)}
+  .dd .ic .ai-mark{font-weight:900;font-size:14.5px;letter-spacing:.5px;color:#fff}
   .dd a b{display:block;font-size:14px;margin-bottom:3px}
   .dd a small{display:block;color:var(--mut);font-size:12px;line-height:1.5}
   .cta{background:var(--ink);color:var(--lime);border:none;padding:10px 20px;border-radius:99px;font-size:13px;font-weight:700;cursor:pointer;transition:transform .2s;white-space:nowrap;display:inline-block}
@@ -536,7 +536,7 @@
   .audit ul{list-style:none;display:grid;gap:9px}
   .audit li{font-size:13.5px;color:var(--mut);padding-left:24px;position:relative;line-height:1.5}
   .audit li::before{content:"\2713";position:absolute;left:0;color:var(--purple);font-weight:800}
-  .au-cal{background:var(--purpleSoft);border:1px solid #dcd0fc;border-radius:18px;padding:22px}
+  .au-cal{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px}
   .au-cal .tag{font-size:18px;letter-spacing:0;text-transform:none;line-height:1.25;color:var(--purple);font-weight:800;margin-bottom:14px}
   .calembed{min-height:130px;border-radius:12px;overflow:hidden;background:#fff;display:flex;align-items:center;justify-content:center;padding:12px}
   .cal-fallback{display:inline-block;background:var(--purple);color:#fff;font-weight:800;font-size:15px;line-height:1.35;padding:16px 24px;border-radius:12px;text-align:center;animation:purplepulse 2.4s ease-out infinite}
@@ -597,7 +597,7 @@
 .hs-book-modal{display:none;position:fixed;inset:0;z-index:99999}
 .hs-book-modal.open{display:block}
 .hs-book-overlay{position:absolute;inset:0;background:rgba(8,20,48,.55)}
-.hs-book-dialog{position:relative;background:#fff;max-width:900px;width:calc(100% - 32px);margin:4vh auto;border-radius:16px;box-shadow:0 30px 80px rgba(8,20,48,.35);padding:14px 14px 8px;max-height:92vh;overflow:auto}
+.hs-book-dialog{position:relative;background:#fff;max-width:1040px;width:calc(100% - 40px);margin:4vh auto;border-radius:16px;box-shadow:0 30px 80px rgba(8,20,48,.35);padding:32px 34px 24px;max-height:92vh;overflow:auto}
 .hs-book-x{position:absolute;top:6px;right:12px;border:0;background:transparent;font-size:30px;line-height:1;cursor:pointer;color:#0a1733;z-index:2}
 .hs-book-dialog .meetings-iframe-container{min-height:660px}
 </style>
@@ -668,7 +668,7 @@
 <section class="reveal bg-blue" id="ads">
   <div class="wrap">
     <span class="eyebrow e-blue">AI ad performance analysis</span>
-    <h2 class="sec">Use AI to analyse ad performance and optimise spend, automatically.</h2>
+    <h2 class="sec">Cut wasted ad spend and double down on what’s converting — automatically.</h2>
     <p class="lead">AI reads through the noise across every campaign - flagging wasted spend, surfacing which audiences and keywords are actually converting, and comparing Google against LinkedIn so budget goes where it's working hardest. I can set this dashboard up for your team to run, or monitor it myself and send you the findings.</p>
 
     <div class="megadash">
