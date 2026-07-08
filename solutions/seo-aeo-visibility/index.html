@@ -611,6 +611,16 @@ function playChecks(){checks.forEach(c=>c.classList.remove("on"));
  checks.forEach((c,i)=>setTimeout(()=>c.classList.add("on"),400+i*550));
  setTimeout(playChecks,400+checks.length*550+3000);}
 new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){playChecks();o.disconnect()}},{threshold:.3}).observe(document.getElementById("checks"));
+
+// On mobile, "book a call"/AEO audit anchor links should jump straight to the form, not the section top
+document.querySelectorAll('a[href="#scorecard"]').forEach(a=>{
+ a.addEventListener("click",e=>{
+  if(window.matchMedia("(max-width:900px)").matches){
+   e.preventDefault();
+   document.querySelector(".sb-form").scrollIntoView({behavior:"smooth",block:"start"});
+  }
+ });
+});
 </script>
 </body>
 </html>
