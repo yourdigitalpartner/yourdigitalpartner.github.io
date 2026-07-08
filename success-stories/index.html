@@ -2,9 +2,6 @@
 <html lang="en-GB">
 <head>
 <meta charset="UTF-8">
-<link rel="preconnect" href="https://calendly.com" crossorigin>
-<link rel="preconnect" href="https://assets.calendly.com" crossorigin>
-
 <link rel="icon" type="image/svg+xml" href="/assets/logo-icon.svg">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Success Stories | AEO, CRO &amp; Paid Media Results | Your Digital Partner</title>
@@ -397,36 +394,11 @@
 /* a11y contrast (WCAG AA) */
 .qdh b{color:#6b46f2}.citebadge{color:#0d6a63}.gcardm .kind{color:#6444ee}.gcardm small{color:#0f766e}.pf-prod b{color:#6b46f2}.sovrow.you b{color:#0f766e}.qrow .rp i.sel{background:#6b46f2;border-color:#6b46f2}.pf-step.on{color:#6444ee}nav ul{color:#4d5b6e}.rp i{color:#5b6b80}.pf-step em{color:#5b6b80}.sovrow.you span{color:#0f766e}.logo b{color:#0d6a63}.e-green{color:#0f766e}
 </style>
+<link rel="preload" as="style" href="https://assets.calendly.com/assets/external/widget.css" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css"></noscript>
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 <script>
-/* Fast Calendly: custom modal + background-preloaded iframe (no widget.js dependency) */
-(function(){
-var CAL="https://calendly.com/chris-your-digital-partner/30min";
-var SRC=CAL+"?embed_domain="+location.hostname+"&embed_type=PopupWidget&hide_gdpr_banner=1";
-var css=document.createElement("style");
-css.textContent="#ydpCalOverlay{position:fixed;inset:0;z-index:9999;visibility:hidden;opacity:0;transition:opacity .18s ease}#ydpCalOverlay.open{visibility:visible;opacity:1}.ydp-cal-back{position:absolute;inset:0;background:rgba(8,20,48,.55)}.ydp-cal-box{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:min(1000px,calc(100vw - 24px));height:min(740px,calc(100vh - 40px));background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 30px 80px rgba(8,20,48,.4)}.ydp-cal-box iframe{width:100%;height:100%;border:0;opacity:0;transition:opacity .25s}#ydpCalOverlay.frameready .ydp-cal-box iframe{opacity:1}#ydpCalOverlay.frameready .ydp-cal-spin{display:none}.ydp-cal-spin{position:absolute;top:50%;left:50%;width:36px;height:36px;margin:-18px 0 0 -18px;border:3px solid #d8e0ec;border-top-color:#35e0c8;border-radius:50%;animation:ydpspin .8s linear infinite}@keyframes ydpspin{to{transform:rotate(360deg)}}.ydp-cal-x{position:absolute;top:10px;right:10px;z-index:2;width:36px;height:36px;border:0;border-radius:50%;background:#0a1733;color:#fff;font-size:20px;cursor:pointer;line-height:1;display:grid;place-items:center}html.ydp-cal-lock,html.ydp-cal-lock body{overflow:hidden}";
-document.head.appendChild(css);
-var ov=null;
-function build(){
-  if(ov)return;
-  if(!document.body){addEventListener("DOMContentLoaded",build,{once:!0});return}
-  ov=document.createElement("div");ov.id="ydpCalOverlay";
-  var back=document.createElement("div");back.className="ydp-cal-back";
-  var box=document.createElement("div");box.className="ydp-cal-box";
-  var x=document.createElement("button");x.className="ydp-cal-x";x.type="button";x.setAttribute("aria-label","Close");x.innerHTML="&times;";
-  var spin=document.createElement("div");spin.className="ydp-cal-spin";
-  var f=document.createElement("iframe");f.src=SRC;f.title="Book a 30-minute call";
-  f.onload=function(){ov.classList.add("frameready")};
-  box.appendChild(x);box.appendChild(spin);box.appendChild(f);
-  ov.appendChild(back);ov.appendChild(box);
-  back.addEventListener("click",hide);x.addEventListener("click",hide);
-  document.addEventListener("keydown",function(e){if(e.key==="Escape")hide()});
-  document.body.appendChild(ov);
-}
-function hide(){if(ov){ov.classList.remove("open");document.documentElement.classList.remove("ydp-cal-lock")}}
-window.ydpCal=function(){build();ov.classList.add("open");document.documentElement.classList.add("ydp-cal-lock");return false};
-window.ydpCalBuild=build;
-if(document.body){build()}else{addEventListener("DOMContentLoaded",build,{once:!0})}
-})();
+function ydpCal(u){if(window.Calendly&&Calendly.showPopupWidget){Calendly.showPopupWidget(u)}else{window.open(u,"_blank")}return false}
 </script>
 </head>
 <body>
