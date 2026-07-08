@@ -530,6 +530,7 @@
   /* ===== AUDIT CTA (shared pattern) ===== */
   .audit{background:#fff;border:2px solid var(--purple);border-radius:28px;box-shadow:10px 10px 0 rgba(123,92,250,.12);position:relative;overflow:hidden}
   .au-top{padding:48px 56px;display:grid;grid-template-columns:1fr;gap:26px;align-items:stretch}
+  .au-top>*{min-width:0}
   .audit h2{font-size:clamp(24px,3.2vw,36px);font-weight:800;letter-spacing:-.01em}
   .audit h2 span{color:var(--purple)}
   .audit .ap{color:var(--mut);font-size:14.5px;line-height:1.68;margin:14px 0 22px;max-width:none}
@@ -539,8 +540,8 @@
   .au-cal{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px}
   .au-cal .tag{font-size:18px;letter-spacing:0;text-transform:none;line-height:1.25;color:var(--purple);font-weight:800;margin-bottom:14px}
   .calembed{min-height:130px;border-radius:12px;overflow:hidden;background:#fff;display:flex;align-items:center;justify-content:center;padding:12px}
-  #calBox{border-radius:14px;overflow:hidden}
-  #calBox iframe{border-radius:14px;display:block}
+  #calBox{border-radius:14px;overflow:hidden;width:100%}
+  #calBox iframe{border-radius:14px;display:block;width:100%;max-width:100%}
   .cal-fallback{display:inline-block;background:var(--purple);color:#fff;font-weight:800;font-size:15px;line-height:1.35;padding:16px 24px;border-radius:12px;text-align:center;animation:purplepulse 2.4s ease-out infinite}
   @keyframes purplepulse{0%{box-shadow:0 0 0 0 rgba(123,92,250,.45)}70%{box-shadow:0 0 0 14px rgba(123,92,250,0)}100%{box-shadow:0 0 0 0 rgba(123,92,250,0)}}
   .au-cal .micro{font-size:11px;color:var(--mut);margin-top:10px;text-align:center}
@@ -606,6 +607,7 @@
     /* SEO & AEO rank table: fit to width instead of horizontal scroll */
     .rank-table{display:table;width:100%;table-layout:fixed;white-space:normal;font-size:10.5px}
     .rank-table th,.rank-table td{padding:8px 5px;word-break:break-word;vertical-align:top}
+    .rank-table .opp{white-space:normal}
     /* Widen the meeting embed by trimming wrapper padding */
     #audit{padding-left:12px;padding-right:12px}
     .au-top{padding:20px 8px}
