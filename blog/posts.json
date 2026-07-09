@@ -1,5 +1,25 @@
 [
   {
+    "title": "5 Steps to Increase Your AI Search Visibility",
+    "excerpt": "A practical, step-by-step guide to increasing your AI search visibility - covering direct answers, clear headings, schema markup, consistent facts and earned mentions.",
+    "tags": ["SEO", "AEO", "AI Marketing"],
+    "type": "guide",
+    "date": "9 Jul 2026",
+    "image": "/assets/blog/card-bg-blue.png",
+    "url": "/blog/5-steps-ai-search-visibility/",
+    "featured": true
+  },
+  {
+    "title": "AI Search Visibility — Your Five Step Checklist",
+    "excerpt": "A free, printable five step checklist to improve your AI search visibility - covering direct answers, question-style headings, schema markup, consistent facts and earned mentions.",
+    "tags": ["SEO", "AEO", "AI Marketing"],
+    "type": "checklist",
+    "date": "9 Jul 2026",
+    "image": "/assets/blog/card-bg-blue.png",
+    "url": "/blog/ai-search-visibility-5-step-checklist/",
+    "featured": false
+  },
+  {
     "title": "What is AEO? A beginner's guide to AI search visibility",
     "excerpt": "An introductory guide to Answer Engine Optimisation: what it is, how it differs from SEO, and the steps needed to start being cited by ChatGPT, Gemini, Perplexity and Google's AI Overview.",
     "tags": ["SEO", "AEO", "AI Marketing"],
@@ -7,6 +27,6 @@
     "date": "9 Jul 2026",
     "image": "/assets/blog/card-bg-green.png",
     "url": "/blog/what-is-aeo-ai-search-visibility-guide/",
-    "featured": true
+    "featured": false
   }
 ]
