@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://your-digital-partner.co.uk/blog/what-is-aeo-ai-search-visibility-guide/">
+<title>What is AEO? A beginner's guide to AI search visibility | Your Digital Partner</title>
+<meta name="description" content="An introductory guide explaining what Answer Engine Optimisation (AEO) is, how it differs from SEO, and the practical steps needed to start being visible and cited across ChatGPT, Gemini, Perplexity and Google's AI Overview.">
+<meta property="og:title" content="What is AEO? A beginner's guide to AI search visibility">
+<meta property="og:description" content="An introductory guide explaining what Answer Engine Optimisation (AEO) is, how it differs from SEO, and the practical steps to start being cited by AI.">
+<meta property="og:image" content="https://your-digital-partner.co.uk/assets/blog/what-is-aeo-featured.png">
+<meta property="og:type" content="article">
+<link rel="icon" type="image/svg+xml" href="/assets/logo-icon.svg">
+<style>
+*{margin:0;box-sizing:border-box;font-family:'Segoe UI',system-ui,-apple-system,sans-serif}
+:root{--bg:#f1f4fa;--ink:#0a1733;--mut:#5b6b80;--lime:#35e0c8;--card:#fff;--line:#d8e0ec;--soft:#e0eef6;--blue:#2f5fd0;--green:#0d9488;--greenSoft:#dcf3ef;--purple:#7b5cfa;--pink:#c2408d}
+body{background:var(--bg);color:var(--ink);overflow-x:hidden;padding-top:110px;padding-bottom:80px}
+
+nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:50;display:flex;gap:8px;align-items:center;background:rgba(255,255,255,.88);backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:99px;padding:8px 10px 8px 22px;box-shadow:0 10px 30px rgba(8,20,48,.08);width:min(920px,94vw);justify-content:space-between}
+.navr{display:flex;align-items:center;gap:10px}
+.logo{font-weight:800;font-size:15.5px;display:flex;align-items:center;gap:9px;color:var(--ink);text-decoration:none}
+.logo b{color:#0d9488}
+nav ul{display:flex;gap:20px;list-style:none;font-size:13px;color:#4d5b6e}
+nav ul li a{color:inherit;text-decoration:none}
+.cta{background:var(--ink);color:var(--lime);border:none;padding:10px 20px;border-radius:99px;font-size:13px;font-weight:700;text-decoration:none;display:inline-block}
+.cta:hover{color:var(--lime)}
+.nav-book{background:#fff;color:var(--ink);border:2px solid var(--ink);border-radius:99px;padding:7px 14px;font-size:12px;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.mobile-menu-toggle{display:none}
+@media(max-width:900px){nav ul{display:none}.navr>.cta{display:none}.navr>.nav-book{display:none}}
+
+.ydp-post{max-width:900px;margin:0 auto;padding:0 24px}
+.ydp-post-hero{display:grid;grid-template-columns:1.2fr 1fr;gap:36px;align-items:center;margin-bottom:20px}
+.ydp-post-title{font-size:clamp(34px,4.6vw,58px);font-weight:800;letter-spacing:-.02em;line-height:1.05;margin:0 0 12px;color:var(--ink)}
+.ydp-post-meta{font-size:13.5px;color:var(--mut)}
+.ydp-post-image{width:100%;height:100%;max-height:320px;object-fit:cover;border-radius:20px;display:block}
+@media(max-width:700px){.ydp-post-hero{grid-template-columns:1fr;gap:20px}.ydp-post-image{max-height:220px}}
+
+.tag-row{display:flex;gap:8px;margin-bottom:32px}
+.tag{font-size:12px;font-weight:800;padding:6px 14px;border-radius:99px}
+.tag.seo{background:rgba(47,95,208,.12);color:var(--blue)}
+.tag.aeo{background:var(--greenSoft);color:var(--green)}
+.tag.ai-marketing{background:rgba(123,92,250,.12);color:var(--purple)}
+
+.ydp-post-intro{margin-bottom:36px}
+.ydp-post-intro h2{font-size:24px;margin:0 0 10px;color:var(--ink);font-weight:800}
+.ydp-post-intro p{font-size:16px;line-height:1.7;color:var(--mut)}
+
+.ydp-post-overview{background:var(--greenSoft);border:1px solid #bfe6da;border-radius:20px;padding:28px 32px;margin-bottom:40px}
+.ydp-post-overview h2{font-size:20px;margin:0 0 14px;color:var(--green);font-weight:800}
+.ydp-post-overview ul{padding-left:20px;line-height:1.9;margin:0}
+.ydp-post-overview ul li{font-size:16px;color:var(--ink)}
+.ydp-post-overview ul li::marker{color:var(--green)}
+
+.ydp-post-content{font-size:16px;line-height:1.75;color:var(--ink)}
+.ydp-post-content h2{font-size:26px;margin:36px 0 12px;color:var(--ink);font-weight:800}
+.ydp-post-content h3{font-size:19px;margin:28px 0 10px;color:var(--ink);font-weight:700}
+.ydp-post-content p{margin:0 0 18px;color:var(--mut)}
+.ydp-post-content ul{margin:0 0 18px;padding-left:20px;color:var(--mut);line-height:1.8}
+.ydp-post-content ol{margin:0 0 18px;padding-left:20px;color:var(--mut);line-height:1.8}
+.ydp-post-content a{color:var(--green);font-weight:700;text-decoration:underline}
+
+.ydp-faq{margin:44px 0}
+.ydp-faq h2{font-size:26px;margin:0 0 20px;color:var(--ink);font-weight:800}
+.ydp-faq-item{margin-bottom:20px}
+.ydp-faq-item h3{font-size:17px;margin:0 0 6px;color:var(--ink);font-weight:700}
+.ydp-faq-item p{font-size:15px;color:var(--mut);margin:0}
+
+.ydp-post-final{text-align:center;margin-top:56px}
+.ydp-post-final .wrap{background:radial-gradient(520px at 82% 15%,rgba(194,64,141,.28),transparent 65%),radial-gradient(520px at 12% 90%,rgba(47,95,208,.25),transparent 65%),var(--ink);color:#eef2fb;border-radius:28px;padding:70px 40px}
+.ydp-post-final h2{font-size:clamp(26px,4vw,40px);font-weight:800;letter-spacing:-.01em;line-height:1.1;max-width:700px;margin:0 auto;color:#eef2fb}
+.ydp-post-final h2 .hl{color:var(--lime)}
+.ydp-post-final p{color:#93a5c1;max-width:560px;margin:20px auto 0;font-size:14.5px;line-height:1.7}
+.ydp-post-final .cta{background:var(--lime);color:var(--ink);font-size:15px;padding:15px 32px;margin-top:26px}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://your-digital-partner.co.uk/blog/what-is-aeo-ai-search-visibility-guide/#article",
+      "headline": "What is AEO? A beginner's guide to AI search visibility",
+      "description": "An introductory guide explaining what Answer Engine Optimisation (AEO) is, how it differs from SEO, and the practical steps needed to start being visible and cited across ChatGPT, Gemini, Perplexity and Google's AI Overview.",
+      "author": { "@type": "Person", "name": "Chris Chapman", "url": "https://your-digital-partner.co.uk/#approach" },
+      "publisher": { "@type": "Organization", "name": "Your Digital Partner", "logo": { "@type": "ImageObject", "url": "https://your-digital-partner.co.uk/assets/logo-icon.svg" } },
+      "datePublished": "2026-07-09",
+      "dateModified": "2026-07-09",
+      "url": "https://your-digital-partner.co.uk/blog/what-is-aeo-ai-search-visibility-guide/",
+      "mainEntityOfPage": { "@id": "https://your-digital-partner.co.uk/blog/what-is-aeo-ai-search-visibility-guide/" },
+      "keywords": "AEO, answer engine optimisation, AI search visibility, SEO vs AEO, generative engine optimisation, ChatGPT, Gemini, Perplexity, Google AI Overview",
+      "articleSection": ["SEO", "AEO", "AI Marketing"],
+      "about": { "@type": "Thing", "name": "Answer Engine Optimisation" },
+      "relatedLink": "https://your-digital-partner.co.uk/solutions/seo-aeo-visibility/",
+      "mentions": [
+        { "@type": "SoftwareApplication", "name": "ChatGPT", "sameAs": "https://openai.com/chatgpt" },
+        { "@type": "SoftwareApplication", "name": "Google Gemini", "sameAs": "https://gemini.google.com" },
+        { "@type": "SoftwareApplication", "name": "Perplexity", "sameAs": "https://www.perplexity.ai" },
+        { "@type": "Thing", "name": "Google AI Overview" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://your-digital-partner.co.uk/blog/what-is-aeo-ai-search-visibility-guide/#faq",
+      "mainEntity": [
+        { "@type": "Question", "name": "What is AEO?", "acceptedAnswer": { "@type": "Answer", "text": "Answer Engine Optimisation is the practice of structuring your website and content so that AI systems like ChatGPT, Gemini, Perplexity, and Google's AI Overview can understand it clearly enough to summarise, reference, or directly cite it in response to someone's question." } },
+        { "@type": "Question", "name": "How does AEO differ from SEO?", "acceptedAnswer": { "@type": "Answer", "text": "SEO optimises for ranking in a list of links a human scans and chooses from, while AEO optimises for being selected, understood, and cited by a model writing an answer on someone's behalf." } },
+        { "@type": "Question", "name": "How do I increase my AI search visibility?", "acceptedAnswer": { "@type": "Answer", "text": "Answer questions directly near the top of the page, use clear question-style headings, add structured data (schema markup), keep facts consistent across your site, and earn genuine mentions elsewhere on the web." } },
+        { "@type": "Question", "name": "Is AEO replacing SEO?", "acceptedAnswer": { "@type": "Answer", "text": "No. AEO builds on the same foundations as SEO but adds a second target: being understood and cited by AI models, not just ranked by traditional search algorithms. Most businesses need both." } },
+        { "@type": "Question", "name": "How long does it take to start appearing in AI answers?", "acceptedAnswer": { "@type": "Answer", "text": "There's no fixed timeline. Structural changes like clearer headings and schema markup can help relatively quickly, but building genuine authority and consistent mentions elsewhere takes longer, similar to traditional SEO." } },
+        { "@type": "Question", "name": "Can a small business realistically compete for AI citations?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. AI models generally favour clear, well-structured, trustworthy content over sheer domain size, so a smaller site that directly answers a specific question can be cited over a larger, vaguer competitor." } },
+        { "@type": "Question", "name": "Do backlinks still matter for AEO?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. AI models draw on the broader web's view of a business, not just the content on your own site, so credible mentions and links from other sources still contribute to whether you're seen as a trustworthy source to cite." } }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://your-digital-partner.co.uk/blog/what-is-aeo-ai-search-visibility-guide/#howto",
+      "name": "How to increase your AI search visibility",
+      "step": [
+        { "@type": "HowToStep", "position": 1, "name": "Answer questions directly", "text": "Structure content around the actual questions your audience asks, and answer them plainly near the top of the page before adding nuance or context." },
+        { "@type": "HowToStep", "position": 2, "name": "Use clear headings", "text": "Question-style headings such as 'What is...' and 'How does...' help both readers and models quickly identify what a section covers." },
+        { "@type": "HowToStep", "position": 3, "name": "Add structured data (schema markup)", "text": "Give AI systems explicit, machine-readable facts about your content rather than making them infer everything from prose." },
+        { "@type": "HowToStep", "position": 4, "name": "Keep facts consistent across your site", "text": "Contradictory or vague information across pages makes it harder for a model to trust and cite you confidently." },
+        { "@type": "HowToStep", "position": 5, "name": "Earn genuine mentions elsewhere", "text": "AI models draw on the wider web's view of your business, not just your own site, so credible external mentions still matter." }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://your-digital-partner.co.uk/blog/what-is-aeo-ai-search-visibility-guide/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://your-digital-partner.co.uk/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://your-digital-partner.co.uk/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "What is AEO? A beginner's guide to AI search visibility", "item": "https://your-digital-partner.co.uk/blog/what-is-aeo-ai-search-visibility-guide/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="/"><span>your<b>digital</b>partner</span></a>
+  <ul>
+    <li><a href="/solutions/seo-aeo-visibility/">Solutions</a></li>
+    <li><a href="/success-stories/">Success Stories</a></li>
+    <li><a href="/blog/">Free Guides</a></li>
+    <li><a href="/#approach">About</a></li>
+  </ul>
+  <div class="navr">
+    <a class="cta" href="/#scorecard">Free AEO audit</a>
+    <a class="nav-book" href="https://meetings-eu1.hubspot.com/cchapman" target="_blank" rel="noopener">Call</a>
+  </div>
+</nav>
+
+<div class="ydp-post">
+
+  <div class="ydp-post-hero">
+    <div>
+      <h1 class="ydp-post-title">What is AEO? A beginner's guide to AI search visibility</h1>
+      <div class="ydp-post-meta">Chris Chapman &middot; 9 July 2026</div>
+    </div>
+    <img class="ydp-post-image" src="/assets/blog/what-is-aeo-featured.png" alt="What is AEO featured image">
+  </div>
+
+  <div class="tag-row">
+    <span class="tag seo">SEO</span>
+    <span class="tag aeo">AEO</span>
+    <span class="tag ai-marketing">AI Marketing</span>
+  </div>
+
+  <div class="ydp-post-intro">
+    <h2>Introduction</h2>
+    <p>If you've noticed a shift in how people find businesses like yours - asking ChatGPT for a recommendation instead of typing a search into Google - you're not imagining it. This guide explains what Answer Engine Optimisation (AEO) actually is, how it's different from traditional SEO, and what practical steps you can take to start showing up in AI-generated answers.</p>
+  </div>
+
+  <div class="ydp-post-overview">
+    <h2>What's in this guide</h2>
+    <ul>
+      <li>What AEO means and where the term comes from</li>
+      <li>How AEO differs from traditional SEO</li>
+      <li>Where AI visibility actually shows up: ChatGPT, Gemini, Perplexity, and Google's AI Overview</li>
+      <li>The basic groundwork needed before you can be cited</li>
+      <li>A simple starting checklist</li>
+    </ul>
+  </div>
+
+  <div class="ydp-post-content">
+    <h2>What is AEO?</h2>
+    <p>Answer Engine Optimisation is the practice of structuring your website and content so that AI systems - large language models like ChatGPT, Gemini, and Perplexity, as well as Google's AI Overview - can understand it clearly enough to summarise, reference, or directly cite it in response to someone's question.</p>
+    <p>Where traditional search returns a list of links for a person to click through, an answer engine reads multiple sources, synthesises them, and gives the person a direct answer, sometimes with a citation, sometimes without. AEO is about maximising the chance that your business is one of the sources it draws from. If you'd like a closer look at where your own site currently stands, our <a href="/solutions/seo-aeo-visibility/">SEO &amp; AEO Visibility service</a> covers this in more depth.</p>
+
+    <h3>How does AEO differ from SEO?</h3>
+    <p>SEO and AEO share a lot of the same foundations - both care about clear structure, authority, and relevance. But they optimise for different endpoints:</p>
+    <ul>
+      <li><strong>SEO</strong> optimises for ranking in a list of links a human will scan and choose from.</li>
+      <li><strong>AEO</strong> optimises for being selected, understood, and cited by a model that's writing an answer on someone's behalf.</li>
+    </ul>
+    <p>In practice, this means AEO puts extra weight on things SEO treats as secondary: direct question-and-answer phrasing, unambiguous factual statements, clear structured data (schema markup), and content that can be lifted and summarised without losing meaning.</p>
+
+    <h3>Where AI visibility actually shows up</h3>
+    <p>AI-driven answers aren't limited to one platform. The main places worth understanding:</p>
+    <ul>
+      <li><strong>ChatGPT</strong> - increasingly used for research and recommendations, including business and service lookups</li>
+      <li><strong>Google Gemini</strong> - Google's own conversational AI, separate from traditional search</li>
+      <li><strong>Perplexity</strong> - built specifically as an answer engine, citing sources directly in its responses</li>
+      <li><strong>Google AI Overview</strong> - the AI-generated summary now appearing above traditional results on many Google searches</li>
+    </ul>
+    <p>Each has slightly different behaviour in what it cites and how, but the underlying groundwork - clarity, structure, and credibility - helps across all of them.</p>
+
+    <h3>How to increase your AI search visibility</h3>
+    <p>A few foundational steps, roughly in order of impact:</p>
+    <ol>
+      <li><strong>Answer questions directly.</strong> Structure content around the actual questions your audience asks, and answer them plainly near the top of the page, before adding nuance or context.</li>
+      <li><strong>Use clear headings.</strong> Question-style headings ("What is...", "How does...") help both readers and models quickly identify what a section covers.</li>
+      <li><strong>Add structured data (schema markup).</strong> This gives AI systems explicit, machine-readable facts about your content, rather than making them infer everything from prose.</li>
+      <li><strong>Keep facts consistent across your site.</strong> Contradictory or vague information across pages makes it harder for a model to trust and cite you confidently.</li>
+      <li><strong>Earn genuine mentions elsewhere.</strong> AI models draw on the wider web's view of your business, not just your own site, so credible external mentions still matter.</li>
+    </ol>
+
+    <h3>A note on common mistakes</h3>
+    <p>The most common misstep is treating AEO as a checklist to "trick" a model into citing you, rather than genuinely making your content clearer and more useful. Models are trained to prioritise accuracy and helpfulness, the same qualities that make content genuinely good for a human reader are, largely, what make it good for AEO too.</p>
+  </div>
+
+  <div class="ydp-faq">
+    <h2>Frequently asked questions</h2>
+    <div class="ydp-faq-item"><h3>Is AEO replacing SEO?</h3><p>No. AEO builds on the same foundations as SEO but adds a second target: being understood and cited by AI models, not just ranked by traditional search algorithms. Most businesses need both, not one instead of the other.</p></div>
+    <div class="ydp-faq-item"><h3>How long does it take to start appearing in AI answers?</h3><p>There's no fixed timeline, since it depends on how AI models crawl and refresh their understanding of the web. Structural changes like clearer headings and schema markup can help relatively quickly, but building genuine authority and consistent mentions elsewhere takes longer, similar to traditional SEO.</p></div>
+    <div class="ydp-faq-item"><h3>Can a small business realistically compete for AI citations?</h3><p>Yes. AI models generally favour clear, well-structured, trustworthy content over sheer domain size, so a smaller site that directly and clearly answers a specific question can be cited over a larger, vaguer competitor.</p></div>
+    <div class="ydp-faq-item"><h3>Do backlinks still matter for AEO?</h3><p>Yes. AI models draw on the broader web's view of a business, not just the content on your own site, so credible mentions and links from other sources still contribute to whether you're seen as a trustworthy source to cite.</p></div>
+  </div>
+
+  <section class="ydp-post-final">
+    <div class="wrap">
+      <h2>Ready to <span class="hl">grow your pipeline</span>?</h2>
+      <p>Book a free 30-minute call and let's discuss how to grow your visibility, conversions and pipeline.</p>
+      <a class="cta" href="https://meetings-eu1.hubspot.com/cchapman" target="_blank" rel="noopener">Book a call &rarr;</a>
+    </div>
+  </section>
+
+</div>
+
+</body>
+</html>
