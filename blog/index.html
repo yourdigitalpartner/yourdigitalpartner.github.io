@@ -165,13 +165,34 @@ function ctaCard(span){
   </a>`;
 }
 
+function parseDate(d){
+  const t = Date.parse(d);
+  return isNaN(t) ? 0 : t;
+}
+function byRecency(a,b){ return parseDate(b.date) - parseDate(a.date); }
+
+// Ordering rule: the most recent post of type "article" always leads (slot 1),
+// and the most recent post of type "guide" always follows in slot 2 -
+// regardless of any "featured" flag or posts.json authoring order. Everything
+// else fills in after, most recent first. If a filtered view has no article
+// or no guide (e.g. the type filter excludes them), that slot is simply
+// skipped rather than left blank, so the layout still fills naturally.
+function buildOrder(filtered){
+  const byDate = [...filtered].sort(byRecency);
+  const topArticle = byDate.find(p=>p.type==='article');
+  const topGuide = byDate.find(p=>p.type==='guide' && p!==topArticle);
+  const leaders = [topArticle, topGuide].filter(Boolean);
+  const leaderSet = new Set(leaders);
+  const rest = byDate.filter(p=>!leaderSet.has(p));
+  return [...leaders, ...rest];
+}
+
 function render(){
   renderFilters();
   const filtered = posts.filter(matches);
 
-  // An explicitly featured:true post always leads, otherwise just use
-  // authored order (most recent first, as maintained in posts.json).
-  const ordered = [...filtered].sort((a,b)=>(b.featured?1:0)-(a.featured?1:0));
+  // Slot 1 = most recent article, slot 2 = most recent guide (see buildOrder).
+  const ordered = buildOrder(filtered);
 
   const fEl = document.getElementById('featured');
   const gEl = document.getElementById('grid');
