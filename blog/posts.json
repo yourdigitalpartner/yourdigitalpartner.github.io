@@ -28,5 +28,15 @@
     "image": "/assets/blog/card-bg-green.png",
     "url": "/blog/what-is-aeo-ai-search-visibility-guide/",
     "featured": false
+  },
+  {
+    "title": "SaaS AI Visibility: An AEO & GEO Guide (for SaaS and Software Companies)",
+    "excerpt": "A practical AEO and GEO guide to AI visibility for SaaS companies - covering feature and pricing pages, competitor comparisons, tracking who AI actually cites, cross-platform consistency, and review recency.",
+    "tags": ["SEO", "AEO"],
+    "type": "article",
+    "date": "9 Jul 2026",
+    "image": "/assets/blog/card-bg-pink.png",
+    "url": "/blog/how-to-increase-ai-visibility-saas/",
+    "featured": false
   }
 ]

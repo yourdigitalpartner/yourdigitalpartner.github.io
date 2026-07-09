@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://your-digital-partner.co.uk/blog/how-to-increase-ai-visibility-saas/">
+<title>SaaS AI Visibility: An AEO &amp; GEO Guide | Your Digital Partner</title>
+<meta name="description" content="A practical AEO and GEO guide to AI visibility for SaaS companies - covering feature and pricing pages, competitor comparisons, tracking who AI actually cites, cross-platform consistency, and review recency.">
+<meta property="og:title" content="SaaS AI Visibility: An AEO &amp; GEO Guide">
+<meta property="og:description" content="A practical AEO/GEO guide to getting your SaaS product cited by ChatGPT, Gemini and Perplexity.">
+<meta property="og:image" content="https://your-digital-partner.co.uk/assets/blog/card-bg-pink.png">
+<meta property="og:type" content="article">
+<link rel="icon" type="image/svg+xml" href="/assets/logo-icon.svg">
+<style>
+*{margin:0;box-sizing:border-box;font-family:'Segoe UI',system-ui,-apple-system,sans-serif}
+:root{--bg:#f1f4fa;--ink:#0a1733;--mut:#5b6b80;--lime:#35e0c8;--card:#fff;--line:#d8e0ec;--soft:#e0eef6;--blue:#2f5fd0;--blueSoft:#e8effe;--green:#0d9488;--greenSoft:#dcf3ef;--purple:#7b5cfa;--pink:#c2408d}
+body{background:var(--bg);color:var(--ink);overflow-x:hidden;padding-top:110px;padding-bottom:80px}
+
+nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:50;display:flex;gap:8px;align-items:center;background:rgba(255,255,255,.88);backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:99px;padding:8px 10px 8px 22px;box-shadow:0 10px 30px rgba(8,20,48,.08);width:min(920px,94vw);justify-content:space-between}
+.navr{display:flex;align-items:center;gap:10px}
+.logo{font-weight:800;font-size:15.5px;display:flex;align-items:center;gap:9px;color:var(--ink);text-decoration:none}
+.logo b{color:#0d9488}
+nav ul{display:flex;gap:20px;list-style:none;font-size:13px;color:#4d5b6e}
+nav ul li a{color:inherit;text-decoration:none}
+.cta{background:var(--ink);color:var(--lime);border:none;padding:10px 20px;border-radius:99px;font-size:13px;font-weight:700;text-decoration:none;display:inline-block}
+.cta:hover{color:var(--lime)}
+.nav-book{background:#fff;color:var(--ink);border:2px solid var(--ink);border-radius:99px;padding:7px 14px;font-size:12px;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.mobile-menu-toggle{display:none}
+@media(max-width:900px){nav ul{display:none}.navr>.cta{display:none}.navr>.nav-book{display:none}}
+
+.ydp-post{max-width:900px;margin:0 auto;padding:0 24px}
+.ydp-post-title{font-size:clamp(34px,4.6vw,58px);font-weight:800;letter-spacing:-.02em;line-height:1.05;margin:0 0 12px;color:var(--ink)}
+.ydp-post-meta{font-size:13.5px;color:var(--mut);margin-bottom:20px}
+
+.tag-row{display:flex;gap:8px;margin-bottom:32px}
+.tag{font-size:12px;font-weight:800;padding:6px 14px;border-radius:99px}
+.tag.seo{background:rgba(47,95,208,.12);color:var(--blue)}
+.tag.aeo{background:var(--greenSoft);color:var(--green)}
+.tag.ai-marketing{background:rgba(123,92,250,.12);color:var(--purple)}
+
+.ydp-post-intro{margin-bottom:36px}
+.ydp-post-intro h2{font-size:24px;margin:0 0 10px;color:var(--ink);font-weight:800}
+.ydp-post-intro p{font-size:16px;line-height:1.7;color:var(--mut)}
+
+.ydp-post-overview{background:var(--greenSoft);border:1px solid #bfe6da;border-radius:20px;padding:28px 32px;margin-bottom:40px}
+.ydp-post-overview h2{font-size:20px;margin:0 0 14px;color:var(--green);font-weight:800}
+.ydp-post-overview ul{padding-left:20px;line-height:1.9;margin:0}
+.ydp-post-overview ul li{font-size:16px;color:var(--ink)}
+.ydp-post-overview ul li::marker{color:var(--green)}
+
+.ydp-post-content{font-size:16px;line-height:1.75;color:var(--ink)}
+.ydp-post-content h2{font-size:26px;margin:36px 0 12px;color:var(--ink);font-weight:800}
+.ydp-post-content h3{font-size:19px;margin:28px 0 10px;color:var(--ink);font-weight:700}
+.ydp-post-content h2.step-q{font-size:20px;color:var(--green);margin:14px 0 12px;font-weight:800}
+.ydp-post-content p{margin:0 0 18px;color:var(--mut)}
+.ydp-post-content ul{margin:0 0 18px;padding-left:20px;color:var(--mut);line-height:1.8}
+.ydp-post-content ol{margin:0 0 18px;padding-left:20px;color:var(--mut);line-height:1.8}
+.ydp-post-content a{color:var(--green);font-weight:700;text-decoration:underline}
+
+.step-block{background:#fff;border:1.5px solid var(--line);border-radius:20px;padding:28px 30px;margin:0 0 20px}
+.step-block h3{margin:0 0 8px;font-size:19px;color:var(--ink);font-weight:800}
+.step-block p{margin:0 0 12px}
+.step-block .try{background:var(--bg);border-radius:12px;padding:12px 16px;font-size:14.5px;color:var(--ink)}
+.step-block .try b{color:var(--green)}
+
+
+@property --dlba{syntax:'<angle>';initial-value:0deg;inherits:false}
+.dl-card{margin:28px 0 8px;background:var(--blueSoft);border:1px solid #c7d6f7;border-radius:16px;padding:20px 24px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.dl-ic{flex:0 0 auto;width:44px;height:44px;border-radius:12px;background:#fff;display:flex;align-items:center;justify-content:center;font-size:20px}
+.dl-txt{flex:1;min-width:220px}
+.dl-h{color:var(--ink);font-size:15.5px;font-weight:800;margin-bottom:3px}
+.dl-p{margin:0;color:var(--mut);font-size:13px;line-height:1.5}
+a.dl-btn{display:inline-block;color:#fff !important;font-size:13px;font-weight:800;padding:8px 17px;border-radius:99px;border:3px solid transparent;text-decoration:none !important;white-space:nowrap;flex:0 0 auto;background:linear-gradient(var(--ink),var(--ink)) padding-box,conic-gradient(from var(--dlba),var(--lime),var(--purple),var(--pink),var(--blue),var(--lime)) border-box;animation:dlbaspin 3.2s linear infinite}
+@keyframes dlbaspin{to{--dlba:360deg}}
+
+.ydp-faq{margin:44px 0}
+.ydp-faq h2{font-size:26px;margin:0 0 20px;color:var(--ink);font-weight:800}
+.ydp-faq-item{margin-bottom:20px}
+.ydp-faq-item h3{font-size:17px;margin:0 0 6px;color:var(--ink);font-weight:700}
+.ydp-faq-item p{font-size:15px;color:var(--mut);margin:0}
+
+.ydp-post-final{text-align:center;margin-top:56px}
+.ydp-post-final .wrap{background:radial-gradient(520px at 82% 15%,rgba(194,64,141,.28),transparent 65%),radial-gradient(520px at 12% 90%,rgba(47,95,208,.25),transparent 65%),var(--ink);color:#eef2fb;border-radius:28px;padding:70px 40px}
+.ydp-post-final h2{font-size:clamp(26px,4vw,40px);font-weight:800;letter-spacing:-.01em;line-height:1.1;max-width:700px;margin:0 auto;color:#eef2fb}
+.ydp-post-final h2 .hl{color:var(--lime)}
+.ydp-post-final p{color:#93a5c1;max-width:560px;margin:20px auto 0;font-size:14.5px;line-height:1.7}
+.ydp-post-final .cta{background:var(--lime);color:var(--ink);font-size:15px;padding:15px 32px;margin-top:26px;border:none;cursor:pointer}
+
+.hs-book-modal{display:none;position:fixed;inset:0;z-index:99999}
+.hs-book-modal.open{display:block}
+.hs-book-overlay{position:absolute;inset:0;background:rgba(8,20,48,.55)}
+.hs-book-dialog{position:relative;background:#fff;max-width:1040px;width:calc(100% - 40px);margin:4vh auto;border-radius:16px;box-shadow:0 30px 80px rgba(8,20,48,.35);padding:32px 34px 24px;max-height:92vh;overflow:auto}
+.hs-book-x{position:absolute;top:6px;right:12px;border:0;background:transparent;font-size:30px;line-height:1;cursor:pointer;color:#0a1733;z-index:2}
+.hs-book-dialog .meetings-iframe-container{min-height:660px;border-radius:24px;overflow:hidden}
+@media(max-width:600px){.hs-book-dialog{width:calc(100% - 20px);padding:16px 12px 12px}.hs-book-x{top:4px;right:8px}}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://your-digital-partner.co.uk/blog/how-to-increase-ai-visibility-saas/#article",
+      "headline": "SaaS AI Visibility: An AEO & GEO Guide (for SaaS and Software Companies)",
+      "description": "A practical AEO and GEO guide to AI visibility for SaaS companies - covering feature and pricing pages, competitor comparisons, tracking who AI actually cites, cross-platform consistency, and review recency.",
+      "author": {
+        "@type": "Person",
+        "name": "Chris Chapman",
+        "url": "https://your-digital-partner.co.uk/#approach",
+        "sameAs": "https://www.linkedin.com/in/chrischapman89"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Your Digital Partner",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://your-digital-partner.co.uk/assets/logo-icon.svg"
+        }
+      },
+      "datePublished": "2026-07-09",
+      "dateModified": "2026-07-09",
+      "url": "https://your-digital-partner.co.uk/blog/how-to-increase-ai-visibility-saas/",
+      "mainEntityOfPage": {
+        "@id": "https://your-digital-partner.co.uk/blog/how-to-increase-ai-visibility-saas/"
+      },
+      "keywords": "AI visibility for SaaS, AEO, GEO, answer engine optimisation, generative engine optimisation, SaaS AI citations, AI search visibility, ChatGPT, Gemini, Perplexity, competitor AI tracking",
+      "articleSection": [
+        "SEO",
+        "AEO"
+      ],
+      "about": {
+        "@type": "Thing",
+        "name": "AI visibility for SaaS companies"
+      },
+      "isBasedOn": {
+        "@id": "https://your-digital-partner.co.uk/blog/5-steps-ai-search-visibility/#article"
+      },
+      "mentions": [
+        {
+          "@type": "SoftwareApplication",
+          "name": "ChatGPT",
+          "sameAs": "https://openai.com/chatgpt"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "Gemini",
+          "sameAs": "https://gemini.google.com/"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "Perplexity",
+          "sameAs": "https://www.perplexity.ai/"
+        },
+        {
+          "@type": "Organization",
+          "name": "G2",
+          "sameAs": "https://www.g2.com/"
+        },
+        {
+          "@type": "Organization",
+          "name": "Capterra",
+          "sameAs": "https://www.capterra.com/"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "HubSpot",
+          "sameAs": "https://www.hubspot.com/products/aeo"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "Searchable",
+          "sameAs": "https://www.searchable.com/"
+        },
+        {
+          "@type": "Service",
+          "name": "AEO & SEO",
+          "url": "https://your-digital-partner.co.uk/solutions/seo-aeo-visibility/"
+        },
+        {
+          "@type": "Article",
+          "name": "What is AEO? A beginner's guide to AI search visibility",
+          "url": "https://your-digital-partner.co.uk/blog/what-is-aeo-ai-search-visibility-guide/"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "AI Search Visibility - Your Five Step Checklist",
+          "url": "https://your-digital-partner.co.uk/blog/ai-search-visibility-5-step-checklist/"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://your-digital-partner.co.uk/blog/how-to-increase-ai-visibility-saas/#howto-steps",
+      "name": "How to Increase AI Visibility for SaaS Companies",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Answer \"what does it do\" questions to build AI visibility for your SaaS product",
+          "text": "Pick five of your product/feature pages and check each one plainly states, in text, what that specific feature can and can't do - not just what it can do. Fix any that only list capabilities with no boundaries or caveats."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Turn \"X vs Y\" comparisons into AEO content that wins AI citations",
+          "text": "Take your most important competitor comparison page and list every advantage claim on it. For each one, check it names a specific feature or mechanism and a specific outcome - rewrite any that are still just adjectives (\"better\", \"more powerful\", \"easier\")."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Track what your competitors are showing up for in AI answers",
+          "text": "Run 8-10 of your actual target buyer queries through ChatGPT, Perplexity and Google's AI Overview this week. Log who's cited for each, then treat a dedicated AEO/GEO tracking tool as the way to keep doing this automatically rather than repeating the exercise manually every few months."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Keep facts consistent for AEO across G2, Capterra and your docs",
+          "text": "Pull up your G2 or Capterra profile next to your current pricing page and your public docs. Check category, pricing tier names, and headline feature list all agree."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Earn recent reviews and mentions to strengthen AI visibility and GEO",
+          "text": "Check the date of your most recent review on your top platform (G2, Capterra, etc). If it's more than a couple of months old, put a simple, recurring nudge in place (a post-onboarding email, a request after a support ticket is resolved) rather than treating reviews as a one-time campaign."
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://your-digital-partner.co.uk/blog/how-to-increase-ai-visibility-saas/#howto-checklist",
+      "name": "Your SaaS AI visibility (AEO/GEO) checklist",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Does every key product/feature page state plainly, in text, what it can and can't do - not just capabilities?",
+          "text": "Does every key product/feature page state plainly, in text, what it can and can't do - not just capabilities?"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Does your pricing page give at least a brief, honest answer (even if it's \"contact us\" plus what drives that)?",
+          "text": "Does your pricing page give at least a brief, honest answer (even if it's \"contact us\" plus what drives that)?"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Does your main competitor comparison page name specific features and mechanisms, not just adjectives like \"better\" or \"more powerful\"?",
+          "text": "Does your main competitor comparison page name specific features and mechanisms, not just adjectives like \"better\" or \"more powerful\"?"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Do you actually know which competitors AI cites for your top 8-10 buyer queries - and are you tracking this with a proper tool, not one-off manual checks?",
+          "text": "Do you actually know which competitors AI cites for your top 8-10 buyer queries - and are you tracking this with a proper tool, not one-off manual checks?"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Do your G2/Capterra listing, your pricing page and your public docs all agree on category, pricing and features?",
+          "text": "Do your G2/Capterra listing, your pricing page and your public docs all agree on category, pricing and features?"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Is your most recent review on your top platform from within the last couple of months, not years old?",
+          "text": "Is your most recent review on your top platform from within the last couple of months, not years old?"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://your-digital-partner.co.uk/blog/how-to-increase-ai-visibility-saas/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I get my SaaS company to show up in ChatGPT, Gemini or Perplexity answers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The same principles as any AI visibility (AEO/GEO) strategy apply, adapted to how SaaS buyers actually ask questions: answer functional \"what does it do\" questions directly on every product page, make comparison content specific rather than promotional, track which competitors are currently being cited instead of you, keep facts consistent everywhere you're listed, and keep reviews and mentions current. This guide walks through each of those in detail."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the difference between AEO, GEO and SEO for a SaaS or software company?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SEO is about ranking in traditional search results. AEO (Answer Engine Optimisation) is about being the source an AI system lifts a direct answer from. GEO (Generative Engine Optimisation) is the broader umbrella term covering visibility across all AI-generated answers, including AI Overviews, chat assistants and generative search. In practice, for a SaaS company they overlap heavily - the same fixes (direct answers, competitor tracking, consistent facts, credible mentions) tend to improve all three."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "We don't think of ourselves as a \"SaaS company\" - does this still apply?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. \"SaaS\" is just a label for how the software is delivered and billed. If you sell a software product or platform - whatever you call yourselves - the same AI visibility principles apply."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which types of SaaS and software companies actually get cited by AI models?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Any category where buyers naturally compare vendor options is a category AI models get asked about. People often search industry-specific versions of this question - \"how do I get my fintech SaaS cited by AI\", \"AI visibility for HR tech software\", \"GEO for cybersecurity platforms\" - and the underlying answer is largely the same regardless of vertical. In our experience this spans HR tech, martech, fintech, dev tools/APIs, cybersecurity, healthtech, e-commerce platforms and edtech at minimum. If people already ask \"what's the best tool for X\" or \"X vs Y\" about your category, AI assistants are already being asked the AI-visibility version of that same question."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a special tool to track AI visibility, or can I check manually?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can start manually - running your own target queries through ChatGPT, Gemini and Perplexity and noting who's cited is a legitimate first step, and Step 3 above walks through it. But manual checks don't scale well as an ongoing practice, which is where a dedicated AEO/GEO tracking tool (HubSpot's AI visibility tracking, or a specialist tool like Searchable) earns its keep - turning an occasional audit into a continuous, comparable signal over time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "We don't publish pricing - it's \"contact us\" only. Does this still work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, but the direct answer becomes different information: what triggers the \"contact us\" path (seat count, feature tier, deployment type), rather than a number. Vague answers like \"flexible pricing to suit your needs\" still give AI nothing to cite."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do SaaS companies need schema markup on developer docs for AI visibility?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Docs benefit most from clean HowTo and FAQPage markup where genuinely step-by-step or Q&A in nature. The bigger risk in docs is usually inconsistency with marketing copy (Step 4), not missing schema."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does review recency affect AI visibility and GEO signals for SaaS companies?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. A large but ageing review pool tends to describe an old version of your product. AI systems appear to give more weight to recent reviews and mentions when forming a current view of a product, so a steady, ongoing trickle of new reviews is more valuable than a high total count from a single push years ago."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://your-digital-partner.co.uk/blog/how-to-increase-ai-visibility-saas/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://your-digital-partner.co.uk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://your-digital-partner.co.uk/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "SaaS AI Visibility: An AEO & GEO Guide (for SaaS and Software Companies)",
+          "item": "https://your-digital-partner.co.uk/blog/how-to-increase-ai-visibility-saas/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="/"><span>your<b>digital</b>partner</span></a>
+  <ul>
+    <li><a href="/solutions/seo-aeo-visibility/">Solutions</a></li>
+    <li><a href="/success-stories/">Success Stories</a></li>
+    <li><a href="/blog/" style="color:#3a4d70;font-weight:800">Free Guides</a></li>
+    <li><a href="/#approach">About</a></li>
+  </ul>
+  <div class="navr">
+    <a class="cta" href="/#scorecard">Free AEO audit</a>
+    <a class="nav-book" href="https://meetings-eu1.hubspot.com/cchapman" target="_blank" rel="noopener">Call</a>
+  </div>
+</nav>
+
+<div class="ydp-post">
+
+  <h1 class="ydp-post-title">SaaS AI Visibility: An AEO &amp; GEO Guide (for SaaS and Software Companies)</h1>
+  <div class="ydp-post-meta">Chris Chapman &middot; 9 July 2026</div>
+
+  <div class="tag-row">
+    <span class="tag seo">SEO</span>
+    <span class="tag aeo">AEO</span>
+  </div>
+
+  <div class="ydp-post-intro">
+    <h2>Introduction</h2>
+    <p>Our <a href="/blog/5-steps-ai-search-visibility/">5 Steps to Increase Your AI Search Visibility</a> guide covers the AEO and GEO fundamentals that apply to any business - and if you're completely new to the topic, our <a href="/blog/what-is-aeo-ai-search-visibility-guide/">introduction to AEO</a> is a good place to start first. SaaS companies - and software businesses more broadly - have their own version of this problem: your buyers don't just ask "what does this company do", they ask "does X integrate with Y", "X vs Y, which is better", and increasingly, industry-specific versions of the same question ("best fintech tool for X", "top HR tech platforms for Y"). This guide takes the same 5-step AI visibility framework and rebuilds it specifically for how SaaS companies get found, compared and cited by ChatGPT, Gemini and Perplexity.</p>
+  </div>
+
+  <div class="ydp-post-overview">
+    <h2>What's in this guide</h2>
+    <ul>
+      <li>How SaaS companies can get cited by AI like ChatGPT, Gemini and Perplexity</li>
+      <li>The specific tasks that get you found by AI: features, pricing context and honest capability detail</li>
+      <li>Turning competitor comparisons into content AI will actually cite</li>
+      <li>Tracking what your competitors are showing up for, and the tools that make it possible</li>
+      <li>The importance of recency: why fresh reviews and mentions carry more weight in AI overviews than old ones</li>
+      <li>Your SaaS AI visibility (AEO/GEO) checklist</li>
+    </ul>
+  </div>
+
+  <div class="ydp-post-content">
+
+    <h2>Step 1: Answer "what does it do" questions to build AI visibility for your SaaS product</h2>
+    <h2 class="step-q">Can AI give an AEO-ready answer about what your SaaS product actually does?</h2>
+    <div class="step-block">
+      <h3>Lead with function, not just positioning</h3>
+      <p>Buyers ask AI assistants very specific functional questions before they ever land on your site: "does it support SSO", "can it automate X", "does it integrate with Y", "what happens during onboarding". If the real, current answer to each of these is buried inside a features carousel or a screenshot rather than stated in plain text, there's nothing clean for a model to lift - and a model with nothing to lift either stays silent on you or repeats an out-of-date summary from a review site.</p>
+      <p>This needs to happen across every product page, not just your homepage or one flagship feature page. Each individual feature or module page should call out, in plain sentences, exactly what that feature does and - just as importantly - what it doesn't do. Stating limitations honestly ("this integration is one-way sync only", "bulk export is available on the Team plan and above, not Starter") is counterintuitive for marketing copy but is exactly what makes a page trustworthy enough for a model to cite with confidence. A page that only ever says yes reads as marketing; a page that's specific about boundaries reads as a source of fact.</p>
+      <p>Pricing is worth a brief, honest mention (many SaaS companies reasonably keep it "contact us" for good reason), but it shouldn't be the main thing this step is solving for. The bigger, more citable opportunity is answering what your SaaS product concretely does, page by page: the specific automations, integrations, workflows and capabilities that differentiate it, described in sentences a model can quote almost verbatim.</p>
+      <div class="try"><b>Try this:</b> Pick five of your product/feature pages and check each one plainly states, in text, what that specific feature can and can't do - not just what it can do. Fix any that only list capabilities with no boundaries or caveats.</div>
+    </div>
+
+    <h2>Step 2: Turn "X vs Y" comparisons into AEO content that wins AI citations</h2>
+    <h2 class="step-q">Does your comparison content give AI and GEO tools enough detail to cite you over competitors?</h2>
+    <div class="step-block">
+      <h3>Comparison pages are prime AI-citation real estate - if they're specific enough to cite</h3>
+      <p>"[Your product] vs [Competitor]" is one of the highest-intent query patterns in SaaS buying, and it's exactly the kind of question people now ask AI assistants instead of Googling. This is where the real weight of your AI visibility work should sit - far more than pricing pages, because it's where you get to make your actual case.</p>
+      <p>The comparisons that earn citations go deep on function, not adjectives. Rather than "we're more powerful" or "better value", state precisely how your product does the thing better: "unlike [Competitor], our automation builder supports conditional branching without custom code", "our integration with [Platform] syncs in real time, not on a nightly batch", "our onboarding is self-serve and typically takes under a day, versus a guided implementation". Each callout should name the specific feature, the specific mechanism, and the specific outcome - that's the level of detail a model can actually lift and repeat accurately.</p>
+      <p>Also be genuinely fair about where a competitor is a better fit (e.g. "if you need X, [Competitor] may suit you better"). Thin, one-sided comparisons push models toward more neutral third-party sources like G2 comparison grids instead of citing you directly; specific, credible, occasionally self-effacing comparisons make you the source worth quoting.</p>
+      <div class="try"><b>Try this:</b> Take your most important competitor comparison page and list every advantage claim on it. For each one, check it names a specific feature or mechanism and a specific outcome - rewrite any that are still just adjectives ("better", "more powerful", "easier").</div>
+    </div>
+
+    <h2>Step 3: Track what your competitors are showing up for in AI answers</h2>
+    <h2 class="step-q">Do you actually know which competitors AI is citing for your key SaaS queries?</h2>
+    <div class="step-block">
+      <h3>You can't fix what you can't see</h3>
+      <p>Before investing further in any of these steps, run your actual target buyer queries - "best SaaS for X", "X vs Y", "what's the best tool for [task]" - through ChatGPT, Gemini, Perplexity and Google's AI Overview, and note who gets cited. This tells you, concretely, which competitor is currently winning on which query, and which of the other steps in this guide is the real gap for your SaaS company - rather than guessing.</p>
+      <p>This is worth treating as an ongoing discipline, not a one-off audit. Investing in a proper AEO/GEO tracking tool (HubSpot's AI visibility tracking, or a dedicated specialist tool like Searchable, for example) turns a manual spot-check into an ongoing signal: which queries you're cited for, which competitors show up instead, and how that shifts month to month as you work through the other steps in this guide. Without this visibility, it's very easy to invest effort in the wrong place - polishing comparison pages, say, when the real gap is stale reviews or missing feature detail.</p>
+      <div class="try"><b>Try this:</b> Run 8-10 of your actual target buyer queries through ChatGPT, Perplexity and Google's AI Overview this week. Log who's cited for each, then treat a dedicated AEO/GEO tracking tool as the way to keep doing this automatically rather than repeating the exercise manually every few months.</div>
+    </div>
+
+    <h2>Step 4: Keep facts consistent for AEO across G2, Capterra and your docs</h2>
+    <h2 class="step-q">Do G2, Capterra and your own site all tell AI the same AEO-ready story?</h2>
+    <div class="step-block">
+      <h3>Your review profile is part of your AI footprint</h3>
+      <p>For most B2B categories, AI models don't just read your website - they weigh review platforms heavily, because that's where buyers historically went to sanity-check vendor claims. If your G2 or Capterra listing has an outdated feature set, an old pricing tier, or a category classification that no longer fits your product, that's often the version an AI model surfaces, not your current site.</p>
+      <p>Documentation is the other quiet inconsistency source. If your public docs describe a feature differently than your marketing site (different terminology, deprecated features still documented, integrations that no longer exist), that mismatch is easy for a model to pick up on and hard for a human to notice.</p>
+      <div class="try"><b>Try this:</b> Pull up your G2 or Capterra profile next to your current pricing page and your public docs. Check category, pricing tier names, and headline feature list all agree.</div>
+    </div>
+
+    <h2>Step 5: Earn recent reviews and mentions to strengthen AI visibility and GEO</h2>
+    <h2 class="step-q">Does the wider SaaS and software ecosystem vouch for your AI visibility?</h2>
+    <div class="step-block">
+      <h3>Reviews, integrations and dev communities carry real weight</h3>
+      <p>The original guide's "earned mentions" step becomes very concrete in SaaS: genuine G2/Capterra reviews, listings in your integration partners' own directories ("works with X"), mentions in developer communities (Stack Overflow, relevant Slack/Discord communities, GitHub discussions) if you have a technical product, and coverage in SaaS-focused publications and newsletters relevant to your category.</p>
+      <p>These sources matter more here than generic press mentions, because they're the same sources your buyers already trust to validate a SaaS purchase - which is exactly the kind of corroboration that makes an AI model more confident recommending you.</p>
+      <p>Recency matters as much as volume. A profile with 200 reviews from three years ago is a weaker signal than one with a steady trickle of reviews from the last few months, because a stale review pool reads as evidence about an old version of your product, not the one you sell today. AI systems appear to weight recent reviews and mentions more heavily than old ones when forming a current picture of a product - so a one-off review push that then goes quiet is worth far less than an ongoing, modest cadence of new reviews every month.</p>
+      <div class="try"><b>Try this:</b> Check the date of your most recent review on your top platform (G2, Capterra, etc). If it's more than a couple of months old, put a simple, recurring nudge in place (a post-onboarding email, a request after a support ticket is resolved) rather than treating reviews as a one-time campaign.</div>
+    </div>
+
+    <h2>Your SaaS AI visibility (AEO/GEO) checklist</h2>
+    <p>If you only have an hour to spend on this, work through these six checks in order:</p>
+    <ol>
+      <li>Does every key product/feature page state plainly, in text, what it can and can't do - not just capabilities?</li>
+      <li>Does your pricing page give at least a brief, honest answer (even if it's "contact us" plus what drives that)?</li>
+      <li>Does your main competitor comparison page name specific features and mechanisms, not just adjectives like "better" or "more powerful"?</li>
+      <li>Do you actually know which competitors AI cites for your top 8-10 buyer queries - and are you tracking this with a proper tool, not one-off manual checks?</li>
+      <li>Do your G2/Capterra listing, your pricing page and your public docs all agree on category, pricing and features?</li>
+      <li>Is your most recent review on your top platform from within the last couple of months, not years old?</li>
+    </ol>
+    <p>Looking for the general, non-SaaS-specific version of this checklist? See our <a href="/blog/ai-search-visibility-5-step-checklist/">AI Search Visibility checklist</a>.</p>
+
+  </div>
+
+  <div class="ydp-faq">
+    <h2>Frequently asked questions about AI visibility, AEO and GEO for SaaS companies</h2>
+    <div class="ydp-faq-item"><h3>How do I get my SaaS company to show up in ChatGPT, Gemini or Perplexity answers?</h3><p>The same principles as any AI visibility (AEO/GEO) strategy apply, adapted to how SaaS buyers actually ask questions: answer functional "what does it do" questions directly on every product page, make comparison content specific rather than promotional, track which competitors are currently being cited instead of you, keep facts consistent everywhere you're listed, and keep reviews and mentions current. This guide walks through each of those in detail.</p></div>
+    <div class="ydp-faq-item"><h3>What's the difference between AEO, GEO and SEO for a SaaS or software company?</h3><p>SEO is about ranking in traditional search results. AEO (Answer Engine Optimisation) is about being the source an AI system lifts a direct answer from. GEO (Generative Engine Optimisation) is the broader umbrella term covering visibility across all AI-generated answers, including AI Overviews, chat assistants and generative search. In practice, for a SaaS company they overlap heavily - the same fixes (direct answers, competitor tracking, consistent facts, credible mentions) tend to improve all three.</p></div>
+    <div class="ydp-faq-item"><h3>We don't think of ourselves as a "SaaS company" - does this still apply?</h3><p>Yes. "SaaS" is just a label for how the software is delivered and billed. If you sell a software product or platform - whatever you call yourselves - the same AI visibility principles apply.</p></div>
+    <div class="ydp-faq-item"><h3>Which types of SaaS and software companies actually get cited by AI models?</h3><p>Any category where buyers naturally compare vendor options is a category AI models get asked about. People often search industry-specific versions of this question - "how do I get my fintech SaaS cited by AI", "AI visibility for HR tech software", "GEO for cybersecurity platforms" - and the underlying answer is largely the same regardless of vertical. In our experience this spans HR tech, martech, fintech, dev tools/APIs, cybersecurity, healthtech, e-commerce platforms and edtech at minimum. If people already ask "what's the best tool for X" or "X vs Y" about your category, AI assistants are already being asked the AI-visibility version of that same question.</p></div>
+    <div class="ydp-faq-item"><h3>Do I need a special tool to track AI visibility, or can I check manually?</h3><p>You can start manually - running your own target queries through ChatGPT, Gemini and Perplexity and noting who's cited is a legitimate first step, and Step 3 above walks through it. But manual checks don't scale well as an ongoing practice, which is where a dedicated AEO/GEO tracking tool (HubSpot's AI visibility tracking, or a specialist tool like Searchable) earns its keep - turning an occasional audit into a continuous, comparable signal over time.</p></div>
+    <div class="ydp-faq-item"><h3>We don't publish pricing - it's "contact us" only. Does this still work?</h3><p>Yes, but the direct answer becomes different information: what triggers the "contact us" path (seat count, feature tier, deployment type), rather than a number. Vague answers like "flexible pricing to suit your needs" still give AI nothing to cite.</p></div>
+    <div class="ydp-faq-item"><h3>Do SaaS companies need schema markup on developer docs for AI visibility?</h3><p>Docs benefit most from clean HowTo and FAQPage markup where genuinely step-by-step or Q&A in nature. The bigger risk in docs is usually inconsistency with marketing copy (Step 4), not missing schema.</p></div>
+    <div class="ydp-faq-item"><h3>Does review recency affect AI visibility and GEO signals for SaaS companies?</h3><p>Yes. A large but ageing review pool tends to describe an old version of your product. AI systems appear to give more weight to recent reviews and mentions when forming a current view of a product, so a steady, ongoing trickle of new reviews is more valuable than a high total count from a single push years ago.</p></div>
+  </div>
+
+  <section class="ydp-post-final">
+    <div class="wrap">
+      <h2>Want a second pair of eyes on <span class="hl">your SaaS visibility</span>?</h2>
+      <p>Book a free 30-minute call and we'll walk through where your product currently stands across these 5 AEO/GEO steps, and what to fix first. If you'd rather have this handled for you end-to-end, see our <a href="/solutions/seo-aeo-visibility/" style="color:#93a5c1;text-decoration:underline">AEO &amp; SEO service</a>.</p>
+      <button class="cta" type="button" data-book>Book my AI visibility call &rarr;</button>
+    </div>
+  </section>
+
+</div>
+
+
+<div id="hsBookModal" class="hs-book-modal" aria-hidden="true">
+  <div class="hs-book-overlay" data-book-close></div>
+  <div class="hs-book-dialog" role="dialog" aria-modal="true" aria-label="Book a meeting">
+    <button class="hs-book-x" type="button" aria-label="Close" data-book-close>&times;</button>
+    <div class="meetings-iframe-container" data-src="https://meetings-eu1.hubspot.com/cchapman?embed=true"></div>
+  </div>
+</div>
+<script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
+<script>
+(function(){
+  var m = document.getElementById("hsBookModal");
+  if(!m) return;
+  function close(){ m.classList.remove("open"); document.body.style.overflow = ""; }
+  document.addEventListener("click", function(e){
+    if(e.target.closest("[data-book]")){ e.preventDefault(); m.classList.add("open"); document.body.style.overflow = "hidden"; return; }
+    if(e.target.closest("[data-book-close]")){ close(); }
+  });
+  document.addEventListener("keydown", function(e){ if(e.key === "Escape") close(); });
+})();
+</script>
+
+</body>
+</html>
