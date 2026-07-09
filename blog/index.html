@@ -39,8 +39,7 @@ nav ul li a{color:inherit;text-decoration:none}
 .featured-main{position:relative;border-radius:24px;overflow:hidden;min-height:420px;display:flex;align-items:flex-end;color:#fff;background:#0a1733;text-decoration:none}
 .featured-main img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .featured-main .content{position:relative;padding:32px;z-index:1}
-.featured-side{display:flex;flex-direction:column;gap:24px}
-.featured-card{position:relative;border-radius:24px;overflow:hidden;flex:1;min-height:190px;display:flex;align-items:flex-end;color:#fff;background:#0a1733;text-decoration:none}
+.featured-card{position:relative;border-radius:24px;overflow:hidden;min-height:420px;display:flex;align-items:flex-end;color:#fff;background:#0a1733;text-decoration:none}
 .featured-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .featured-card .content{position:relative;padding:24px;z-index:1}
 
@@ -52,22 +51,29 @@ nav ul li a{color:inherit;text-decoration:none}
 .featured-main p,.featured-card p{font-size:13.5px;color:#cdd6e6;max-width:520px}
 
 .grid-head{font-size:20px;font-weight:800;margin-bottom:20px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:24px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;transition:all .2s;text-decoration:none;color:var(--ink);display:flex;flex-direction:column}
 .card:hover{border-color:var(--ink);box-shadow:0 14px 34px rgba(8,20,48,.1);transform:translateY(-2px)}
-.card img{width:100%;height:160px;object-fit:cover}
+.card-img{position:relative}
+.card-img img{width:100%;height:160px;object-fit:cover;display:block}
+.card-img .tag-row{position:absolute;left:12px;right:12px;bottom:10px;margin:0}
 .card-body{padding:18px 20px 22px}
-.card .tag-row{margin-bottom:10px}
-.card .tag-badge{background:var(--greenSoft);color:var(--green)}
-.card .type-badge{background:var(--soft);color:var(--ink)}
 .card h3{font-size:16px;font-weight:800;margin-bottom:8px;line-height:1.3}
 .card p{font-size:13.5px;color:var(--mut);line-height:1.6}
 .card-meta{font-size:12px;color:var(--mut);margin-top:12px}
 
+/* CTA filler — used when a 3-card row has 1 or 2 real posts. Spans the
+   remaining column(s) so every row always fills the full grid width. */
+.cta-card{grid-column:span 1;border-radius:20px;background:linear-gradient(135deg,#0a1733,#16305f);color:#fff;text-decoration:none;display:flex;flex-direction:column;justify-content:center;padding:28px;gap:8px}
+.cta-card.span-2{grid-column:span 2}
+.cta-card .cta-h{font-size:17px;font-weight:800;line-height:1.3}
+.cta-card .cta-p{font-size:13px;color:#9fb0c9;line-height:1.5}
+.cta-card .cta-link{margin-top:10px;display:inline-flex;align-items:center;gap:6px;background:var(--lime);color:var(--ink);font-size:13px;font-weight:800;padding:9px 18px;border-radius:99px;width:fit-content}
+
 .empty{display:none;text-align:center;padding:60px 0;color:var(--mut)}
 
-@media(max-width:900px){.featured{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}}
-@media(max-width:600px){.grid{grid-template-columns:1fr}.type-select{margin-left:0;width:100%}}
+@media(max-width:900px){.featured{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.cta-card{grid-column:span 1 !important}}
+@media(max-width:600px){.grid{grid-template-columns:1fr}.type-select{margin-left:0;width:100%}.cta-card{grid-column:1/-1 !important}}
 </style>
 </head>
 <body>
@@ -138,48 +144,87 @@ function badgeRow(p){
   return `<div class="tag-row">${p.tags.map(t=>`<span class="tag-badge">${t}</span>`).join('')}<span class="type-badge">${p.type}</span></div>`;
 }
 
+// The 3 accent card backgrounds available. "accent colour" adjacency rules
+// below always pick from this fixed set so no two neighbouring cards (left/
+// right in the same row, or directly above/below in the 3-col grid) ever
+// repeat the same accent - regardless of what's manually set in posts.json.
+const ACCENTS = ['/assets/blog/card-bg-blue.png','/assets/blog/card-bg-green.png','/assets/blog/card-bg-pink.png'];
+
+function pickAccent(preferred, ...neighbours){
+  const bad = new Set(neighbours.filter(Boolean));
+  if(preferred && !bad.has(preferred)) return preferred;
+  return ACCENTS.find(a=>!bad.has(a)) || ACCENTS[0];
+}
+
+function ctaCard(span){
+  return `<a class="cta-card${span===2?' span-2':''}" href="https://meetings-eu1.hubspot.com/cchapman" target="_blank" rel="noopener">
+    <div class="cta-h">Want help with your AI &amp; search visibility?</div>
+    <div class="cta-p">Book a free 30-minute call - no obligation.</div>
+    <span class="cta-link">Book a call &rarr;</span>
+  </a>`;
+}
+
 function render(){
   renderFilters();
   const filtered = posts.filter(matches);
-  const featured = filtered.filter(p=>p.featured);
-  const rest = filtered.filter(p=>!p.featured);
+
+  // An explicitly featured:true post always leads, otherwise just use
+  // authored order (most recent first, as maintained in posts.json).
+  const ordered = [...filtered].sort((a,b)=>(b.featured?1:0)-(a.featured?1:0));
 
   const fEl = document.getElementById('featured');
-  if(featured.length){
-    fEl.style.display = 'grid';
-    fEl.innerHTML = `
-      <a class="featured-main" href="${featured[0].url}">
-        <img src="${featured[0].image}">
-        <div class="content">${badgeRow(featured[0])}<h2>${featured[0].title}</h2><p>${featured[0].excerpt}</p></div>
-      </a>
-      <div class="featured-side">
-        ${featured.slice(1,3).map(p=>`
-          <a class="featured-card" href="${p.url}">
-            <img src="${p.image}">
-            <div class="content">${badgeRow(p)}<h3>${p.title}</h3><p>${p.excerpt}</p></div>
-          </a>`).join('')}
-      </div>`;
-  } else {
-    fEl.style.display = 'none';
-  }
-
   const gEl = document.getElementById('grid');
   const emptyEl = document.getElementById('empty');
-  if(rest.length===0 && featured.length===0){
-    gEl.innerHTML = ''; emptyEl.style.display='block';
-  } else {
-    emptyEl.style.display='none';
-    gEl.innerHTML = rest.map(p=>`
-      <a class="card" href="${p.url}">
-        <img src="${p.image}">
-        <div class="card-body">
-          ${badgeRow(p)}
-          <h3>${p.title}</h3>
-          <p>${p.excerpt}</p>
-          <div class="card-meta">${p.date}</div>
-        </div>
-      </a>`).join('');
+
+  if(ordered.length===0){
+    fEl.style.display='none'; gEl.innerHTML=''; emptyEl.style.display='block';
+    return;
   }
+  emptyEl.style.display='none';
+
+  // --- Row 1: always exactly 2 slots (main + secondary), whenever posts exist ---
+  const main = ordered[0];
+  const secondary = ordered[1];
+  fEl.style.display = 'grid';
+  const mainAccent = pickAccent(main.image);
+  const secAccent = secondary ? pickAccent(secondary.image, mainAccent) : null;
+  fEl.innerHTML = `
+    <a class="featured-main" href="${main.url}">
+      <img src="${mainAccent}">
+      <div class="content">${badgeRow(main)}<h2>${main.title}</h2><p>${main.excerpt}</p></div>
+    </a>
+    ${secondary ? `
+    <a class="featured-card" href="${secondary.url}">
+      <img src="${secAccent}">
+      <div class="content">${badgeRow(secondary)}<h3>${secondary.title}</h3><p>${secondary.excerpt}</p></div>
+    </a>` : ''}`;
+
+  // --- Remaining posts: rows of up to 3, CTA fills any incomplete row ---
+  const rest = ordered.slice(2);
+  let html = '';
+  const colAbove = [null,null,null]; // last accent used in each of the 3 columns
+  for(let i=0; i<rest.length; i+=3){
+    const row = rest.slice(i, i+3);
+    let rowLeft = null;
+    row.forEach((p, col)=>{
+      const accent = pickAccent(p.image, rowLeft, colAbove[col]);
+      rowLeft = accent;
+      colAbove[col] = accent;
+      html += `
+        <a class="card" href="${p.url}">
+          <div class="card-img"><img src="${accent}">${badgeRow(p)}</div>
+          <div class="card-body">
+            <h3>${p.title}</h3>
+            <p>${p.excerpt}</p>
+            <div class="card-meta">${p.date}</div>
+          </div>
+        </a>`;
+    });
+    const missing = 3 - row.length;
+    if(missing===1) html += ctaCard(1);
+    if(missing===2) html += ctaCard(2);
+  }
+  gEl.innerHTML = html;
 }
 
 fetch('/blog/posts.json')
