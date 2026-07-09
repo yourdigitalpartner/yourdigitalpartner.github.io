@@ -29,11 +29,8 @@ nav ul li a{color:inherit;text-decoration:none}
 @media(max-width:900px){nav ul{display:none}.navr>.cta{display:none}.navr>.nav-book{display:none}}
 
 .ydp-post{max-width:900px;margin:0 auto;padding:0 24px}
-.ydp-post-hero{display:grid;grid-template-columns:1.2fr 1fr;gap:36px;align-items:center;margin-bottom:20px}
 .ydp-post-title{font-size:clamp(34px,4.6vw,58px);font-weight:800;letter-spacing:-.02em;line-height:1.05;margin:0 0 12px;color:var(--ink)}
-.ydp-post-meta{font-size:13.5px;color:var(--mut)}
-.ydp-post-image{width:100%;height:100%;max-height:320px;object-fit:cover;border-radius:20px;display:block}
-@media(max-width:700px){.ydp-post-hero{grid-template-columns:1fr;gap:20px}.ydp-post-image{max-height:220px}}
+.ydp-post-meta{font-size:13.5px;color:var(--mut);margin-bottom:20px}
 
 .tag-row{display:flex;gap:8px;margin-bottom:32px}
 .tag{font-size:12px;font-weight:800;padding:6px 14px;border-radius:99px}
@@ -70,7 +67,15 @@ nav ul li a{color:inherit;text-decoration:none}
 .ydp-post-final h2{font-size:clamp(26px,4vw,40px);font-weight:800;letter-spacing:-.01em;line-height:1.1;max-width:700px;margin:0 auto;color:#eef2fb}
 .ydp-post-final h2 .hl{color:var(--lime)}
 .ydp-post-final p{color:#93a5c1;max-width:560px;margin:20px auto 0;font-size:14.5px;line-height:1.7}
-.ydp-post-final .cta{background:var(--lime);color:var(--ink);font-size:15px;padding:15px 32px;margin-top:26px}
+.ydp-post-final .cta{background:var(--lime);color:var(--ink);font-size:15px;padding:15px 32px;margin-top:26px;border:none;cursor:pointer}
+
+.hs-book-modal{display:none;position:fixed;inset:0;z-index:99999}
+.hs-book-modal.open{display:block}
+.hs-book-overlay{position:absolute;inset:0;background:rgba(8,20,48,.55)}
+.hs-book-dialog{position:relative;background:#fff;max-width:1040px;width:calc(100% - 40px);margin:4vh auto;border-radius:16px;box-shadow:0 30px 80px rgba(8,20,48,.35);padding:32px 34px 24px;max-height:92vh;overflow:auto}
+.hs-book-x{position:absolute;top:6px;right:12px;border:0;background:transparent;font-size:30px;line-height:1;cursor:pointer;color:#0a1733;z-index:2}
+.hs-book-dialog .meetings-iframe-container{min-height:660px;border-radius:24px;overflow:hidden}
+@media(max-width:600px){.hs-book-dialog{width:calc(100% - 20px);padding:16px 12px 12px}.hs-book-x{top:4px;right:8px}}
 </style>
 
 <script type="application/ld+json">
@@ -155,13 +160,8 @@ nav ul li a{color:inherit;text-decoration:none}
 
 <div class="ydp-post">
 
-  <div class="ydp-post-hero">
-    <div>
-      <h1 class="ydp-post-title">What is AEO? A beginner's guide to AI search visibility</h1>
-      <div class="ydp-post-meta">Chris Chapman &middot; 9 July 2026</div>
-    </div>
-    <img class="ydp-post-image" src="/assets/blog/card-bg-green.png" alt="What is AEO featured image">
-  </div>
+  <h1 class="ydp-post-title">What is AEO? A beginner's guide to AI search visibility</h1>
+  <div class="ydp-post-meta">Chris Chapman &middot; 9 July 2026</div>
 
   <div class="tag-row">
     <span class="tag seo">SEO</span>
@@ -232,13 +232,34 @@ nav ul li a{color:inherit;text-decoration:none}
 
   <section class="ydp-post-final">
     <div class="wrap">
-      <h2>Ready to <span class="hl">grow your pipeline</span>?</h2>
-      <p>Book a free 30-minute call and let's discuss how to grow your visibility, conversions and pipeline.</p>
-      <a class="cta" href="https://meetings-eu1.hubspot.com/cchapman" target="_blank" rel="noopener">Book a call &rarr;</a>
+      <h2>Ready to get found in <span class="hl">AI search</span>?</h2>
+      <p>Book a free 30-minute call and let's talk through how to get your business cited by ChatGPT, Gemini and Google's AI Overview.</p>
+      <button class="cta" type="button" data-book>Book my AI visibility call &rarr;</button>
     </div>
   </section>
 
 </div>
+
+<div id="hsBookModal" class="hs-book-modal" aria-hidden="true">
+  <div class="hs-book-overlay" data-book-close></div>
+  <div class="hs-book-dialog" role="dialog" aria-modal="true" aria-label="Book a meeting">
+    <button class="hs-book-x" type="button" aria-label="Close" data-book-close>&times;</button>
+    <div class="meetings-iframe-container" data-src="https://meetings-eu1.hubspot.com/cchapman?embed=true"></div>
+  </div>
+</div>
+<script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
+<script>
+(function(){
+  var m = document.getElementById("hsBookModal");
+  if(!m) return;
+  function close(){ m.classList.remove("open"); document.body.style.overflow = ""; }
+  document.addEventListener("click", function(e){
+    if(e.target.closest("[data-book]")){ e.preventDefault(); m.classList.add("open"); document.body.style.overflow = "hidden"; return; }
+    if(e.target.closest("[data-book-close]")){ close(); }
+  });
+  document.addEventListener("keydown", function(e){ if(e.key === "Escape") close(); });
+})();
+</script>
 
 </body>
 </html>
