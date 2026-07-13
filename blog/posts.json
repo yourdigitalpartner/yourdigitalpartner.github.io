@@ -5,7 +5,7 @@
     "tags": ["SEO", "AEO", "AI Marketing"],
     "type": "guide",
     "date": "9 Jul 2026",
-    "image": "/assets/blog/card-bg-blue.png",
+    "image": "/assets/blog/card-bg-blue.jpg",
     "url": "/blog/5-steps-ai-search-visibility/",
     "featured": true
   },
@@ -15,7 +15,7 @@
     "tags": ["SEO", "AEO", "AI Marketing"],
     "type": "checklist",
     "date": "9 Jul 2026",
-    "image": "/assets/blog/card-bg-blue.png",
+    "image": "/assets/blog/card-bg-blue.jpg",
     "url": "/blog/ai-search-visibility-5-step-checklist/",
     "featured": false
   },
@@ -25,7 +25,7 @@
     "tags": ["SEO", "AEO", "AI Marketing"],
     "type": "guide",
     "date": "9 Jul 2026",
-    "image": "/assets/blog/card-bg-green.png",
+    "image": "/assets/blog/card-bg-green.jpg",
     "url": "/blog/what-is-aeo-ai-search-visibility-guide/",
     "featured": false
   },
@@ -35,7 +35,7 @@
     "tags": ["SEO", "AEO"],
     "type": "article",
     "date": "9 Jul 2026",
-    "image": "/assets/blog/card-bg-pink.png",
+    "image": "/assets/blog/card-bg-pink.jpg",
     "url": "/blog/how-to-increase-ai-visibility-saas/",
     "featured": false
   }
