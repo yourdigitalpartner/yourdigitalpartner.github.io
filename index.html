@@ -591,7 +591,7 @@ nav ul{color:#4d5b6e}.t-green .tag{color:#0f766e}.logo b{color:#0d6a63}.logos sp
 @media(max-width:600px){.hs-book-dialog{width:calc(100% - 20px);padding:16px 12px 12px}.hs-book-x{top:4px;right:8px}}
 </style>
     <!-- Start of HubSpot Embed Code -->
-    <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/146760313.js"></script>
+    <script type="text/javascript" id="hs-script-loader" async defer src="https://js-eu1.hs-scripts.com/146760313.js"></script>
     <!-- End of HubSpot Embed Code -->
 </head>
 <body>
@@ -829,9 +829,8 @@ new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){spinQ1();o.disconnect
     <div class="meetings-iframe-container" data-src="https://meetings-eu1.hubspot.com/cchapman?embed=true"></div>
   </div>
 </div>
-<script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
 <script>
-(function(){var m=document.getElementById("hsBookModal");if(!m)return;function close(){m.classList.remove("open");document.body.style.overflow="";}document.addEventListener("click",function(e){if(e.target.closest("[data-book]")){e.preventDefault();m.classList.add("open");document.body.style.overflow="hidden";return;}if(e.target.closest("[data-book-close]")){close();}});document.addEventListener("keydown",function(e){if(e.key==="Escape")close();});})();
+(function(){var m=document.getElementById("hsBookModal");if(!m)return;var loaded=false;function loadMeetings(){if(loaded)return;loaded=true;var s=document.createElement("script");s.type="text/javascript";s.src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js";document.body.appendChild(s);}function close(){m.classList.remove("open");document.body.style.overflow="";}document.addEventListener("click",function(e){if(e.target.closest("[data-book]")){e.preventDefault();loadMeetings();m.classList.add("open");document.body.style.overflow="hidden";return;}if(e.target.closest("[data-book-close]")){close();}});document.addEventListener("keydown",function(e){if(e.key==="Escape")close();});})();
 </script>
 </body>
 </html>

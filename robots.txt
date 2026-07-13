@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /privacy/
 
 Sitemap: https://your-digital-partner.co.uk/sitemap.xml

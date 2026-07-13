@@ -115,7 +115,7 @@ nav ul li a{color:inherit;text-decoration:none}
 @media(max-width:600px){.grid{grid-template-columns:1fr}.type-select{margin-left:0;width:100%}.cta-card{grid-column:1/-1 !important}}
 </style>
     <!-- Start of HubSpot Embed Code -->
-    <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/146760313.js"></script>
+    <script type="text/javascript" id="hs-script-loader" async defer src="https://js-eu1.hs-scripts.com/146760313.js"></script>
     <!-- End of HubSpot Embed Code -->
 </head>
 <body>
@@ -161,16 +161,19 @@ let posts = [];
 let activeTags = new Set();
 let activeType = "all";
 
+// Escape all posts.json-sourced strings before innerHTML injection.
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+
 function allTags(){ return [...new Set(posts.flatMap(p=>p.tags))]; }
 function allTypes(){ return [...new Set(posts.map(p=>p.type))]; }
 
 function renderFilters(){
   const el = document.getElementById('filters');
-  const tagPills = allTags().map(t=>`<button class="pill${activeTags.has(t)?' active':''}" data-tag="${t}">${t}</button>`).join('');
+  const tagPills = allTags().map(t=>`<button class="pill${activeTags.has(t)?' active':''}" data-tag="${esc(t)}">${esc(t)}</button>`).join('');
   el.innerHTML = `<span class="filters-label">Filter by tag</span>${tagPills}
     <select class="type-select" id="typeSelect">
       <option value="all">All types</option>
-      ${allTypes().map(t=>`<option value="${t}"${activeType===t?' selected':''}>${t.charAt(0).toUpperCase()+t.slice(1)}</option>`).join('')}
+      ${allTypes().map(t=>`<option value="${esc(t)}"${activeType===t?' selected':''}>${esc(t.charAt(0).toUpperCase()+t.slice(1))}</option>`).join('')}
     </select>`;
   el.querySelectorAll('.pill').forEach(btn=>{
     btn.addEventListener('click', ()=>{
@@ -192,7 +195,7 @@ function matches(p){
 }
 
 function badgeRow(p){
-  return `<div class="tag-row">${p.tags.map(t=>`<span class="tag-badge">${t}</span>`).join('')}<span class="type-badge">${p.type}</span></div>`;
+  return `<div class="tag-row">${p.tags.map(t=>`<span class="tag-badge">${esc(t)}</span>`).join('')}<span class="type-badge">${esc(p.type)}</span></div>`;
 }
 
 // The 3 accent card backgrounds available. "accent colour" adjacency rules
@@ -261,14 +264,14 @@ function render(){
   const mainAccent = pickAccent(main.image);
   const secAccent = secondary ? pickAccent(secondary.image, mainAccent) : null;
   fEl.innerHTML = `
-    <a class="featured-main" href="${main.url}">
+    <a class="featured-main" href="${esc(main.url)}">
       <img src="${mainAccent}" alt="" loading="lazy">
-      <div class="content">${badgeRow(main)}<h2>${main.title}</h2><p>${main.excerpt}</p></div>
+      <div class="content">${badgeRow(main)}<h2>${esc(main.title)}</h2><p>${esc(main.excerpt)}</p></div>
     </a>
     ${secondary ? `
-    <a class="featured-card" href="${secondary.url}">
+    <a class="featured-card" href="${esc(secondary.url)}">
       <img src="${secAccent}" alt="" loading="lazy">
-      <div class="content">${badgeRow(secondary)}<h3>${secondary.title}</h3><p>${secondary.excerpt}</p></div>
+      <div class="content">${badgeRow(secondary)}<h3>${esc(secondary.title)}</h3><p>${esc(secondary.excerpt)}</p></div>
     </a>` : ''}`;
 
   // --- Remaining posts: rows of up to 3, CTA fills any incomplete row ---
@@ -283,12 +286,12 @@ function render(){
       rowLeft = accent;
       colAbove[col] = accent;
       html += `
-        <a class="card" href="${p.url}">
+        <a class="card" href="${esc(p.url)}">
           <div class="card-img"><img src="${accent}" alt="" loading="lazy">${badgeRow(p)}</div>
           <div class="card-body">
-            <h3>${p.title}</h3>
-            <p>${p.excerpt}</p>
-            <div class="card-meta">${p.date}</div>
+            <h3>${esc(p.title)}</h3>
+            <p>${esc(p.excerpt)}</p>
+            <div class="card-meta">${esc(p.date)}</div>
           </div>
         </a>`;
     });
