@@ -1,0 +1,35 @@
+name: Regenerate sitemap
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**/index.html'
+      - 'robots.txt'
+      - 'scripts/gen_sitemap.py'
+
+permissions:
+  contents: write
+
+jobs:
+  sitemap:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # full history so lastmod git dates are accurate
+
+      - name: Regenerate sitemap.xml
+        run: python3 scripts/gen_sitemap.py
+
+      - name: Commit if changed
+        run: |
+          if ! git diff --quiet sitemap.xml; then
+            git config user.name "sitemap-bot"
+            git config user.email "actions@github.com"
+            git add sitemap.xml
+            git commit -m "chore: auto-regenerate sitemap.xml"
+            git push
+          else
+            echo "sitemap.xml already up to date"
+          fi
