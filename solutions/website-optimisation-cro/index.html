@@ -233,7 +233,9 @@
   .logo{font-weight:800;font-size:15.5px;white-space:nowrap;display:flex;align-items:center;gap:9px;letter-spacing:-.2px}.logo b{color:var(--green)}.logo svg{display:block}
   nav ul{display:flex;gap:20px;list-style:none;font-size:13px;color:var(--mut)}
   nav ul li{cursor:pointer;position:relative}nav ul li:hover{color:var(--ink)}
-  .nav-book{background:#fff;color:var(--ink);border:2px solid var(--ink);border-radius:99px;padding:7px 14px 7px 10px;font-size:12px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+  @property --nba{syntax:'<angle>';initial-value:0deg;inherits:false}
+  .nav-book{position:relative;background:linear-gradient(#fff,#fff) padding-box,conic-gradient(from var(--nba),#35e0c8,#7b5cfa,#c2408d,#2f5fd0,#35e0c8) border-box;border:3px solid transparent;color:var(--ink);border-radius:99px;padding:6px 13px 6px 9px;font-size:12px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:6px;white-space:nowrap;animation:navbaspin 3.2s linear infinite}
+  @keyframes navbaspin{to{--nba:360deg}}
   .nav-book .ic{font-size:19px}
   .dd{position:absolute;top:34px;left:-40px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:10px;width:450px;box-shadow:0 24px 60px rgba(8,20,48,.18);opacity:0;visibility:hidden;transform:translateY(6px);transition:all .2s}
   li:hover .dd{opacity:1;visibility:visible;transform:none}
@@ -508,7 +510,7 @@
   </ul>
   <div class="navr">
   <a class="cta" href="#review">Free website review</a>
-  <button class="nav-book" type="button" title="Book a 30-minute call" aria-label="Book a 30-minute call" data-book><span class="ic">📅</span>Call</button>
+  <button class="nav-book" type="button" title="Book a 30-minute call" aria-label="Book a 30-minute call" data-book><span class="ic">📅</span>Book a meeting →</button>
   <button class="mobile-menu-toggle" type="button" aria-label="Open menu" onclick="this.closest('nav').classList.toggle('open')">☰</button>
   </div>
 </nav>
