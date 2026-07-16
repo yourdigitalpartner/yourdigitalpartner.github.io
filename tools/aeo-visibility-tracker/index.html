@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="/assets/logo-icon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free AEO Visibility Tracker | See How AI Ranks You vs Competitors | Your Digital Partner</title>
+<meta name="description" content="Track your AI search visibility in ChatGPT, Perplexity and Google against 3 competitors. Get buyer-intent prompts, visibility &amp; sentiment scores out of 10, and content recommendations - free.">
+<link rel="canonical" href="https://your-digital-partner.co.uk/tools/aeo-visibility-tracker/">
+<meta name="theme-color" content="#0a1733">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://your-digital-partner.co.uk/tools/aeo-visibility-tracker/">
+<meta property="og:title" content="Free AEO Visibility Tracker | See How AI Ranks You vs Competitors">
+<meta property="og:description" content="Enter your URL and 3 competitors. See who ChatGPT, Perplexity and Google surface for the questions your buyers actually ask - with visibility and sentiment scored out of 10 and a content plan to win.">
+<meta property="og:site_name" content="Your Digital Partner">
+<meta property="og:image" content="https://your-digital-partner.co.uk/assets/social-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "AEO Visibility Tracker",
+      "url": "https://your-digital-partner.co.uk/tools/aeo-visibility-tracker/",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web browser",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
+      "description": "Track your AI search visibility across ChatGPT, Perplexity and Google against three competitors. Generates buyer-intent prompts, scores visibility and sentiment out of 10, and recommends the content to close the gap.",
+      "publisher": { "@id": "https://your-digital-partner.co.uk/#organization" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://your-digital-partner.co.uk/" },
+        { "@type": "ListItem", "position": 2, "name": "Free Tools", "item": "https://your-digital-partner.co.uk/tools/aeo-visibility-tracker/" },
+        { "@type": "ListItem", "position": 3, "name": "AEO Visibility Tracker", "item": "https://your-digital-partner.co.uk/tools/aeo-visibility-tracker/" }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root{--bg:#f1f4fa;--ink:#0a1733;--mut:#5b6b80;--lime:#35e0c8;--card:#fff;--line:#d8e0ec;--soft:#e0eef6;--blue:#2f5fd0;--pink:#c2408d;--green:#0d9488;--purple:#7b5cfa}
+  *{margin:0;box-sizing:border-box;font-family:'Segoe UI',system-ui,-apple-system,sans-serif}
+  html{scroll-behavior:smooth}
+  [id]{scroll-margin-top:95px}
+  body{background:var(--bg);color:var(--ink);overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  /* NAV (shared) */
+  nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:50;display:flex;gap:8px;align-items:center;background:rgba(255,255,255,.88);backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:99px;padding:8px 10px 8px 22px;box-shadow:0 10px 30px rgba(8,20,48,.08);width:min(920px,94vw);justify-content:space-between}
+  .navr{display:flex;align-items:center;gap:10px}
+  .logo{font-weight:800;font-size:15.5px;white-space:nowrap;display:flex;align-items:center;gap:9px;letter-spacing:-.2px}.logo b{color:#0d6a63}.logo svg{display:block}
+  nav ul{display:flex;gap:20px;list-style:none;font-size:13px;color:#4d5b6e}
+  nav ul li{cursor:pointer;position:relative}nav ul li:hover{color:var(--ink)}
+  @property --nba{syntax:'<angle>';initial-value:0deg;inherits:false}
+  .nav-book{position:relative;background:linear-gradient(#fff,#fff) padding-box,conic-gradient(from var(--nba),#35e0c8,#7b5cfa,#c2408d,#2f5fd0,#35e0c8) border-box;border:3px solid transparent;color:var(--ink);border-radius:99px;padding:6px 13px 6px 9px;font-size:12px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:6px;white-space:nowrap;animation:navbaspin 3.2s linear infinite}
+  @keyframes navbaspin{to{--nba:360deg}}
+  .nav-book .ic{font-size:19px}
+  .dd{position:absolute;top:34px;left:-40px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:10px;width:450px;box-shadow:0 24px 60px rgba(8,20,48,.18);opacity:0;visibility:hidden;transform:translateY(6px);transition:all .2s}
+  li:hover .dd{opacity:1;visibility:visible;transform:none}
+  .dd a{display:flex;gap:14px;align-items:flex-start;padding:14px;border-radius:14px;font-size:14px;color:var(--ink);transition:background .15s}
+  .dd a:hover{background:var(--soft)}
+  .dd .ic{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;font-size:19px;flex-shrink:0}
+  .dd .ic.g{background:#dcf3ef}.dd .ic.b{background:#e8effe}.dd .ic.p{background:#fceaf3}.dd .ic.pu{background:var(--ink)}
+  .dd .ic .ai-mark{font-weight:900;font-size:14.5px;letter-spacing:.5px;color:#fff}
+  .dd a b{display:block;font-size:14px;margin-bottom:3px}
+  .dd a small{display:block;color:var(--mut);font-size:12px;line-height:1.5}
+  .cta{background:var(--ink);color:var(--lime);border:none;padding:10px 20px;border-radius:99px;font-size:13px;font-weight:700;cursor:pointer;transition:transform .2s;white-space:nowrap;display:inline-block}
+  .cta:hover{transform:scale(1.05)}
+  .mobile-menu-toggle{display:none}
+  .nav-mob-cta-li{display:none}
+  section{padding:96px 40px}
+  .wrap{max-width:1160px;margin:0 auto}
+  .bg-dark{background:radial-gradient(700px at 85% 0%,rgba(53,224,200,.22),transparent 65%),radial-gradient(640px at 8% 100%,rgba(123,92,250,.3),transparent 65%),var(--ink)}
+  .eyebrow{display:inline-block;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:800;color:#0f766e;background:#fff;border:1.5px solid var(--green);border-radius:99px;padding:6px 14px;margin-bottom:18px}
+  /* HERO */
+  .hero{padding:132px 40px 40px;position:relative}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(700px 480px at 5% 12%,rgba(47,95,208,.13),transparent 70%),radial-gradient(620px 440px at 95% 75%,rgba(194,64,141,.11),transparent 70%),radial-gradient(700px 460px at 55% 100%,rgba(53,224,200,.16),transparent 70%);pointer-events:none;z-index:0}
+  .hero .wrap{position:relative;z-index:1;text-align:center;max-width:820px}
+  h1{font-size:clamp(30px,4.4vw,52px);font-weight:800;letter-spacing:-.02em;line-height:1.08}
+  h1 .hl{background:var(--lime);border-radius:12px;padding:0 12px;display:inline-block}
+  .hero p{color:var(--mut);font-size:16.5px;line-height:1.66;margin:20px auto 24px;max-width:640px}
+  .llm-list{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:8px}
+  .llm{font-size:12.5px;font-weight:700;background:#fff;border:1.5px solid;border-radius:99px;padding:7px 14px}
+  .llm.c1{color:#0d8f70;border-color:#10a37f}.llm.c2{color:#20808d;border-color:#20808d}.llm.c3{color:#c9442d;border-color:#ea4335}
+  /* TOOL */
+  .tool{padding:26px 20px 90px}
+  .twrap{max-width:1060px;margin:0 auto}
+  .card{background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:0 18px 46px rgba(8,20,48,.07);padding:30px 32px;margin-bottom:22px}
+  .card h2{font-size:20px;font-weight:800;letter-spacing:-.01em;display:flex;align-items:center;gap:10px}
+  .step-n{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--ink);color:var(--lime);font-size:13px;font-weight:800;flex-shrink:0}
+  .card .sub{color:var(--mut);font-size:14px;line-height:1.6;margin:8px 0 20px}
+  label.fl{display:block;font-size:12px;font-weight:800;letter-spacing:.4px;text-transform:uppercase;color:#3a4d70;margin:0 0 7px}
+  .inp{width:100%;border:1.6px solid var(--line);border-radius:12px;padding:13px 15px;font-size:15px;color:var(--ink);background:#fbfcfe;transition:border-color .15s,box-shadow .15s}
+  .inp:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px rgba(13,148,136,.14)}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .fld{margin-bottom:16px}
+  .comp-row{display:grid;grid-template-columns:22px 1.3fr 1fr;gap:10px;align-items:center;margin-bottom:10px}
+  .comp-dot{width:12px;height:12px;border-radius:50%;justify-self:center}
+  .cd0{background:var(--ink)}.cd1{background:var(--blue)}.cd2{background:var(--pink)}.cd3{background:var(--purple)}
+  .row-between{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  .btn{border:0;border-radius:12px;padding:13px 22px;font-size:14.5px;font-weight:800;cursor:pointer;transition:transform .15s,box-shadow .15s,background .15s;display:inline-flex;align-items:center;gap:8px}
+  .btn:disabled{opacity:.5;cursor:not-allowed}
+  .btn-primary{background:linear-gradient(120deg,#0d9488,#2f5fd0);color:#fff;box-shadow:0 10px 26px rgba(47,95,208,.28)}
+  .btn-primary:hover:not(:disabled){transform:translateY(-2px)}
+  .btn-ghost{background:#eef3fb;color:#28406b;border:1.5px solid var(--line)}
+  .btn-ghost:hover:not(:disabled){background:#e2ebf8}
+  .btn-run{background:var(--ink);color:var(--lime);font-size:16px;padding:16px 34px;border-radius:14px}
+  .btn-run:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 14px 34px rgba(8,20,48,.24)}
+  .btn-sm{padding:8px 14px;font-size:13px;border-radius:10px}
+  .mode-badge{font-size:11.5px;font-weight:800;border-radius:99px;padding:5px 12px;letter-spacing:.3px}
+  .mode-estimate{background:#fff4e0;color:#a86400;border:1px solid #f2d59b}
+  .mode-live{background:#dcf3ef;color:#0d6a63;border:1px solid #9fdccf}
+  details.adv{border:1.5px dashed var(--line);border-radius:14px;padding:0 18px;margin-top:6px;background:#fbfcfe}
+  details.adv summary{cursor:pointer;font-weight:800;font-size:14px;padding:15px 0;color:#28406b;list-style:none;display:flex;align-items:center;gap:9px}
+  details.adv summary::-webkit-details-marker{display:none}
+  details.adv summary .chev{transition:transform .2s}
+  details.adv[open] summary .chev{transform:rotate(90deg)}
+  .adv-inner{padding:0 0 20px}
+  .note{font-size:12.5px;color:var(--mut);line-height:1.6;background:#f2f6fc;border-left:3px solid var(--green);border-radius:0 10px 10px 0;padding:11px 14px;margin:12px 0}
+  .keygrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+  .inp-sm{padding:10px 12px;font-size:13.5px}
+  /* prompt list */
+  .pchip{display:flex;align-items:center;gap:12px;border:1.5px solid var(--line);border-radius:12px;padding:11px 14px;margin-bottom:9px;background:#fbfcfe;transition:border-color .15s,background .15s}
+  .pchip.sel{border-color:var(--green);background:rgba(13,148,136,.05)}
+  .pchip input[type=checkbox]{width:18px;height:18px;accent-color:var(--green);flex-shrink:0;cursor:pointer}
+  .pchip .ptext{flex:1;font-size:14.5px;line-height:1.4}
+  .pcat{font-size:10.5px;font-weight:800;letter-spacing:.4px;text-transform:uppercase;padding:3px 8px;border-radius:99px;white-space:nowrap}
+  .cat-comparison{background:#e8effe;color:#28406b}.cat-commercial{background:#fceaf3;color:#a82b78}
+  .cat-problem{background:#dcf3ef;color:#0d6a63}.cat-brand{background:#efe9ff;color:#5b3fd6}
+  .pchip .del{border:0;background:transparent;color:#b8c2d2;font-size:20px;cursor:pointer;line-height:1;padding:0 2px}
+  .pchip .del:hover{color:var(--pink)}
+  .addrow{display:flex;gap:10px;margin-top:6px}
+  /* progress */
+  #progress{display:none;margin-top:18px}
+  #progress.on{display:block}
+  .pbar{height:10px;background:#e7edf6;border-radius:99px;overflow:hidden}
+  .pbar i{display:block;height:100%;width:0;background:linear-gradient(90deg,#0d9488,#2f5fd0);border-radius:99px;transition:width .3s}
+  .plog{font-size:12.5px;color:var(--mut);margin-top:10px;font-family:ui-monospace,Menlo,Consolas,monospace;min-height:18px}
+  /* RESULTS */
+  #results{display:none}
+  #results.on{display:block}
+  .dash{background:var(--ink);color:#fff;border-radius:22px;padding:32px 34px;margin-bottom:24px;position:relative;overflow:hidden}
+  .dash::before{content:"";position:absolute;inset:0;background:radial-gradient(600px at 90% 0%,rgba(53,224,200,.22),transparent 62%),radial-gradient(520px at 0% 100%,rgba(123,92,250,.32),transparent 60%);pointer-events:none}
+  .dash > *{position:relative;z-index:1}
+  .dash h2{color:#fff;font-size:22px;margin-bottom:4px}
+  .dash .dsub{color:#b9c6de;font-size:14px;margin-bottom:22px}
+  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .kpi{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:18px}
+  .kpi .kl{font-size:11px;letter-spacing:.6px;text-transform:uppercase;color:#9fb0cc;font-weight:800}
+  .kpi .kv{font-size:30px;font-weight:800;margin-top:6px;letter-spacing:-.02em}
+  .kpi .kv small{font-size:15px;color:#9fb0cc;font-weight:700}
+  .kpi .kd{font-size:12px;color:#cdd7e8;margin-top:2px}
+  .kv.rank1{color:var(--lime)}.kv.good{color:#5fe0b8}.kv.mid{color:#ffd36b}.kv.bad{color:#ff9db8}
+  .sov{margin-top:22px}
+  .sov h3{font-size:13px;color:#cdd7e8;font-weight:800;letter-spacing:.4px;text-transform:uppercase;margin-bottom:12px}
+  .sovrow{display:grid;grid-template-columns:150px 1fr 46px;gap:12px;align-items:center;margin-bottom:9px;font-size:13.5px}
+  .sovrow .nm{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:700}
+  .sovrow .you{color:var(--lime)}
+  .sovtrack{height:14px;background:rgba(255,255,255,.09);border-radius:99px;overflow:hidden}
+  .sovtrack i{display:block;height:100%;border-radius:99px;width:0;transition:width .9s cubic-bezier(.2,.8,.2,1)}
+  .sf0{background:var(--lime)}.sf1{background:#6ea0ff}.sf2{background:#ef7ab8}.sf3{background:#b49bff}
+  .sovrow .pct{text-align:right;font-weight:800;font-size:13px}
+  /* per prompt cards */
+  .presult{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px 26px;margin-bottom:18px;box-shadow:0 12px 32px rgba(8,20,48,.06)}
+  .presult .ph{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;flex-wrap:wrap;margin-bottom:16px}
+  .presult .pq{font-size:17px;font-weight:800;line-height:1.35}
+  .presult .pq .qmark{color:var(--green)}
+  .winner{font-size:12.5px;font-weight:800;border-radius:99px;padding:6px 13px;white-space:nowrap}
+  .win-you{background:rgba(53,224,200,.18);color:#0b6a5f;border:1px solid #7fd7c8}
+  .win-them{background:#fdeef5;color:#a82b78;border:1px solid #f3c3dd}
+  .lb{width:100%;border-collapse:collapse;font-size:13.5px;margin-bottom:8px}
+  .lb th{text-align:left;font-size:11px;letter-spacing:.4px;text-transform:uppercase;color:var(--mut);font-weight:800;padding:8px 8px;border-bottom:2px solid var(--line)}
+  .lb th.c,.lb td.c{text-align:center}
+  .lb td{padding:11px 8px;border-bottom:1px solid #eef2f8;vertical-align:middle}
+  .lb tr.you td{background:rgba(13,148,136,.05)}
+  .lb .ent{font-weight:700;display:flex;align-items:center;gap:9px}
+  .lb .ent .dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+  .lb .yb{font-size:10px;font-weight:800;color:#0b6a5f;background:rgba(53,224,200,.2);border-radius:99px;padding:2px 7px}
+  .ecell{font-size:12.5px;font-weight:800}
+  .escore{display:inline-grid;place-items:center;min-width:34px;height:26px;border-radius:8px;font-weight:800;font-size:13px}
+  .sc-hi{background:rgba(13,148,136,.16);color:#0b6a5f}.sc-md{background:#fff2d6;color:#9a6400}.sc-lo{background:#fde7ef;color:#a82b78}.sc-none{background:#f0f2f6;color:#9aa6b8}
+  .miss{color:#b6c0cf;font-weight:700}
+  .rec{margin-top:16px;border:1.5px solid #d9e7f7;border-radius:14px;background:linear-gradient(180deg,#f6faff,#fff);padding:18px 20px}
+  .rec .rh{font-size:13px;font-weight:800;color:#28406b;letter-spacing:.3px;text-transform:uppercase;display:flex;align-items:center;gap:8px;margin-bottom:6px}
+  .rec .rtitle{font-size:16px;font-weight:800;margin-bottom:6px}
+  .rec .rwhy{font-size:13.5px;color:var(--mut);line-height:1.6;margin-bottom:14px}
+  .rec .rwhy b{color:var(--ink)}
+  .assets{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+  .asset{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;line-height:1.45;background:#fff;border:1px solid var(--line);border-radius:11px;padding:11px 13px}
+  .asset .at{font-size:9.5px;font-weight:800;letter-spacing:.4px;text-transform:uppercase;padding:3px 7px;border-radius:6px;white-space:nowrap;margin-top:1px;flex-shrink:0}
+  .at-pillar{background:#e8effe;color:#28406b}.at-blog{background:#dcf3ef;color:#0d6a63}
+  .at-compare{background:#fceaf3;color:#a82b78}.at-tool{background:#efe9ff;color:#5b3fd6}
+  .at-webinar{background:#fff2d6;color:#9a6400}.at-schema{background:#e6f7f4;color:#0b6a5f}
+  .engnote{font-size:12px;color:var(--mut);margin-top:10px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+  .etag{font-size:10.5px;font-weight:800;border-radius:99px;padding:3px 9px}
+  .etag.live{background:#dcf3ef;color:#0b6a5f}.etag.est{background:#fff4e0;color:#9a6400}.etag.err{background:#fde7ef;color:#a82b78}
+  /* CTA */
+  .cta-band{background:radial-gradient(700px at 85% 0%,rgba(53,224,200,.22),transparent 65%),radial-gradient(640px at 8% 100%,rgba(123,92,250,.3),transparent 65%),var(--ink);color:#fff;border-radius:22px;padding:40px;text-align:center;margin-top:8px}
+  .cta-band h2{color:#fff;font-size:26px;margin-bottom:10px}
+  .cta-band p{color:#c3cee2;max-width:560px;margin:0 auto 22px;line-height:1.6;font-size:15px}
+  .cta-band .btn-run{margin:0 auto}
+  .disclaimer{font-size:11.5px;color:#93a1b8;text-align:center;max-width:760px;margin:26px auto 0;line-height:1.6}
+  footer{padding:34px 40px;font-size:12.5px;color:var(--mut);max-width:1160px;margin:0 auto;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+  footer a:hover{color:var(--ink)}
+  .mobile-sticky-cta{display:none}
+  @media(max-width:900px){
+    body{padding-bottom:74px}nav ul{display:none}.navr>.cta{display:none}.navr>.nav-book{display:none}
+    .mobile-menu-toggle{position:relative;display:grid;place-items:center;width:42px;height:42px;border:0;background:var(--ink);color:var(--lime);border-radius:50%;font-size:20px;cursor:pointer;padding:0}
+    nav.open ul{display:flex;position:absolute;top:calc(100% + 8px);left:0;right:0;flex-direction:column;gap:4px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:10px;box-shadow:0 18px 42px rgba(8,20,48,.18)}
+    nav.open ul li{padding:10px}nav.open .dd{position:static;opacity:1;visibility:visible;transform:none;width:auto;box-shadow:none;border:0;padding:6px 0 0;background:transparent}nav.open .dd a{padding:10px}
+    nav.open ul .nav-mob-cta-li{display:block;padding:8px 4px 4px;margin-top:6px;border-top:1px solid #d8e0ec}
+    .nav-mob-cta{width:100%;background:#35e0c8;color:#0a1733;border:0;border-radius:12px;padding:15px;font-size:15.5px;font-weight:800;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 8px 20px rgba(53,224,200,.35)}
+    .mobile-sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;align-items:center;justify-content:center;background:var(--ink);color:var(--lime);padding:17px 20px calc(17px + env(safe-area-inset-bottom));font-size:16px;font-weight:800;box-shadow:0 -10px 28px rgba(8,20,48,.18)}
+    section{padding:70px 20px}.hero{padding:116px 18px 30px}.card{padding:24px 18px}
+    .grid2,.keygrid,.kpis,.assets{grid-template-columns:1fr}.kpis{grid-template-columns:1fr 1fr}
+    .comp-row{grid-template-columns:18px 1fr;grid-template-areas:"d dom" ". brand"}
+    .comp-row .comp-dot{grid-area:d}.comp-row>*:nth-child(2){grid-area:dom}.comp-row>*:nth-child(3){grid-area:brand}
+    .sovrow{grid-template-columns:110px 1fr 40px}
+    .lb{font-size:12px}.lb th,.lb td{padding:8px 5px}
+    .dash,.cta-band{padding:24px 18px}
+  }
+  @media(max-width:560px){.kpis{grid-template-columns:1fr}.lb .engcol{display:none}}
+  /* HubSpot book modal */
+  .hs-book-modal{display:none;position:fixed;inset:0;z-index:99999}
+  .hs-book-modal.open{display:block}
+  .hs-book-overlay{position:absolute;inset:0;background:rgba(8,20,48,.55)}
+  .hs-book-dialog{position:relative;background:#fff;max-width:1040px;width:calc(100% - 40px);margin:4vh auto;border-radius:16px;box-shadow:0 30px 80px rgba(8,20,48,.35);padding:32px 34px 24px;max-height:92vh;overflow:auto}
+  .hs-book-x{position:absolute;top:6px;right:12px;border:0;background:transparent;font-size:30px;line-height:1;cursor:pointer;color:#0a1733;z-index:2}
+</style>
+<!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/146760313.js"></script>
+<!-- End of HubSpot Embed Code -->
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="/">
+    <svg viewBox="0 0 64 64" width="30" height="30" xmlns="http://www.w3.org/2000/svg"><rect width="64" height="64" rx="16" fill="#0a1733"/><circle cx="28" cy="28" r="13.5" fill="none" stroke="#35e0c8" stroke-width="4"/><path d="M38 38 L48.5 48.5" stroke="#35e0c8" stroke-width="5.5" stroke-linecap="round"/><path d="M21 33.5 L26.5 26.5 L29.5 29.5 L35 22.5" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M30.5 21.5 L35.5 21.9 L35.1 26.9" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M50 9 l1.9 4.2 4.2 1.9 -4.2 1.9 -1.9 4.2 -1.9 -4.2 -4.2 -1.9 4.2 -1.9 z" fill="#35e0c8"/></svg>
+    <span>your<b>digital</b>partner</span>
+  </a>
+  <ul>
+    <li>Solutions ▾
+      <div class="dd">
+        <a href="/solutions/seo-aeo-visibility/"><span class="ic g">🔍</span><span><b>SEO &amp; AEO Visibility</b><small>Rank on Google and get cited by ChatGPT, Gemini &amp; Perplexity</small></span></a>
+        <a href="/solutions/website-optimisation-cro/"><span class="ic b">📈</span><span><b>Website Optimisation &amp; CRO</b><small>Heatmaps, A/B testing &amp; personalisation that turn traffic into pipeline</small></span></a>
+        <a href="/solutions/ai-marketing/"><span class="ic pu"><b class="ai-mark">AI</b></span><span><b>AI-Enabled Digital Marketing</b><small>Practical AI across reporting, SEO, conversion &amp; HubSpot</small></span></a>
+        <a href="/solutions/paid-campaigns/"><span class="ic p">🎯</span><span><b>Performance Marketing</b><small>Google &amp; LinkedIn Ads accountable to revenue, not clicks</small></span></a>
+      </div>
+    </li>
+    <li><a href="/success-stories/">Success Stories</a></li>
+    <li><a href="/blog/" style="color:#3a4d70;font-weight:800">Free Guides</a></li>
+    <li><a href="/solutions/seo-aeo-visibility/">AEO</a></li>
+    <li class="nav-mob-cta-li"><button class="nav-mob-cta" type="button" onclick="document.querySelector('nav').classList.remove('open');return false;" data-book><span class="ic">📅</span> Book a meeting</button></li>
+  </ul>
+  <div class="navr">
+  <a class="cta" href="#tool">Run free audit</a>
+  <button class="nav-book" type="button" title="Book a 30-minute call" aria-label="Book a 30-minute call" data-book><span class="ic">📅</span>Book a meeting →</button>
+  <button class="mobile-menu-toggle" type="button" aria-label="Open menu" onclick="this.closest('nav').classList.toggle('open')">☰</button>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Free AEO tool</span>
+    <h1>See who AI recommends when your buyers ask — <span class="hl">you or your rivals</span></h1>
+    <p>Enter your website and up to three competitors. This tracker builds the questions your in-market buyers are actually asking, runs them through ChatGPT, Perplexity and Google, and scores who wins on <b>visibility</b> and <b>sentiment</b> — then tells you exactly what content to build to close the gap.</p>
+    <div class="llm-list">
+      <span class="llm c1">ChatGPT</span>
+      <span class="llm c2">Perplexity</span>
+      <span class="llm c3">Google</span>
+    </div>
+  </div>
+</header>
+
+<main class="tool" id="tool">
+  <div class="twrap">
+
+    <!-- STEP 1 -->
+    <section class="card" style="padding:30px 32px">
+      <h2><span class="step-n">1</span> Your website &amp; competitors</h2>
+      <p class="sub">Add your domain and what you do. We’ll build the rest around it. Leave competitors blank and hit <b>Auto-generate</b>, or type them in yourself.</p>
+
+      <div class="grid2">
+        <div class="fld">
+          <label class="fl" for="yourUrl">Your website URL</label>
+          <input class="inp" id="yourUrl" type="text" placeholder="e.g. your-digital-partner.co.uk" autocomplete="off">
+        </div>
+        <div class="fld">
+          <label class="fl" for="yourBrand">Your brand name <span style="font-weight:600;text-transform:none;color:#9aa6b8">(auto-filled)</span></label>
+          <input class="inp" id="yourBrand" type="text" placeholder="e.g. Your Digital Partner" autocomplete="off">
+        </div>
+      </div>
+      <div class="grid2">
+        <div class="fld">
+          <label class="fl" for="category">What do you sell / your category</label>
+          <input class="inp" id="category" type="text" placeholder="e.g. B2B digital marketing consultancy" autocomplete="off">
+        </div>
+        <div class="fld">
+          <label class="fl" for="audience">Who buys it (audience / industry)</label>
+          <input class="inp" id="audience" type="text" placeholder="e.g. B2B SaaS companies in the UK" autocomplete="off">
+        </div>
+      </div>
+
+      <div class="row-between" style="margin:18px 0 10px">
+        <label class="fl" style="margin:0">Competitors (up to 3)</label>
+        <button class="btn btn-ghost btn-sm" id="autoComp" type="button">✨ Auto-generate competitors</button>
+      </div>
+      <div id="compRows">
+        <div class="comp-row"><span class="comp-dot cd1"></span><input class="inp inp-sm comp-domain" type="text" placeholder="competitor-one.com"><input class="inp inp-sm comp-brand" type="text" placeholder="Brand name (optional)"></div>
+        <div class="comp-row"><span class="comp-dot cd2"></span><input class="inp inp-sm comp-domain" type="text" placeholder="competitor-two.com"><input class="inp inp-sm comp-brand" type="text" placeholder="Brand name (optional)"></div>
+        <div class="comp-row"><span class="comp-dot cd3"></span><input class="inp inp-sm comp-domain" type="text" placeholder="competitor-three.com"><input class="inp inp-sm comp-brand" type="text" placeholder="Brand name (optional)"></div>
+      </div>
+      <div id="autoCompNote" class="note" style="display:none"></div>
+
+      <details class="adv">
+        <summary><span class="chev">▸</span> Advanced: connect live AI engines (optional) <span id="modeInline" class="mode-badge mode-estimate" style="margin-left:auto">Estimate mode</span></summary>
+        <div class="adv-inner">
+          <div class="note">
+            <b>Estimate mode</b> (default) gives you an instant, transparent simulation so you can see how the tool works — it’s an educated model, <b>not</b> a live search.
+            Add your own API keys below to switch to <b>Live mode</b> and query the real engines. Keys are stored only in <b>your browser</b> (localStorage) and are sent directly to each provider — never to us.
+          </div>
+          <div class="keygrid">
+            <div>
+              <label class="fl" for="kOpenai">OpenAI API key <span style="font-weight:600;text-transform:none;color:#9aa6b8">— ChatGPT</span></label>
+              <input class="inp inp-sm" id="kOpenai" type="password" placeholder="sk-..." autocomplete="off">
+            </div>
+            <div>
+              <label class="fl" for="kOpenaiModel">OpenAI model</label>
+              <input class="inp inp-sm" id="kOpenaiModel" type="text" placeholder="gpt-4o-mini" autocomplete="off">
+            </div>
+            <div>
+              <label class="fl" for="kPplx">Perplexity API key <span style="font-weight:600;text-transform:none;color:#9aa6b8">— web-grounded</span></label>
+              <input class="inp inp-sm" id="kPplx" type="password" placeholder="pplx-..." autocomplete="off">
+            </div>
+            <div>
+              <label class="fl" for="kPplxModel">Perplexity model</label>
+              <input class="inp inp-sm" id="kPplxModel" type="text" placeholder="sonar" autocomplete="off">
+            </div>
+            <div>
+              <label class="fl" for="kGoogleKey">Google API key <span style="font-weight:600;text-transform:none;color:#9aa6b8">— Custom Search</span></label>
+              <input class="inp inp-sm" id="kGoogleKey" type="password" placeholder="AIza..." autocomplete="off">
+            </div>
+            <div>
+              <label class="fl" for="kGoogleCx">Google Search Engine ID (cx)</label>
+              <input class="inp inp-sm" id="kGoogleCx" type="text" placeholder="e.g. 0123abc..." autocomplete="off">
+            </div>
+          </div>
+          <div class="addrow" style="margin-top:14px">
+            <button class="btn btn-ghost btn-sm" id="saveKeys" type="button">💾 Save keys in this browser</button>
+            <button class="btn btn-ghost btn-sm" id="clearKeys" type="button">🗑 Clear saved keys</button>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <!-- STEP 2 -->
+    <section class="card">
+      <h2><span class="step-n">2</span> Buyer-intent prompts to track</h2>
+      <p class="sub">These are the questions in-market prospects type into AI when they’re looking for what you sell. Tick the ones to track, edit any of them, or add your own.</p>
+      <div class="row-between" style="margin-bottom:14px">
+        <span style="font-size:13px;color:var(--mut)"><b id="selCount">0</b> selected</span>
+        <button class="btn btn-ghost btn-sm" id="genPrompts" type="button">🔄 Generate prompts</button>
+      </div>
+      <div id="promptList"></div>
+      <div class="addrow">
+        <input class="inp inp-sm" id="newPrompt" type="text" placeholder="Add your own prompt, e.g. best marketing consultant for SaaS startups">
+        <button class="btn btn-ghost btn-sm" id="addPrompt" type="button">+ Add</button>
+      </div>
+    </section>
+
+    <!-- STEP 3 -->
+    <section class="card" style="text-align:center">
+      <h2 style="justify-content:center"><span class="step-n">3</span> Run the visibility check</h2>
+      <p class="sub" style="max-width:560px;margin:8px auto 18px">We’ll run every selected prompt through each engine, detect who gets mentioned and cited, and score visibility &amp; sentiment out of 10.</p>
+      <div style="display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap">
+        <button class="btn btn-run" id="runBtn" type="button">▶ Run visibility check</button>
+        <span id="modeMain" class="mode-badge mode-estimate">Estimate mode</span>
+      </div>
+      <div id="progress">
+        <div class="pbar"><i id="pbarFill"></i></div>
+        <div class="plog" id="plog"></div>
+      </div>
+    </section>
+
+    <!-- RESULTS -->
+    <section id="results">
+      <div class="dash" id="dash"></div>
+      <div id="perPrompt"></div>
+
+      <div class="cta-band">
+        <h2>Want us to actually close these gaps?</h2>
+        <p>You’ve got the map. We build the content hubs, schema and answer-first pages that get you cited by ChatGPT, Perplexity and Google — and we track the movement. Book a free 30-minute review of your results.</p>
+        <button class="btn btn-run" type="button" data-book>📅 Book a free AEO review →</button>
+        <p class="disclaimer">Scores in Estimate mode are a transparent simulation to demonstrate the method, not live search data. For live results, add your own API keys under “Advanced”. Live results reflect a single point-in-time query and will vary between runs and locations — AI answers are non-deterministic.</p>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <span>© Your Digital Partner · Chris Chapman, your on-demand digital marketing partner</span>
+  <span><a href="/solutions/seo-aeo-visibility/">SEO &amp; AEO</a> · <a href="/solutions/website-optimisation-cro/">CRO</a> · <a href="/solutions/paid-campaigns/">Paid</a></span>
+</footer>
+
+<a class="mobile-sticky-cta" data-book>Book a free AEO review →</a>
+
+<div id="hsBookModal" class="hs-book-modal" aria-hidden="true">
+  <div class="hs-book-overlay" data-book-close></div>
+  <div class="hs-book-dialog" role="dialog" aria-modal="true" aria-label="Book a meeting">
+    <button class="hs-book-x" type="button" aria-label="Close" data-book-close>&times;</button>
+    <div class="meetings-iframe-container" data-src="https://meetings-eu1.hubspot.com/cchapman?embed=true"></div>
+  </div>
+</div>
+<script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
+<script>
+(function(){var m=document.getElementById("hsBookModal");if(!m)return;function close(){m.classList.remove("open");document.body.style.overflow="";}document.addEventListener("click",function(e){if(e.target.closest("[data-book]")){e.preventDefault();m.classList.add("open");document.body.style.overflow="hidden";return;}if(e.target.closest("[data-book-close]")){close();}});document.addEventListener("keydown",function(e){if(e.key==="Escape")close();});})();
+</script>
+
+<script>
+/* ============================================================
+   AEO Visibility Tracker — client-side engine
+   Live mode: real calls to OpenAI / Perplexity / Google CSE using
+   the user's own keys (kept in localStorage, sent only to each API).
+   Estimate mode: transparent, deterministic simulation for demo.
+   ============================================================ */
+(function(){
+"use strict";
+var $=function(s,r){return (r||document).querySelector(s)};
+var $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+
+/* ---------- helpers ---------- */
+function cleanDomain(v){
+  if(!v)return"";
+  v=v.trim().toLowerCase().replace(/^https?:\/\//,"").replace(/^www\./,"");
+  v=v.split("/")[0].split("?")[0].split("#")[0];
+  return v;
+}
+function registrable(d){ // crude eTLD+1 for matching/display
+  d=cleanDomain(d); if(!d)return"";
+  var p=d.split("."); if(p.length<=2)return d;
+  var two=["co.uk","org.uk","ac.uk","gov.uk","com.au","co.nz","co.za","com.br","co.jp"];
+  var last2=p.slice(-2).join(".");
+  if(two.indexOf(last2)>-1)return p.slice(-3).join(".");
+  return p.slice(-2).join(".");
+}
+function brandFromDomain(d){
+  d=registrable(d); if(!d)return"";
+  var sld=d.split(".")[0].replace(/[-_]/g," ");
+  return sld.replace(/\b\w/g,function(c){return c.toUpperCase()});
+}
+function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+function hash(str){var h=2166136261;for(var i=0;i<str.length;i++){h^=str.charCodeAt(i);h=Math.imul(h,16777619)}return (h>>>0)}
+function rand01(seed){var x=hash(seed);return (x%100000)/100000}
+function clamp(n,a,b){return Math.max(a,Math.min(b,n))}
+function round1(n){return Math.round(n*10)/10}
+
+/* ---------- state ---------- */
+var state={ entities:[], prompts:[], keys:{}, results:null };
+var STOP=["the","a","an","for","to","of","and","or","in","on","is","are","best","top","how","what","which","who","vs","versus","near","me","2024","2025","2026","your","my","our","with","that","get","find","should","i","we","do","does","need","looking"];
+
+/* ---------- keys ---------- */
+var KEY_FIELDS={openai:"kOpenai",openaiModel:"kOpenaiModel",pplx:"kPplx",pplxModel:"kPplxModel",googleKey:"kGoogleKey",googleCx:"kGoogleCx"};
+function readKeys(){
+  var k={};
+  for(var f in KEY_FIELDS){ k[f]=($("#"+KEY_FIELDS[f]).value||"").trim(); }
+  k.openaiModel=k.openaiModel||"gpt-4o-mini";
+  k.pplxModel=k.pplxModel||"sonar";
+  state.keys=k; return k;
+}
+function activeEngines(){
+  var k=readKeys(), e={};
+  e.chatgpt = k.openai ? "live":"estimate";
+  e.perplexity = k.pplx ? "live":"estimate";
+  e.google = (k.googleKey && k.googleCx) ? "live":"estimate";
+  return e;
+}
+function anyLive(){var e=activeEngines();return e.chatgpt==="live"||e.perplexity==="live"||e.google==="live"}
+function refreshModeBadge(){
+  var live=anyLive();
+  ["#modeInline","#modeMain"].forEach(function(sel){
+    var el=$(sel); if(!el)return;
+    el.textContent=live?"Live mode":"Estimate mode";
+    el.className="mode-badge "+(live?"mode-live":"mode-estimate");
+  });
+}
+function saveKeys(){ try{localStorage.setItem("aeo_keys",JSON.stringify(readKeys()))}catch(e){} }
+function loadKeys(){
+  try{
+    var raw=localStorage.getItem("aeo_keys"); if(!raw)return;
+    var k=JSON.parse(raw);
+    for(var f in KEY_FIELDS){ if(k[f]!=null)$("#"+KEY_FIELDS[f]).value=k[f]; }
+  }catch(e){}
+}
+
+/* ---------- entities ---------- */
+function collectEntities(){
+  var ents=[];
+  var yd=cleanDomain($("#yourUrl").value);
+  var yb=($("#yourBrand").value||"").trim()||brandFromDomain(yd);
+  if(yd)ents.push({domain:registrable(yd),brand:yb,you:true,idx:0});
+  $$(".comp-row").forEach(function(row,i){
+    var d=cleanDomain($(".comp-domain",row).value);
+    if(!d)return;
+    var b=($(".comp-brand",row).value||"").trim()||brandFromDomain(d);
+    ents.push({domain:registrable(d),brand:b,you:false,idx:ents.length});
+  });
+  return ents;
+}
+
+/* ---------- prompt generation (heuristic, no key needed) ---------- */
+function titleCase(s){return s.replace(/\b\w/g,function(c){return c.toUpperCase()})}
+function genPrompts(){
+  var cat=($("#category").value||"").trim();
+  var aud=($("#audience").value||"").trim();
+  var brand=($("#yourBrand").value||"").trim()||brandFromDomain(cleanDomain($("#yourUrl").value));
+  var c=cat||"digital marketing";
+  var forAud=aud?(" for "+aud):"";
+  var list=[
+    {text:"Best "+c+forAud+"?",cat:"comparison"},
+    {text:"Top "+c+" providers"+(aud?(" for "+aud):" 2026"),cat:"commercial"},
+    {text:"Who are the leading "+c+" companies"+forAud+"?",cat:"commercial"},
+    {text:"How do I choose a "+c+(aud?(" for "+aud):"")+"?",cat:"problem"},
+    {text:"What should I look for in a "+c+"?",cat:"problem"},
+    {text:"Recommended "+c+forAud,cat:"comparison"},
+    {text:c+" vs doing it in-house — which is better"+(aud?(" for "+aud):"")+"?",cat:"problem"}
+  ];
+  var comps=$$(".comp-row").map(function(r){return ($(".comp-brand",r).value||"").trim()||brandFromDomain(cleanDomain($(".comp-domain",r).value))}).filter(Boolean);
+  if(comps[0])list.push({text:comps[0]+" alternatives"+(aud?(" for "+aud):""),cat:"brand"});
+  if(brand&&comps[0])list.push({text:brand+" vs "+comps[0]+" — which is better?",cat:"brand"});
+  state.prompts=list.map(function(p,i){return {id:"p"+i+"_"+hash(p.text),text:p.text,cat:p.cat,sel:i<6}});
+  renderPrompts();
+}
+var CAT_LABEL={comparison:"Comparison",commercial:"Commercial",problem:"Problem-aware",brand:"Competitor"};
+function renderPrompts(){
+  var host=$("#promptList"); host.innerHTML="";
+  state.prompts.forEach(function(p){
+    var d=document.createElement("div");
+    d.className="pchip"+(p.sel?" sel":"");
+    d.innerHTML='<input type="checkbox" '+(p.sel?"checked":"")+'>'+
+      '<span class="ptext" contenteditable="true" spellcheck="false"></span>'+
+      '<span class="pcat cat-'+p.cat+'">'+CAT_LABEL[p.cat]+'</span>'+
+      '<button class="del" title="Remove" aria-label="Remove">×</button>';
+    $(".ptext",d).textContent=p.text;
+    $("input",d).addEventListener("change",function(){p.sel=this.checked;d.classList.toggle("sel",p.sel);updateSelCount()});
+    $(".ptext",d).addEventListener("input",function(){p.text=this.textContent.trim()});
+    $(".del",d).addEventListener("click",function(){state.prompts=state.prompts.filter(function(x){return x!==p});renderPrompts()});
+    host.appendChild(d);
+  });
+  updateSelCount();
+}
+function updateSelCount(){$("#selCount").textContent=state.prompts.filter(function(p){return p.sel}).length}
+
+/* ---------- sentiment lexicon ---------- */
+var POS=["best","top","leading","recommend","recommended","excellent","great","popular","trusted","strong","reliable","powerful","favourite","favorite","robust","award","praised","preferred","standout","ideal","proven","results","specialist","expert","go-to","impressive","effective","respected","well-regarded"];
+var NEG=["expensive","costly","poor","limited","lacking","complaint","complaints","weak","difficult","confusing","outdated","avoid","downside","drawback","worst","problem","problems","issue","issues","buggy","unreliable","overpriced","dated","clunky","mixed reviews","disappointing"];
+
+/* ---------- detection on a text/citation result ---------- */
+function detectInText(text, ent){
+  if(!text)return{present:false};
+  var lc=text.toLowerCase();
+  var terms=[ent.domain.toLowerCase(), ent.brand.toLowerCase(), ent.domain.split(".")[0].toLowerCase()].filter(function(v){return v&&v.length>1});
+  var first=-1,count=0;
+  terms.forEach(function(t){
+    var re=new RegExp("(^|[^a-z0-9])"+t.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+"([^a-z0-9]|$)","g"),m;
+    while((m=re.exec(lc))){count++; if(first<0||m.index<first)first=m.index;}
+  });
+  if(count===0)return{present:false};
+  var prominence=1-(first/Math.max(lc.length,1));           // earlier = higher
+  // sentiment window around first mention
+  var w=lc.slice(Math.max(0,first-140),first+180),pos=0,neg=0;
+  POS.forEach(function(t){if(w.indexOf(t)>-1)pos++}); NEG.forEach(function(t){if(w.indexOf(t)>-1)neg++});
+  return{present:true,prominence:clamp(prominence,0,1),count:count,pos:pos,neg:neg,cited:false};
+}
+function scoreFromSignals(sig,engine){
+  if(!sig||!sig.present)return{vis:0,sent:null,present:false,cited:false};
+  var vis;
+  if(engine==="google"&&sig.rank){ vis = 10 - (sig.rank-1)*0.95; }
+  else { vis = 4 + sig.prominence*4 + (sig.cited?1:0) + Math.min((sig.count-1),3)*0.45; }
+  vis=clamp(vis,1,10);
+  var sent=6 + (sig.pos-sig.neg)*1.4;
+  sent=clamp(sent,1,10);
+  return{vis:round1(vis),sent:round1(sent),present:true,cited:!!sig.cited,rank:sig.rank};
+}
+
+/* ---------- LIVE ENGINE ADAPTERS ---------- */
+function timeoutFetch(url,opts,ms){
+  return Promise.race([
+    fetch(url,opts),
+    new Promise(function(_,rej){setTimeout(function(){rej(new Error("timeout"))},ms||30000)})
+  ]);
+}
+function openaiCall(prompt){
+  var k=state.keys;
+  var body={model:k.openaiModel,temperature:0.3,messages:[
+    {role:"system",content:"You are the assistant a buyer consults before purchasing. Answer the user's question naturally and specifically, naming the real companies, brands, products or websites you would actually recommend or reference, as you normally would. Keep it under 180 words."},
+    {role:"user",content:prompt}
+  ]};
+  return timeoutFetch("https://api.openai.com/v1/chat/completions",{
+    method:"POST",headers:{"Content-Type":"application/json","Authorization":"Bearer "+k.openai},body:JSON.stringify(body)
+  }).then(function(r){if(!r.ok)return r.text().then(function(t){throw new Error("OpenAI "+r.status)});return r.json()})
+   .then(function(j){return {text:(j.choices&&j.choices[0]&&j.choices[0].message.content)||"",citations:[]}});
+}
+function pplxCall(prompt){
+  var k=state.keys;
+  var body={model:k.pplxModel,messages:[
+    {role:"system",content:"Answer the buyer's question concisely, naming the specific companies, brands or websites you would recommend, with sources."},
+    {role:"user",content:prompt}
+  ]};
+  return timeoutFetch("https://api.perplexity.ai/chat/completions",{
+    method:"POST",headers:{"Content-Type":"application/json","Authorization":"Bearer "+k.pplx},body:JSON.stringify(body)
+  }).then(function(r){if(!r.ok)throw new Error("Perplexity "+r.status);return r.json()})
+   .then(function(j){
+     var text=(j.choices&&j.choices[0]&&j.choices[0].message.content)||"";
+     var cites=j.citations||j.search_results&&j.search_results.map(function(s){return s.url})||[];
+     return {text:text,citations:cites};
+   });
+}
+function googleCall(prompt){
+  var k=state.keys;
+  var u="https://www.googleapis.com/customsearch/v1?key="+encodeURIComponent(k.googleKey)+"&cx="+encodeURIComponent(k.googleCx)+"&num=10&q="+encodeURIComponent(prompt);
+  return timeoutFetch(u,{}).then(function(r){if(!r.ok)throw new Error("Google "+r.status);return r.json()})
+   .then(function(j){
+     var items=j.items||[];
+     var results=items.map(function(it,i){return {link:it.link,domain:registrable(it.link||""),title:it.title||"",snippet:it.snippet||"",rank:i+1}});
+     var text=results.map(function(r){return r.title+". "+r.snippet}).join("  ");
+     return {text:text,citations:results.map(function(r){return r.link}),results:results};
+   });
+}
+
+/* ---------- run one engine for one prompt, return per-entity scores ---------- */
+function estimateSignals(prompt,ent,engine){
+  var seed=engine+"|"+prompt+"|"+ent.domain;
+  var base=rand01(seed);
+  // presence: you slightly less likely to dominate (creates realistic gap-to-close narrative)
+  var presThresh = ent.you ? 0.52 : 0.42;
+  var present = rand01(seed+"|p") > presThresh;
+  if(!present)return{present:false};
+  var prominence=rand01(seed+"|pr");
+  var count=1+Math.floor(rand01(seed+"|c")*3);
+  var rank= engine==="google" ? 1+Math.floor(rand01(seed+"|rk")*9) : null;
+  var s=rand01(seed+"|s"); var pos=s>0.55?(s>0.8?2:1):0; var neg=s<0.28?1:0;
+  return{present:true,prominence:prominence,count:count,rank:rank,pos:pos,neg:neg,cited:rand01(seed+"|ct")>0.55};
+}
+function runEngine(engine,prompt,liveFn){
+  var ents=state.entities;
+  var mode=activeEngines()[engine];
+  if(mode==="live"){
+    return liveFn(prompt).then(function(res){
+      var out={mode:"live",perEnt:{}};
+      ents.forEach(function(e){
+        var sig;
+        if(engine==="google"&&res.results){
+          var hit=res.results.filter(function(r){return r.domain===e.domain||r.domain.indexOf(e.domain)>-1||e.domain.indexOf(r.domain)>-1})[0];
+          if(hit){sig={present:true,rank:hit.rank,prominence:1-(hit.rank-1)/10,count:1,cited:true,pos:0,neg:0};
+            var w=(hit.title+" "+hit.snippet).toLowerCase();POS.forEach(function(t){if(w.indexOf(t)>-1)sig.pos++});NEG.forEach(function(t){if(w.indexOf(t)>-1)sig.neg++});}
+          else sig={present:false};
+        }else{
+          sig=detectInText(res.text,e);
+          if(sig.present&&res.citations&&res.citations.length){
+            sig.cited=res.citations.some(function(u){return registrable(u||"")===e.domain});
+          }
+        }
+        out.perEnt[e.idx]=scoreFromSignals(sig,engine);
+      });
+      return out;
+    }).catch(function(err){
+      // fall back to estimate for this engine, flag the error
+      var out={mode:"error",err:(err&&err.message)||"failed",perEnt:{}};
+      ents.forEach(function(e){out.perEnt[e.idx]=scoreFromSignals(estimateSignals(prompt,e,engine),engine)});
+      return out;
+    });
+  }
+  // estimate
+  return Promise.resolve().then(function(){
+    var out={mode:"estimate",perEnt:{}};
+    ents.forEach(function(e){out.perEnt[e.idx]=scoreFromSignals(estimateSignals(prompt,e,engine),engine)});
+    return out;
+  });
+}
+
+/* ---------- recommendations ---------- */
+function topicOf(promptText){
+  var words=promptText.toLowerCase().replace(/[?.,]/g,"").split(/\s+/).filter(function(w){return w&&STOP.indexOf(w)<0&&w.length>2});
+  var t=words.slice(0,5).join(" ");
+  return titleCase(t||"your category");
+}
+function makeRecommendation(p,rankedEnts){
+  var cat=($("#category").value||"").trim()||"your category";
+  var aud=($("#audience").value||"").trim();
+  var topic=topicOf(p.text);
+  var leader=rankedEnts.filter(function(r){return !r.ent.you})[0];
+  var you=rankedEnts.filter(function(r){return r.ent.you})[0];
+  var leaderName=leader?leader.ent.brand:"the market leader";
+  var youVis=you?you.avgVis:0;
+  var leadVis=leader?leader.avgVis:0;
+  var behind = leader && you && leadVis>youVis+0.3;
+  var forAud=aud?(" for "+aud):"";
+  var assets=[
+    {t:"pillar",label:"Pillar page",txt:"A definitive guide: “<b>"+esc(topic)+": the complete guide"+esc(forAud)+"</b>” — the answer-first page AI can cite."},
+    {t:"blog",label:"Supporting blog",txt:"“How to choose the right "+esc(cat)+esc(forAud)+"” — targets the decision-stage query directly."},
+    {t:"blog",label:"Supporting blog",txt:"“"+esc(topic)+": common mistakes and how to avoid them” — captures problem-aware searchers."},
+    {t:"compare",label:"Comparison page",txt:"“"+esc((you?you.ent.brand:"You")+" vs "+leaderName)+": which is better"+esc(forAud)+"?” — win the head-to-head "+esc(leaderName)+" is currently owning."},
+    {t:"tool",label:"Checklist / template",txt:"A downloadable “"+esc(topic)+" checklist” — the linkable, quotable asset AI engines love to reference."},
+    {t:"webinar",label:"Webinar / video",txt:"A short webinar or explainer on “"+esc(topic)+esc(forAud)+"” — repurposed into a transcript page for AI crawlers."},
+    {t:"schema",label:"FAQ + schema",txt:"Add FAQPage &amp; Organization schema answering “"+esc(p.text)+"” in one clean, extractable paragraph."}
+  ];
+  var why;
+  if(behind){
+    why="<b>"+esc(leaderName)+"</b> is out-ranking you here (visibility "+leadVis.toFixed(1)+"/10 vs your "+youVis.toFixed(1)+"/10). They’re being surfaced because they own topical depth around <b>"+esc(topic)+"</b>. Build a content hub that out-answers them:";
+  }else if(you&&youVis>0){
+    why="You’re showing up (visibility "+youVis.toFixed(1)+"/10) but the position is defendable, not dominant. Reinforce your lead on <b>"+esc(topic)+"</b> before a competitor invests here:";
+  }else{
+    why="You’re currently <b>invisible</b> for this query — competitors are taking the whole answer. This is the fastest win: build a focused content hub around <b>"+esc(topic)+"</b> so engines have something of yours to cite:";
+  }
+  return{topic:topic,why:why,assets:assets};
+}
+
+/* ---------- run all ---------- */
+function setProgress(pct,msg){ $("#pbarFill").style.width=pct+"%"; if(msg)$("#plog").textContent=msg; }
+function runCheck(){
+  state.entities=collectEntities();
+  if(state.entities.length===0||!state.entities[0].you){ alert("Enter your website URL first."); return; }
+  readKeys();
+  var sel=state.prompts.filter(function(p){return p.sel&&p.text});
+  if(sel.length===0){ alert("Generate or select at least one prompt to track."); return; }
+
+  $("#runBtn").disabled=true;
+  $("#progress").classList.add("on");
+  $("#results").classList.remove("on");
+  setProgress(2,"Warming up "+state.entities.length+" brands across "+sel.length+" prompts…");
+
+  var engines=[{k:"chatgpt",fn:openaiCall,label:"ChatGPT"},{k:"perplexity",fn:pplxCall,label:"Perplexity"},{k:"google",fn:googleCall,label:"Google"}];
+  var results=[]; var total=sel.length*engines.length; var done=0;
+  var chain=Promise.resolve();
+  sel.forEach(function(p){
+    var rec={prompt:p,engines:{}};
+    results.push(rec);
+    engines.forEach(function(eng){
+      chain=chain.then(function(){
+        setProgress(4+Math.round(done/total*92), eng.label+"  ·  “"+p.text.slice(0,54)+(p.text.length>54?"…":"")+"”");
+        return runEngine(eng.k,p.text,eng.fn).then(function(out){ rec.engines[eng.k]=out; done++; setProgress(4+Math.round(done/total*92)); });
+      });
+    });
+  });
+  chain.then(function(){
+    setProgress(100,"Done — building your report…");
+    state.results=results;
+    setTimeout(function(){ renderResults(); $("#runBtn").disabled=false; $("#progress").classList.remove("on"); },350);
+  }).catch(function(e){
+    $("#plog").textContent="Something went wrong: "+((e&&e.message)||e); $("#runBtn").disabled=false;
+  });
+}
+
+/* ---------- aggregate + render ---------- */
+var ENG_KEYS=["chatgpt","perplexity","google"];
+var ENG_NAME={chatgpt:"ChatGPT",perplexity:"Perplexity",google:"Google"};
+function rankEntitiesForPrompt(rec){
+  return state.entities.map(function(e){
+    var vs=[],ss=[];
+    ENG_KEYS.forEach(function(k){
+      var pe=rec.engines[k]&&rec.engines[k].perEnt[e.idx];
+      if(pe){ vs.push(pe.vis); if(pe.sent!=null)ss.push(pe.sent); }
+    });
+    var avgVis=vs.length?vs.reduce(function(a,b){return a+b},0)/vs.length:0;
+    var avgSent=ss.length?ss.reduce(function(a,b){return a+b},0)/ss.length:null;
+    return{ent:e,avgVis:avgVis,avgSent:avgSent};
+  }).sort(function(a,b){return b.avgVis-a.avgVis});
+}
+function scoreCell(pe){
+  if(!pe||!pe.present)return'<span class="escore sc-none miss">—</span>';
+  var v=pe.vis,cls=v>=7?"sc-hi":v>=4?"sc-md":"sc-lo";
+  var extra=pe.rank?'<div style="font-size:9.5px;color:#9aa6b8;margin-top:2px">#'+pe.rank+'</div>':(pe.cited?'<div style="font-size:9.5px;color:#0b6a5f;margin-top:2px">cited</div>':"");
+  return '<span class="escore '+cls+'">'+v.toFixed(1)+'</span>'+extra;
+}
+function dotClass(e){return e.you?"cd0":["cd1","cd2","cd3"][e.idx-1]||"cd3"}
+function sovClass(i){return "sf"+Math.min(i,3)}
+
+function renderResults(){
+  var ents=state.entities, recs=state.results;
+  // overall aggregates
+  var totals={}; ents.forEach(function(e){totals[e.idx]={vis:[],sent:[],wins:0}});
+  recs.forEach(function(rec){
+    var ranked=rankEntitiesForPrompt(rec);
+    rec._ranked=ranked;
+    if(ranked[0]&&ranked[0].avgVis>0)totals[ranked[0].ent.idx].wins++;
+    ranked.forEach(function(r){ totals[r.ent.idx].vis.push(r.avgVis); if(r.avgSent!=null)totals[r.ent.idx].sent.push(r.avgSent); });
+  });
+  var agg=ents.map(function(e){
+    var v=totals[e.idx].vis, s=totals[e.idx].sent;
+    var av=v.length?v.reduce(function(a,b){return a+b},0)/v.length:0;
+    var as=s.length?s.reduce(function(a,b){return a+b},0)/s.length:0;
+    return{ent:e,avgVis:av,avgSent:as,wins:totals[e.idx].wins};
+  });
+  var sumVis=agg.reduce(function(a,b){return a+b.avgVis},0)||1;
+  var ranked=agg.slice().sort(function(a,b){return b.avgVis-a.avgVis});
+  var you=agg.filter(function(a){return a.ent.you})[0];
+  var yourRank=ranked.map(function(r){return r.ent.idx}).indexOf(you.ent.idx)+1;
+  var ord=["1st","2nd","3rd","4th"];
+
+  /* dashboard */
+  var rankCls=yourRank===1?"rank1":yourRank===2?"good":yourRank===3?"mid":"bad";
+  var visCls=you.avgVis>=7?"good":you.avgVis>=4?"mid":"bad";
+  var sentCls=you.avgSent>=7?"good":you.avgSent>=4?"mid":"bad";
+  var e=activeEngines();
+  var liveCount=ENG_KEYS.filter(function(k){return e[k]==="live"}).length;
+  var d=$("#dash");
+  var sov=ranked.map(function(r){
+    var pct=Math.round(r.avgVis/sumVis*100);
+    return '<div class="sovrow"><span class="nm '+(r.ent.you?"you":"")+'">'+esc(r.ent.brand)+(r.ent.you?" (you)":"")+'</span>'+
+      '<div class="sovtrack"><i class="'+sovClass(r.ent.idx)+'" style="width:'+pct+'%"></i></div>'+
+      '<span class="pct">'+pct+'%</span></div>';
+  }).join("");
+  d.innerHTML=
+    '<h2>Your AI visibility report</h2>'+
+    '<div class="dsub">'+recs.length+' buyer prompts · '+ents.length+' brands · '+
+      (liveCount?('<b style="color:#5fe0b8">Live</b> on '+liveCount+' engine'+(liveCount>1?"s":"")):'<b style="color:#ffd36b">Estimate mode</b> — add API keys for live data')+'</div>'+
+    '<div class="kpis">'+
+      '<div class="kpi"><div class="kl">Your rank</div><div class="kv '+rankCls+'">'+ord[yourRank-1]+'<small> of '+ents.length+'</small></div><div class="kd">'+(yourRank===1?"You’re winning share of voice":"Room to climb the leaderboard")+'</div></div>'+
+      '<div class="kpi"><div class="kl">Avg visibility</div><div class="kv '+visCls+'">'+you.avgVis.toFixed(1)+'<small>/10</small></div><div class="kd">Across ChatGPT, Perplexity &amp; Google</div></div>'+
+      '<div class="kpi"><div class="kl">Avg sentiment</div><div class="kv '+sentCls+'">'+(you.avgSent?you.avgSent.toFixed(1):"—")+'<small>/10</small></div><div class="kd">How positively AI frames you</div></div>'+
+      '<div class="kpi"><div class="kl">Prompts you win</div><div class="kv">'+you.wins+'<small>/'+recs.length+'</small></div><div class="kd">Where you’re the top brand cited</div></div>'+
+    '</div>'+
+    '<div class="sov"><h3>Share of AI voice</h3>'+sov+'</div>';
+
+  /* per-prompt */
+  var host=$("#perPrompt"); host.innerHTML="";
+  recs.forEach(function(rec){
+    var ranked=rec._ranked;
+    var top=ranked[0];
+    var youR=ranked.filter(function(r){return r.ent.you})[0];
+    var youWins=top&&top.ent.you;
+    var rec2=makeRecommendation(rec.prompt,ranked);
+    var head='<div class="ph"><div class="pq"><span class="qmark">Q.</span> '+esc(rec.prompt.text)+'</div>'+
+      '<span class="winner '+(youWins?"win-you":"win-them")+'">'+(youWins?"🏆 You lead this":("Leader: "+esc(top?top.ent.brand:"—")))+'</span></div>';
+    // table
+    var rows=ranked.map(function(r){
+      var e2=r.ent;
+      var cells=ENG_KEYS.map(function(k){var pe=rec.engines[k]&&rec.engines[k].perEnt[e2.idx];return '<td class="c engcol">'+scoreCell(pe)+'</td>'}).join("");
+      var sent=r.avgSent!=null?r.avgSent.toFixed(1):"—";
+      var sCls=r.avgSent>=7?"sc-hi":r.avgSent>=4?"sc-md":r.avgSent!=null?"sc-lo":"sc-none";
+      var vCls=r.avgVis>=7?"sc-hi":r.avgVis>=4?"sc-md":r.avgVis>0?"sc-lo":"sc-none";
+      return '<tr class="'+(e2.you?"you":"")+'"><td><span class="ent"><span class="dot '+dotClass(e2)+'"></span>'+esc(e2.brand)+(e2.you?' <span class="yb">YOU</span>':"")+'</span></td>'+
+        cells+
+        '<td class="c"><span class="escore '+vCls+'">'+r.avgVis.toFixed(1)+'</span></td>'+
+        '<td class="c"><span class="escore '+sCls+'">'+sent+'</span></td></tr>';
+    }).join("");
+    var table='<table class="lb"><thead><tr><th>Brand</th>'+
+      '<th class="c engcol">ChatGPT</th><th class="c engcol">Perplexity</th><th class="c engcol">Google</th>'+
+      '<th class="c">Visibility</th><th class="c">Sentiment</th></tr></thead><tbody>'+rows+'</tbody></table>';
+    // engine mode tags
+    var tags=ENG_KEYS.map(function(k){
+      var m=rec.engines[k]&&rec.engines[k].mode;
+      var cls=m==="live"?"live":m==="error"?"err":"est";
+      var lbl=ENG_NAME[k]+" · "+(m==="live"?"live":m==="error"?"est (live failed)":"estimate");
+      return '<span class="etag '+cls+'">'+lbl+'</span>';
+    }).join("");
+    // recommendation
+    var assets=rec2.assets.map(function(a){return '<div class="asset"><span class="at at-'+a.t+'">'+a.label+'</span><span>'+a.txt+'</span></div>'}).join("");
+    var recHtml='<div class="rec"><div class="rh">✳ Recommendation to win this prompt</div>'+
+      '<div class="rtitle">Build a content hub on “'+esc(rec2.topic)+'”</div>'+
+      '<div class="rwhy">'+rec2.why+'</div>'+
+      '<div class="assets">'+assets+'</div></div>';
+    var card=document.createElement("div");
+    card.className="presult";
+    card.innerHTML=head+table+'<div class="engnote">'+tags+'</div>'+recHtml;
+    host.appendChild(card);
+  });
+
+  $("#results").classList.add("on");
+  // animate sov bars
+  setTimeout(function(){$$("#dash .sovtrack i").forEach(function(i){var w=i.style.width;i.style.width="0";requestAnimationFrame(function(){i.style.width=w})})},60);
+  $("#results").scrollIntoView({behavior:"smooth",block:"start"});
+}
+
+/* ---------- auto-generate competitors ---------- */
+function fillCompetitors(list){
+  var rows=$$(".comp-row");
+  list.slice(0,3).forEach(function(c,i){
+    if(!rows[i])return;
+    $(".comp-domain",rows[i]).value=c.domain||"";
+    $(".comp-brand",rows[i]).value=c.brand||brandFromDomain(c.domain||"");
+  });
+}
+var GENERIC=["google.com","youtube.com","wikipedia.org","reddit.com","linkedin.com","facebook.com","twitter.com","x.com","instagram.com","amazon.com","medium.com","quora.com","g2.com","capterra.com","trustpilot.com","gartner.com","forbes.com","clutch.co"];
+function autoCompetitors(){
+  readKeys();
+  var note=$("#autoCompNote"); note.style.display="block";
+  var yd=registrable(cleanDomain($("#yourUrl").value));
+  var cat=($("#category").value||"").trim();
+  var aud=($("#audience").value||"").trim();
+  if(!yd&&!cat){ note.textContent="Add your URL and category first, then I can find competitors."; return; }
+  var k=state.keys;
+  if(k.openai){
+    note.textContent="🔎 Asking ChatGPT for your top 3 competitors…";
+    var q="List exactly 3 real, direct competitor companies for a "+(cat||"company")+(aud?(" serving "+aud):"")+
+      (yd?(", other than "+yd):"")+'. Respond ONLY as compact JSON: {"competitors":[{"domain":"example.com","brand":"Example"}]}';
+    var body={model:k.openaiModel,temperature:0.4,messages:[{role:"user",content:q}]};
+    timeoutFetch("https://api.openai.com/v1/chat/completions",{method:"POST",headers:{"Content-Type":"application/json","Authorization":"Bearer "+k.openai},body:JSON.stringify(body)})
+     .then(function(r){if(!r.ok)throw new Error("OpenAI "+r.status);return r.json()})
+     .then(function(j){
+       var t=(j.choices&&j.choices[0]&&j.choices[0].message.content)||"";
+       var m=t.match(/\{[\s\S]*\}/); var data=m?JSON.parse(m[0]):{competitors:[]};
+       var list=(data.competitors||[]).map(function(c){return {domain:registrable(c.domain||""),brand:c.brand}}).filter(function(c){return c.domain&&c.domain!==yd});
+       if(!list.length)throw new Error("no results");
+       fillCompetitors(list); note.textContent="✓ Added "+Math.min(list.length,3)+" competitors from ChatGPT. Edit any you disagree with.";
+     }).catch(function(err){ googleCompetitors(yd,cat,aud,note); });
+    return;
+  }
+  if(k.googleKey&&k.googleCx){ googleCompetitors(yd,cat,aud,note); return; }
+  note.innerHTML="To auto-discover <b>real</b> competitors, add an OpenAI or Google API key under “Advanced” above — otherwise just type the three domains you compete with. (Auto-generation won’t invent companies that may not exist.)";
+}
+function googleCompetitors(yd,cat,aud,note){
+  var k=state.keys;
+  if(!(k.googleKey&&k.googleCx)){ note.innerHTML="Couldn’t auto-generate. Add a Google or OpenAI key under “Advanced”, or enter competitors manually."; return; }
+  note.textContent="🔎 Searching Google for competitors…";
+  var q=(cat||"")+(aud?(" for "+aud):"")+" companies";
+  var u="https://www.googleapis.com/customsearch/v1?key="+encodeURIComponent(k.googleKey)+"&cx="+encodeURIComponent(k.googleCx)+"&num=10&q="+encodeURIComponent(q);
+  timeoutFetch(u,{}).then(function(r){if(!r.ok)throw new Error("Google "+r.status);return r.json()})
+   .then(function(j){
+     var seen={},list=[];
+     (j.items||[]).forEach(function(it){
+       var d=registrable(it.link||"");
+       if(!d||d===yd||seen[d]||GENERIC.indexOf(d)>-1)return; seen[d]=1;
+       list.push({domain:d,brand:brandFromDomain(d)});
+     });
+     if(!list.length)throw new Error("no results");
+     fillCompetitors(list); note.textContent="✓ Added "+Math.min(list.length,3)+" competitors from Google results. Edit any you disagree with.";
+   }).catch(function(err){ note.innerHTML="Couldn’t auto-generate competitors ("+esc((err&&err.message)||"error")+"). Please enter them manually."; });
+}
+
+/* ---------- wire up ---------- */
+$("#yourUrl").addEventListener("blur",function(){ if(!$("#yourBrand").value)$("#yourBrand").value=brandFromDomain(cleanDomain(this.value)); });
+$("#genPrompts").addEventListener("click",genPrompts);
+$("#addPrompt").addEventListener("click",function(){
+  var v=$("#newPrompt").value.trim(); if(!v)return;
+  state.prompts.push({id:"p_"+hash(v)+Date.now(),text:v,cat:"comparison",sel:true});
+  $("#newPrompt").value=""; renderPrompts();
+});
+$("#newPrompt").addEventListener("keydown",function(e){if(e.key==="Enter"){e.preventDefault();$("#addPrompt").click();}});
+$("#autoComp").addEventListener("click",autoCompetitors);
+$("#runBtn").addEventListener("click",runCheck);
+$("#saveKeys").addEventListener("click",function(){saveKeys();refreshModeBadge();var b=this;var o=b.textContent;b.textContent="✓ Saved";setTimeout(function(){b.textContent=o},1500)});
+$("#clearKeys").addEventListener("click",function(){for(var f in KEY_FIELDS)$("#"+KEY_FIELDS[f]).value="";try{localStorage.removeItem("aeo_keys")}catch(e){}refreshModeBadge()});
+Object.keys(KEY_FIELDS).forEach(function(f){$("#"+KEY_FIELDS[f]).addEventListener("input",refreshModeBadge)});
+
+/* init */
+loadKeys(); refreshModeBadge();
+// seed sensible defaults so the tool is usable immediately as a demo
+$("#yourUrl").value="your-digital-partner.co.uk";
+$("#yourBrand").value="Your Digital Partner";
+$("#category").value="B2B digital marketing consultancy";
+$("#audience").value="B2B SaaS companies in the UK";
+genPrompts();
+})();
+</script>
+</body>
+</html>
